@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://game/game.gd" type="Script" id=1]
 [ext_resource path="res://game/player.gd" type="Script" id=2]
 [ext_resource path="res://assets/Alien sprites/alienPink.png" type="Texture" id=3]
 [ext_resource path="res://assets/Request pack/Tiles/laserBlueBurst.png" type="Texture" id=4]
 [ext_resource path="res://assets/grass_tiles.res" type="TileSet" id=5]
+[ext_resource path="res://assets/Base pack/Items/cloud3.png" type="Texture" id=6]
+[ext_resource path="res://assets/Base pack/Items/cloud2.png" type="Texture" id=7]
+[ext_resource path="res://assets/Base pack/Items/cloud1.png" type="Texture" id=8]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -64,6 +67,7 @@ _sections_unfolded = [ "Angle", "Angular Velocity", "Animation", "Color", "Dampi
 [node name="game" type="Node2D"]
 
 script = ExtResource( 1 )
+_sections_unfolded = [ "Material" ]
 
 [node name="player" type="KinematicBody2D" parent="."]
 
@@ -84,6 +88,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="jetpack_exhaust" type="Particles2D" parent="player"]
 
@@ -186,5 +191,41 @@ exp_edit = false
 rounded = false
 percent_visible = true
 _sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="backgrounds" type="ParallaxBackground" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, -200 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+_sections_unfolded = [ "Pause", "Scroll" ]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="backgrounds"]
+
+motion_scale = Vector2( 0.1, 0.1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="cloud3" type="Sprite" parent="backgrounds/ParallaxLayer"]
+
+position = Vector2( 656.495, 73.5491 )
+texture = ExtResource( 6 )
+
+[node name="cloud2" type="Sprite" parent="backgrounds/ParallaxLayer"]
+
+position = Vector2( 164.25, 149.644 )
+texture = ExtResource( 7 )
+
+[node name="cloud1" type="Sprite" parent="backgrounds/ParallaxLayer"]
+
+position = Vector2( 401.228, 231.655 )
+texture = ExtResource( 8 )
 
 

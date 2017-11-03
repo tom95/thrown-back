@@ -4,15 +4,20 @@ const GRAVITY = Vector2(0, 1200.0)
 const WALK_SPEED = 250.0
 const JETPACK_STRAFE_SPEED = 30.0
 const JETPACK_SPEED = 40.0
+const PROJECTILE_SPEED = 1000
 var velocity = Vector2()
 var jetpack_fuel = 100
 var max_jetpack_fuel = 100
+var direction = 1
 
 onready var jetpack_exhaust = get_node("jetpack_exhaust")
 
 var jetpacking = Jetpacking.new(self)
 var walking = Walking.new(self)
 var idle = Idle.new(self)
+
+const WEAPON_COOLDOWN = 200
+var weapon_cooldown = 0
 
 var current_state = idle
 
@@ -98,6 +103,20 @@ func _ready():
 func _physics_process(delta):
 	velocity += GRAVITY * delta
 	velocity = move_and_slide(velocity, Vector2(0, -1), 25.0)
+	
+	weapon_cooldown = max(0, weapon_cooldown - 1000 * delta)
+	
+	if Input.is_action_pressed("move_left"):
+		direction = -1
+	elif Input.is_action_pressed("move_right"):
+		direction = 1
+	if Input.is_action_pressed("fire") and weapon_cooldown <= 0:
+		weapon_cooldown = WEAPON_COOLDOWN
+		var projectile = preload("res://game/projectile.tscn").instance()
+		projectile.add_collision_exception_with(self)
+		projectile.linear_velocity = Vector2(PROJECTILE_SPEED * direction, 0)
+		projectile.position = self.global_position
+		get_parent().add_child(projectile)
 	
 	current_state.check_leave()
 	current_state.process(delta)
