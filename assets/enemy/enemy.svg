@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="100"
+   viewBox="0 0 26.458335 26.458334"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92+devel (unknown)"
+   sodipodi:docname="enemy.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4.6103362"
+     inkscape:cx="52.098616"
+     inkscape:cy="28.085986"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     units="px" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-103.67586,-83.560612)">
+    <g
+       id="body"
+       inkscape:label="#g51">
+      <circle
+         r="8.5615168"
+         cy="96.78978"
+         cx="116.86839"
+         id="path10"
+         style="vector-effect:none;fill:#187aa5;fill-opacity:1;stroke-width:0.06104046" />
+      <circle
+         style="vector-effect:none;fill:#2ba9e0;stroke-width:0.05561843"
+         id="circle22"
+         cx="117.28907"
+         cy="96.385269"
+         r="7.8010249" />
+    </g>
+    <circle
+       r="2.59727"
+       cy="96.78978"
+       cx="116.86839"
+       id="eye"
+       style="vector-effect:none;fill:#ffffff;stroke-width:0.01851758"
+       inkscape:label="#circle18" />
+    <circle
+       style="vector-effect:none;fill:#1a1a1a;stroke-width:0.00572796"
+       id="pupil"
+       cx="116.52858"
+       cy="97.016312"
+       r="0.80340099"
+       inkscape:label="#circle20" />
+    <g
+       id="arm_left"
+       inkscape:label="#g47">
+      <rect
+         transform="rotate(-42.305541)"
+         ry="0.99205589"
+         y="141.66982"
+         x="11.040528"
+         height="1.9841118"
+         width="5.1344008"
+         id="rect12"
+         style="vector-effect:none;fill:#187aa5;fill-opacity:1;stroke-width:0.06104046" />
+      <rect
+         style="vector-effect:none;fill:#2ba9e0;stroke-width:0.04709"
+         id="rect829"
+         width="3.9609616"
+         height="1.5306537"
+         x="12.002786"
+         y="141.84451"
+         ry="0.76532686"
+         transform="rotate(-42.305541)" />
+    </g>
+    <g
+       id="arm_right"
+       inkscape:label="#g43">
+      <rect
+         style="vector-effect:none;fill:#187aa5;fill-opacity:1;stroke-width:0.06104046"
+         id="rect831"
+         width="5.1344008"
+         height="1.9841118"
+         x="-161.87744"
+         y="-15.704001"
+         ry="0.99205589"
+         transform="matrix(-0.73956601,-0.67308404,-0.67308404,0.73956601,0,0)" />
+      <rect
+         transform="matrix(-0.73956601,-0.67308404,-0.67308404,0.73956601,0,0)"
+         ry="0.76532686"
+         y="-15.529305"
+         x="-160.91519"
+         height="1.5306537"
+         width="3.9609616"
+         id="rect833"
+         style="vector-effect:none;fill:#2ba9e0;stroke-width:0.04709" />
+    </g>
+  </g>
+</svg>
