@@ -1,147 +1,23 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://game/game.gd" type="Script" id=1]
-[ext_resource path="res://game/player.gd" type="Script" id=2]
-[ext_resource path="res://assets/Alien sprites/alienPink.png" type="Texture" id=3]
-[ext_resource path="res://assets/Request pack/Tiles/laserBlueBurst.png" type="Texture" id=4]
-[ext_resource path="res://assets/grass_tiles.res" type="TileSet" id=5]
-[ext_resource path="res://assets/Base pack/Items/cloud3.png" type="Texture" id=6]
-[ext_resource path="res://assets/Base pack/Items/cloud2.png" type="Texture" id=7]
-[ext_resource path="res://assets/Base pack/Items/cloud1.png" type="Texture" id=8]
-
-[sub_resource type="CapsuleShape2D" id=1]
-
-custom_solver_bias = 0.0
-radius = 28.0
-height = 37.0
-
-[sub_resource type="Gradient" id=2]
-
-offsets = PoolRealArray( 0, 0.0490483, 1 )
-colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0 )
-
-[sub_resource type="GradientTexture" id=3]
-
-gradient = SubResource( 2 )
-width = 2048
-
-[sub_resource type="ParticlesMaterial" id=4]
-
-render_priority = 0
-trail_divisor = 1
-emission_shape = 0
-flag_align_y = false
-flag_rotate_y = false
-flag_disable_z = true
-spread = 45.0
-flatness = 0.0
-gravity = Vector3( 0, 98, 0 )
-initial_velocity = 200.0
-initial_velocity_random = 0.0
-angular_velocity = 1.49939e-43
-angular_velocity_random = 0.0
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-linear_accel = 0.0
-linear_accel_random = 0.0
-radial_accel = 0.0
-radial_accel_random = 0.0
-tangential_accel = 0.0
-tangential_accel_random = 0.0
-damping = 100.0
-damping_random = 0.0
-angle = 0.0
-angle_random = 0.0
-scale = 1.0
-scale_random = 0.0
-color_ramp = SubResource( 3 )
-hue_variation = 0.0
-hue_variation_random = 0.0
-anim_speed = 0.0
-anim_speed_random = 0.0
-anim_offset = 0.0
-anim_offset_random = 0.0
-anim_loop = true
-_sections_unfolded = [ "Angle", "Angular Velocity", "Animation", "Color", "Damping", "Emission Shape", "Flags", "Gravity", "Hue Variation", "Initial Velocity", "Linear Accel", "Orbit Velocity", "Radial Accel", "Scale", "Spread", "Tangential Accel", "Trail" ]
+[ext_resource path="res://assets/grass_tiles.res" type="TileSet" id=2]
+[ext_resource path="res://assets/enemy/enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Base pack/Items/cloud3.png" type="Texture" id=4]
+[ext_resource path="res://assets/Base pack/Items/cloud2.png" type="Texture" id=5]
+[ext_resource path="res://assets/Base pack/Items/cloud1.png" type="Texture" id=6]
+[ext_resource path="res://assets/wizard/wizard.tscn" type="PackedScene" id=7]
 
 [node name="game" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Material" ]
 
-[node name="player" type="KinematicBody2D" parent="."]
-
-position = Vector2( 250, 485 )
-z = 1
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-script = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "Z" ]
-
-[node name="player_image" type="Sprite" parent="player"]
-
-texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="jetpack_exhaust" type="Particles2D" parent="player"]
-
-position = Vector2( -1, 50 )
-rotation = 1.56831
-emitting = false
-amount = 25
-lifetime = 1.0
-one_shot = false
-preprocess = 0.0
-speed_scale = 1.0
-explosiveness = 0.0
-randomness = 0.0
-fixed_fps = 0
-fract_delta = true
-visibility_rect = Rect2( -100, -100, 200, 200 )
-local_coords = false
-draw_order = 0
-process_material = SubResource( 4 )
-texture = ExtResource( 4 )
-normal_map = null
-h_frames = 1
-v_frames = 1
-_sections_unfolded = [ "Drawing", "Process Material", "Time" ]
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-
-anchor_mode = 1
-rotating = false
-current = true
-zoom = Vector2( 1, 1 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
-limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_enabled = false
-smoothing_speed = 5.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
-
-[node name="TileMap" type="TileMap" parent="."]
+[node name="map" type="TileMap" parent="."]
 
 position = Vector2( 47, 184 )
 mode = 0
-tile_set = ExtResource( 5 )
+tile_set = ExtResource( 2 )
 cell_size = Vector2( 70, 70 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -160,8 +36,13 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="enemy" parent="." instance=ExtResource( 3 )]
+
+position = Vector2( 589.363, 301.026 )
+
 [node name="hud" type="CanvasLayer" parent="."]
 
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -194,6 +75,7 @@ _sections_unfolded = [ "Material", "Visibility" ]
 
 [node name="backgrounds" type="ParallaxBackground" parent="."]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -216,16 +98,20 @@ _sections_unfolded = [ "Motion" ]
 [node name="cloud3" type="Sprite" parent="backgrounds/ParallaxLayer"]
 
 position = Vector2( 656.495, 73.5491 )
-texture = ExtResource( 6 )
+texture = ExtResource( 4 )
 
 [node name="cloud2" type="Sprite" parent="backgrounds/ParallaxLayer"]
 
 position = Vector2( 164.25, 149.644 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 
 [node name="cloud1" type="Sprite" parent="backgrounds/ParallaxLayer"]
 
 position = Vector2( 401.228, 231.655 )
-texture = ExtResource( 8 )
+texture = ExtResource( 6 )
+
+[node name="wizard" parent="." instance=ExtResource( 7 )]
+
+position = Vector2( 237.864, 504.436 )
 
 
