@@ -12,10 +12,10 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="8.5in"
    height="11in"
-   viewBox="0 0 215.89728 279.39648"
+   viewBox="0 0 215.9 279.4"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.2 (unknown)"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="tiles.svg"
    inkscape:export-filename="/home/tom/Code/godot/game-thing/assets/background/rock.png"
    inkscape:export-xdpi="90"
@@ -51,9 +51,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.1200001"
-     inkscape:cx="109.7942"
-     inkscape:cy="581.82513"
+     inkscape:zoom="1.8101934"
+     inkscape:cx="198.14668"
+     inkscape:cy="613.00933"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -97,7 +97,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -215,7 +215,7 @@
          style="fill:#73a707;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.10441081px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
     <rect
-       style="vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        id="rect29"
        width="18.520834"
        height="18.520834"
@@ -224,7 +224,7 @@
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
-       style="vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        d="m 45.416722,157.44861 c -0.04747,0.83006 -5.510084,0.90446 -5.499742,-0.15108 0.01651,-1.68483 1.461996,-1.79777 3.30261,-1.8112 1.589475,-0.0116 2.272673,0.64128 2.197132,1.96228 z"
        id="path836"
        inkscape:connector-curvature="0"
@@ -236,11 +236,11 @@
        inkscape:connector-curvature="0"
        id="path839"
        d="m 51.502554,161.78196 c -0.348046,0.55679 -4.182468,0.45467 -4.099476,-0.19113 0.162448,-1.2641 0.765287,-1.45855 2.645599,-1.56348 1.449203,-0.0809 2.155225,0.63261 1.453877,1.75461 z"
-       style="vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
-       style="vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        d="m 52.369599,153.51257 c -0.09167,0.6502 -3.733256,0.34723 -4.099476,-0.19113 -0.494503,-0.72695 0.271912,-1.42382 2.154819,-1.45913 1.221202,-0.0229 2.004117,1.22851 1.944657,1.65026 z"
        id="path841"
        inkscape:connector-curvature="0"
@@ -252,7 +252,7 @@
        inkscape:connector-curvature="0"
        id="path843"
        d="m 52.369599,153.51257 c -0.09167,0.6502 -3.910872,0.46747 -4.159592,-0.28131 0.819128,0.18481 1.449716,0.42156 2.373423,0.42905 0.699497,0.006 1.247201,-0.1241 1.786169,-0.14775 z"
-       style="vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -260,11 +260,11 @@
        inkscape:connector-curvature="0"
        id="path845"
        d="m 45.416722,157.44861 c -0.04747,0.83006 -5.510084,0.90446 -5.499742,-0.15108 0.889547,0.42298 1.210166,0.38905 3.050771,0.40367 1.29436,0.0103 1.782386,-0.0742 2.448971,-0.25259 z"
-       style="vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
-       style="vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        d="m 51.502554,161.78196 c -0.348046,0.55679 -4.182468,0.45467 -4.099476,-0.19113 0.665391,0.20266 1.647815,0.36219 2.36673,0.35893 0.718915,-0.003 1.138299,-0.005 1.732746,-0.1678 z"
        id="path847"
        inkscape:connector-curvature="0"
@@ -276,11 +276,11 @@
        inkscape:connector-curvature="0"
        id="path849"
        d="m 40.884246,155.76517 c 0.593512,-0.24052 1.415037,-0.27211 2.335344,-0.27883 0.794738,-0.006 1.858512,0.20572 2.052384,1.0118 -0.514246,-0.1335 -1.169159,-0.49769 -2.022761,-0.66516 -0.853602,-0.16747 -1.509968,-0.0938 -2.364967,-0.0678 z"
-       style="vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.08656284;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-variation-settings:normal;vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.08656284;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
-       style="vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        d="m 51.776781,160.9407 c -0.804851,-0.75086 -3.317478,-0.92792 -4.173824,-0.0827 0.192512,-0.4898 0.565408,-0.72574 2.44572,-0.83067 1.449203,-0.0809 1.699124,0.45006 1.728104,0.91335 z"
        id="path897"
        inkscape:connector-curvature="0"
@@ -292,7 +292,7 @@
        inkscape:connector-curvature="0"
        id="path899"
        d="m 51.724041,152.36569 c -0.926827,-0.30509 -1.857332,-0.31418 -2.943608,-0.21346 0.515891,-0.27428 1.036475,-0.27263 1.644509,-0.28992 0.438812,-0.0125 0.856832,0.0823 1.299099,0.50338 z"
-       style="vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <g
@@ -405,11 +405,10 @@
     <g
        id="top01"
        inkscape:label="#g1095"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"
-       inkscape:export-filename="/home/tom/Code/godot/game-thing/levels/01-grass/tiles/top01.png">
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <rect
-         style="vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+         style="font-variation-settings:normal;vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671"
          id="rect901"
          width="18.520834"
          height="18.520834"
@@ -434,12 +433,35 @@
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccccccccc" />
     </g>
+    <path
+       sodipodi:nodetypes="ssss"
+       inkscape:connector-curvature="0"
+       id="path911"
+       d="m 48.494449,142.50744 c -0.08481,0.60159 -3.4541,0.32127 -3.792935,-0.17683 -0.457526,-0.67259 0.251579,-1.31735 1.993689,-1.35003 1.129887,-0.0213 1.854259,1.13666 1.799246,1.52686 z"
+       style="font-variation-settings:normal;vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.30270252"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.30270252"
+       d="m 48.494449,142.50744 c -0.08481,0.60159 -3.618434,0.43253 -3.848556,-0.26026 0.757877,0.17099 1.341312,0.39003 2.195948,0.39696 0.647191,0.005 1.15394,-0.11482 1.652608,-0.1367 z"
+       id="path913"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccscc"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.30270252"
+       d="m 47.897162,141.44633 c -0.857523,-0.28228 -1.718448,-0.29069 -2.723497,-0.1975 0.477315,-0.25377 0.958972,-0.25225 1.521538,-0.26825 0.406,-0.0115 0.792763,0.0762 1.201959,0.46575 z"
+       id="path915"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <g
        id="corner01"
        inkscape:label="#g4565"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"
-       inkscape:export-filename="/home/tom/Code/godot/game-thing/levels/01-grass/tiles/corner01.png">
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          sodipodi:nodetypes="cccc"
          inkscape:connector-curvature="0"
@@ -451,7 +473,7 @@
          inkscape:connector-curvature="0"
          id="rect1039"
          d="m 57.166114,74.750001 h 16.917215 v 18.52084 H 55.562495 l 0.371007,-1.22101 0.25374,-1.75982 -0.06263,-1.5124 0.8494,-1.50829 0.522277,-2.10587 -0.330177,-3.46813 v -2.31511 -2.3151 z"
-         style="vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.3126823" />
+         style="font-variation-settings:normal;vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.3126823" />
       <path
          style="fill:#73a707;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.09258991px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 57.375362,82.410971 c 0,0 -0.925398,0.34913 -1.272159,0.95529 0.0116,-0.73548 1.060065,-1.4108 1.060065,-1.4108 z"
@@ -505,41 +527,39 @@
          inkscape:connector-curvature="0"
          id="path883"
          d="m 63.986929,81.821981 c -0.08481,0.60159 -3.4541,0.32127 -3.792935,-0.17683 -0.457526,-0.67259 0.251579,-1.31735 1.993689,-1.35003 1.129887,-0.0213 1.854259,1.13666 1.799246,1.52686 z"
-         style="vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.30270252" />
+         style="font-variation-settings:normal;vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.30270252" />
       <path
-         style="vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.30270252"
+         style="font-variation-settings:normal;vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.30270252"
          d="m 63.986929,81.821981 c -0.08481,0.60159 -3.618434,0.43253 -3.848556,-0.26026 0.757877,0.17099 1.341312,0.39003 2.195948,0.39696 0.647191,0.005 1.15394,-0.11482 1.652608,-0.1367 z"
          id="path885"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccscc" />
       <path
-         style="vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.30270252"
+         style="font-variation-settings:normal;vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.30270252"
          d="m 63.389642,80.760871 c -0.857523,-0.28228 -1.718448,-0.29069 -2.723497,-0.1975 0.477315,-0.25377 0.958972,-0.25225 1.521538,-0.26825 0.406,-0.0115 0.792763,0.0762 1.201959,0.46575 z"
          id="path887"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccsc" />
     </g>
     <path
-       style="vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        d="M 55.562496,111.79167 H 74.08333 v 18.52084 H 55.562496 l 0.283482,-4.46485 0.675857,-3.08027 -0.203389,-4.24302 0.354353,-2.90569 z"
        id="edge01"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccc"
        inkscape:label="#rect991"
-       inkscape:export-xdpi="95.998741"
-       inkscape:export-ydpi="95.998741"
-       inkscape:export-filename="/home/tom/Code/godot/game-thing/levels/01-grass/tiles/edge01.png" />
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <rect
-       style="vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        id="mid"
        width="18.520834"
        height="18.520834"
        x="74.083328"
        y="130.3125"
        inkscape:label="#rect996"
-       inkscape:export-xdpi="95.998741"
-       inkscape:export-ydpi="95.998741"
-       inkscape:export-filename="/home/tom/Code/godot/game-thing/levels/01-grass/tiles/mid.png" />
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <g
        id="g1009"
        transform="translate(37.041665,-55.562491)"
@@ -551,7 +571,7 @@
          height="18.520834"
          width="18.520834"
          id="rect1003"
-         style="vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671" />
+         style="font-variation-settings:normal;vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671" />
       <path
          style="fill:#4b7b05;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.08009004px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 38.272599,132.54583 0.87489,1.23734 1.075253,-1.06796 0.491912,0.80387 0.626999,-0.52587 0.586548,0.84949 0.525871,-0.39441 0.942847,-0.3254 0.826011,-0.2891 c 0,0 0.417493,0.28052 0.696304,0.56707 0.404625,0.0187 1.06691,-0.40958 1.06691,-0.40958 l 0.788806,0.68757 c 0.33635,-0.48931 0.488568,-0.60431 0.915217,-0.81398 0.370773,-0.17289 0.6596,-0.1949 1.090017,-0.38377 0.707639,0.69621 1.021279,1.36444 1.021279,1.36444 0.134506,-0.41967 1.372291,-1.06713 2.158416,-1.1238 l 0.851387,0.49226 0.859675,-0.69281 1.891559,-0.092 v -1.54531 l -18.520833,0.16562 v 1.37969 l 0.67448,0.27438 z"
@@ -572,7 +592,7 @@
        height="18.520834"
        width="18.520834"
        id="rect1045"
-       style="vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -580,11 +600,11 @@
        inkscape:connector-curvature="0"
        id="path1047"
        d="m 82.45839,120.40695 c -0.04747,0.83006 -5.510084,0.90446 -5.499742,-0.15108 0.01651,-1.68483 1.461996,-1.79777 3.30261,-1.8112 1.589475,-0.0116 2.272673,0.64128 2.197132,1.96228 z"
-       style="vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
-       style="vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        d="m 88.544222,124.7403 c -0.348046,0.55679 -4.182468,0.45467 -4.099476,-0.19113 0.162448,-1.2641 0.765287,-1.45855 2.645599,-1.56348 1.449203,-0.0809 2.155225,0.63261 1.453877,1.75461 z"
        id="path1049"
        inkscape:connector-curvature="0"
@@ -596,11 +616,11 @@
        inkscape:connector-curvature="0"
        id="path1051"
        d="m 89.411267,116.47091 c -0.09167,0.6502 -3.733256,0.34723 -4.099476,-0.19113 -0.494503,-0.72695 0.271912,-1.42382 2.154819,-1.45913 1.221202,-0.0229 2.004117,1.22851 1.944657,1.65026 z"
-       style="vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
-       style="vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        d="m 89.411267,116.47091 c -0.09167,0.6502 -3.910872,0.46747 -4.159592,-0.28131 0.819128,0.18481 1.449716,0.42156 2.373423,0.42905 0.699497,0.006 1.247201,-0.1241 1.786169,-0.14775 z"
        id="path1053"
        inkscape:connector-curvature="0"
@@ -608,7 +628,7 @@
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
-       style="vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        d="m 82.45839,120.40695 c -0.04747,0.83006 -5.510084,0.90446 -5.499742,-0.15108 0.889547,0.42298 1.210166,0.38905 3.050771,0.40367 1.29436,0.0103 1.782386,-0.0742 2.448971,-0.25259 z"
        id="path1055"
        inkscape:connector-curvature="0"
@@ -620,11 +640,11 @@
        inkscape:connector-curvature="0"
        id="path1057"
        d="m 88.544222,124.7403 c -0.348046,0.55679 -4.182468,0.45467 -4.099476,-0.19113 0.665391,0.20266 1.647815,0.36219 2.36673,0.35893 0.718915,-0.003 1.138299,-0.005 1.732746,-0.1678 z"
-       style="vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
-       style="vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.08656284;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-variation-settings:normal;vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.08656284;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 77.925914,118.72351 c 0.593512,-0.24052 1.415037,-0.27211 2.335344,-0.27883 0.794738,-0.006 1.858512,0.20572 2.052384,1.0118 -0.514246,-0.1335 -1.169159,-0.49769 -2.022761,-0.66516 -0.853602,-0.16747 -1.509968,-0.0938 -2.364967,-0.0678 z"
        id="path1059"
        inkscape:connector-curvature="0"
@@ -636,11 +656,11 @@
        inkscape:connector-curvature="0"
        id="path1061"
        d="m 88.818449,123.89904 c -0.804851,-0.75086 -3.317478,-0.92792 -4.173824,-0.0827 0.192512,-0.4898 0.565408,-0.72574 2.44572,-0.83067 1.449203,-0.0809 1.699124,0.45006 1.728104,0.91335 z"
-       style="vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
-       style="vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        d="m 88.765709,115.32403 c -0.926827,-0.30509 -1.857332,-0.31418 -2.943608,-0.21346 0.515891,-0.27428 1.036475,-0.27263 1.644509,-0.28992 0.438812,-0.0125 0.856832,0.0823 1.299099,0.50338 z"
        id="path1063"
        inkscape:connector-curvature="0"
@@ -650,16 +670,15 @@
     <g
        id="corner_lower02"
        inkscape:label="#g4585"
-       inkscape:export-xdpi="95.998741"
-       inkscape:export-ydpi="95.998741"
-       inkscape:export-filename="/home/tom/Code/godot/game-thing/levels/01-grass/tiles/corner_lower02.png">
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <rect
          y="130.3125"
          x="55.562496"
          height="18.520834"
          width="18.520834"
          id="rect1037"
-         style="vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671" />
+         style="font-variation-settings:normal;vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671" />
       <path
          style="fill:#4b7b05;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.08009004px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 57.059688,131.69023 c 0.316519,-1.15475 -0.217385,-1.34423 -1.497189,-1.37773 l -2e-6,2.11667 1.133106,-0.42617 z"
@@ -676,9 +695,8 @@
     <g
        id="edge02"
        inkscape:label="#g4580"
-       inkscape:export-xdpi="96.000023"
-       inkscape:export-ydpi="96.000023"
-       inkscape:export-filename="/home/tom/Code/godot/game-thing/levels/01-grass/tiles/edge02.png">
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          sodipodi:nodetypes="cccc"
          inkscape:connector-curvature="0"
@@ -692,7 +710,7 @@
          d="m 58.584917,104.68612 c 0,0 0.0064,-1.24035 0.233803,-1.88002 -0.836492,0.85893 -0.968879,1.35279 -0.968879,1.35279 0,0 -1.083975,-1.44843 -2.131439,-1.34871 0.771299,0.48611 1.583319,2.01019 1.583319,2.01019 0,0 -0.760143,-0.27478 -1.354584,-0.17053 0.486414,0.23433 1.169661,0.80402 1.169661,0.80402 z"
          style="fill:#73a707;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.12529513px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         style="vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+         style="font-variation-settings:normal;vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671"
          d="M 55.562498,93.270833 H 74.083332 V 111.79167 H 55.562498 l 0.283482,-4.46485 0.76807,-2.14348 2.572894,-0.71839 -0.737867,-6.050943 -1.776276,-1.316164 z"
          id="path1097"
          inkscape:connector-curvature="0"
@@ -704,22 +722,21 @@
        height="18.520834"
        width="18.520834"
        id="rect1099"
-       style="vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671"
+       style="font-variation-settings:normal;vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <g
        id="g1274"
        transform="translate(-18.520831,7.7529298e-6)"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"
-       inkscape:export-filename="/home/tom/Code/godot/game-thing/levels/01-grass/tiles/g1274.png">
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <rect
          y="130.3125"
          x="37.041664"
          height="18.520834"
          width="18.520834"
          id="rect1266"
-         style="vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671" />
+         style="font-variation-settings:normal;vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671" />
       <path
          style="fill:#4b7b05;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.08009004px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 38.272598,132.54583 0.87489,1.23734 1.075253,-1.06796 0.491912,0.80387 0.626999,-0.52587 0.586548,0.84949 0.525871,-0.39441 0.942847,-0.3254 0.826011,-0.2891 c 0,0 0.417493,0.28052 0.696304,0.56707 0.404625,0.0187 1.06691,-0.40958 1.06691,-0.40958 l 0.788806,0.68757 c 0.33635,-0.48931 0.488568,-0.60431 0.915217,-0.81398 0.370773,-0.17289 0.6596,-0.1949 1.090017,-0.38377 0.707639,0.69621 1.021279,1.36444 1.021279,1.36444 0.134506,-0.41967 1.372291,-1.06713 2.158416,-1.1238 l 0.851387,0.49226 0.859675,-0.69281 1.891559,-0.092 v -1.54531 l -18.520833,0.16562 v 1.37969 l 0.67448,0.27438 z"
@@ -977,16 +994,15 @@
        id="top02"
        transform="translate(-37.041667,7.7529298e-6)"
        inkscape:label="#g1294"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"
-       inkscape:export-filename="/home/tom/Code/godot/game-thing/levels/01-grass/tiles/top02.png">
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <rect
          y="130.3125"
          x="37.041664"
          height="18.520834"
          width="18.520834"
          id="rect1286"
-         style="vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671" />
+         style="font-variation-settings:normal;vector-effect:none;fill:#4b291c;fill-opacity:1;stroke:none;stroke-width:0.32716671" />
       <path
          style="fill:#4b7b05;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.08009004px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 38.272598,132.54583 0.87489,1.23734 1.075253,-1.06796 c 0.660908,0.13873 1.100798,0.47564 1.705459,1.12749 l 0.525871,-0.76906 c 1.20897,0.59789 1.243815,0.36314 1.768858,-0.23985 1.103747,0.45658 1.741891,0.47916 2.135776,1.09052 0.33635,-0.48931 0.904812,-0.84977 1.331461,-1.05944 0.798628,-0.0957 1.933675,1.35261 2.422658,1.93038 0.507238,-1.04075 1.060929,-2.01685 1.847054,-2.07352 l 0.851387,0.49226 0.859675,-0.69281 1.891559,-0.092 v -1.54531 l -18.520833,0.16562 v 1.37969 l 0.67448,0.27438 z"
@@ -1040,9 +1056,9 @@
          inkscape:connector-curvature="0"
          id="rect1535"
          d="m 26.537916,123.42196 -3.732073,2.3611 0.311092,2.13889 -1.23923,1.34164 0.203634,1.04891 H 35.29242 l 0.301271,-1.55908 -1.740977,-1.55908 -0.143661,-1.8898 -0.917257,-0.69144 -0.23255,-0.34855 -3.549396,-0.33719 -0.347007,0.4408 -0.664559,-0.0393 z"
-         style="vector-effect:none;fill:url(#linearGradient1591);fill-opacity:1;stroke:none;stroke-width:0.13229166;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="font-variation-settings:normal;vector-effect:none;fill:url(#linearGradient1591);fill-opacity:1;stroke:none;stroke-width:0.13229166;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
-         style="vector-effect:none;fill:#413d35;fill-opacity:1;stroke:none;stroke-width:0.12251186;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="font-variation-settings:normal;vector-effect:none;fill:#413d35;fill-opacity:1;stroke:none;stroke-width:0.12251186;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 26.708162,123.96607 -3.464914,2.18103 0.288822,1.97578 -1.15052,1.23931 0.189058,0.96892 H 34.83598 l 0.279704,-1.44017 -1.61635,-1.4402 -0.133378,-1.74566 -0.851595,-0.63872 -0.215902,-0.32197 -3.295315,-0.31147 -0.322167,0.40718 -0.616986,-0.0362 z"
          id="path1572"
          inkscape:connector-curvature="0"
@@ -1052,9 +1068,9 @@
          inkscape:connector-curvature="0"
          id="rect1578"
          d="m 24.428223,126.04935 2.076128,-0.903 1.277566,1.40801 -3.645795,0.8426 z"
-         style="vector-effect:none;fill:#393530;fill-opacity:1;stroke:none;stroke-width:0.25375655;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="font-variation-settings:normal;vector-effect:none;fill:#393530;fill-opacity:1;stroke:none;stroke-width:0.25375655;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
-         style="vector-effect:none;fill:#393530;fill-opacity:1;stroke:none;stroke-width:0.21039343;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="font-variation-settings:normal;vector-effect:none;fill:#393530;fill-opacity:1;stroke:none;stroke-width:0.21039343;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 28.16366,127.13352 2.292321,0.62262 0.396368,1.1033 -2.948795,0.52238 z"
          id="path1581"
          inkscape:connector-curvature="0"
@@ -1064,31 +1080,7 @@
          inkscape:connector-curvature="0"
          id="path1583"
          d="m 30.921579,124.9407 1.392623,0.68474 -0.206729,1.66864 -2.326143,-0.84129 z"
-         style="vector-effect:none;fill:#393530;fill-opacity:1;stroke:none;stroke-width:0.24378029;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="font-variation-settings:normal;vector-effect:none;fill:#393530;fill-opacity:1;stroke:none;stroke-width:0.24378029;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
-    <path
-       sodipodi:nodetypes="ssss"
-       inkscape:connector-curvature="0"
-       id="path911"
-       d="m 30.042146,141.41796 c -0.08481,0.60159 -3.4541,0.32127 -3.792935,-0.17683 -0.457526,-0.67259 0.251579,-1.31735 1.993689,-1.35003 1.129887,-0.0213 1.854259,1.13666 1.799246,1.52686 z"
-       style="vector-effect:none;fill:#6c3b2a;fill-opacity:1;stroke:none;stroke-width:0.30270252"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <path
-       style="vector-effect:none;fill:#5d3425;fill-opacity:1;stroke:none;stroke-width:0.30270252"
-       d="m 30.042146,141.41796 c -0.08481,0.60159 -3.618434,0.43253 -3.848556,-0.26026 0.757877,0.17099 1.341312,0.39003 2.195948,0.39696 0.647191,0.005 1.15394,-0.11482 1.652608,-0.1367 z"
-       id="path913"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccscc"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <path
-       style="vector-effect:none;fill:#824733;fill-opacity:1;stroke:none;stroke-width:0.30270252"
-       d="m 29.444859,140.35685 c -0.857523,-0.28228 -1.718448,-0.29069 -2.723497,-0.1975 0.477315,-0.25377 0.958972,-0.25225 1.521538,-0.26825 0.406,-0.0115 0.792763,0.0762 1.201959,0.46575 z"
-       id="path915"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccsc"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
   </g>
 </svg>

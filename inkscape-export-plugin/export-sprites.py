@@ -3,6 +3,7 @@
 
 import re
 import os
+import sys
 import subprocess
 import inkex
 
@@ -16,14 +17,9 @@ class ExportSprites(inkex.Effect):
     folder = self.get_folder()
     all_boxes = self.get_all_bboxs()
     for id, node in self.selected.iteritems():
-
-      inkex.errormsg(id)
-      if id != 'body':
-        continue
-
       filename = folder + '/' + str(id) + '.png'
-      box = computeBBox([node])
-      inkex.errormsg('%s %s %s %s = %s %s %s %s' % (self.val(box[0]), self.val(box[1]), self.val(box[2]), self.val(box[3]), box[0], box[1], box[2], box[3]))
+      #box = computeBBox([node])
+      #inkex.errormsg('%s %s %s %s = %s %s %s %s' % (self.val(box[0]), self.val(box[1]), self.val(box[2]), self.val(box[3]), box[0], box[1], box[2], box[3]))
       #inkex.errormsg(id + ' -> ' + all_boxes[id])
       cmd = 'inkscape --export-id %s -a %s --export-id-only -e \"%s\" \"%s\"' % (id, all_boxes[id], filename, self.args[-1])
       p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
@@ -41,10 +37,11 @@ class ExportSprites(inkex.Effect):
     # return int(self.uutounit(float(v), self.getDocumentUnit()))
     #return int(float(v))
     #return self.unittouu(str(v) + 'px')
-    pageHeight = self.uutounit(self.unittouu(self.getDocumentHeight()), "px")
-    pageWidth = self.uutounit(self.unittouu(self.getDocumentWidth()), "px")
+    #pageHeight = self.uutounit(self.unittouu(self.getDocumentHeight()), "px")
+    #pageWidth = self.uutounit(self.unittouu(self.getDocumentWidth()), "px")
 
-    return self.uutounit(float(v),"px") * self.getDocumentScale() * 0.5
+    return int(float(v))
+    #return self.uutounit(float(v),"px") * self.getDocumentScale() * 0.5
     #return self.uutounit(self.unittouu(str(v)), "px") * self.getDocumentScale()
 
   def get_folder(self):
