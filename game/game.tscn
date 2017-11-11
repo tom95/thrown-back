@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/Base pack/Items/cloud3.png" type="Texture" id=5]
 [ext_resource path="res://assets/Base pack/Items/cloud2.png" type="Texture" id=6]
 [ext_resource path="res://assets/Base pack/Items/cloud1.png" type="Texture" id=7]
-[ext_resource path="res://assets/wizard/wizard.tscn" type="PackedScene" id=8]
+[ext_resource path="res://characters/wizard/wizard.tscn" type="PackedScene" id=8]
 
 [node name="game" type="Node2D"]
 
@@ -81,7 +81,12 @@ texture = ExtResource( 7 )
 
 [node name="wizard" parent="." instance=ExtResource( 8 )]
 
-position = Vector2( 237.864, 504.436 )
+visible = false
+position = Vector2( 200.864, 526.436 )
+
+[node name="wizard_new" parent="." instance=ExtResource( 8 )]
+
+position = Vector2( 349.864, 530.436 )
 
 
 [editable path="hud"]
