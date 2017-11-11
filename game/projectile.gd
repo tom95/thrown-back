@@ -4,4 +4,7 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	get_node("sprite").rotate(delta * 10)
+	pass
+
+func _on_Timer_timeout():
+	queue_free()

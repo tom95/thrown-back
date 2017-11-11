@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="test"
+config/name="Thrown Back"
 run/main_scene="res://game/game.tscn"
 config/icon="res://icon.png"
 
