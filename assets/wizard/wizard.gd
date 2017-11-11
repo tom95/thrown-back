@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const GRAVITY = Vector2(0, 1200.0)
 const WALK_SPEED = 250.0
-const JETPACK_STRAFE_SPEED = 30.0
+const JETPACK_STRAFE_SPEED = 250.0
 const JETPACK_SPEED = 40.0
 const PROJECTILE_SPEED = 1000
 var velocity = Vector2()
