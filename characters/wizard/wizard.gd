@@ -42,7 +42,8 @@ class Idle extends State:
 		pass
 	
 	func enter():
-		player.animation_player.play("idle")
+		# player.animation_player.play("idle")
+		pass
 	
 	func check_leave():
 		if Input.is_action_pressed("jump") and player.can_use_jetpack():

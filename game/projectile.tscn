@@ -14,9 +14,9 @@ input_pickable = false
 collision_layer = 1
 collision_mask = 1
 mode = 0
-mass = 1.0
-friction = 1.0
-bounce = 0.0
+mass = 0.00666667
+friction = 0.4
+bounce = 1.0
 gravity_scale = 1.0
 custom_integrator = false
 continuous_cd = 0
@@ -36,6 +36,7 @@ shape = SubResource( 1 )
 
 [node name="sprite" type="Sprite" parent="."]
 
+position = Vector2( 0, -0.19371 )
 texture = ExtResource( 2 )
 
 
