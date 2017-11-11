@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Export Sprites</_name>
+    <id>de.tombeckmann.export-sprites</id>
+    <dependency type="executable" location="extensions">export-sprites.py</dependency>
+
+
+    <effect>
+	<object-type>all</object-type>
+	<effects-menu>
+	    <submenu _name="Export"/>
+	</effects-menu>
+    </effect>
+    <script>
+	<command reldir="extensions" interpreter="python">export-sprites.py</command>
+    </script>
+</inkscape-extension>
