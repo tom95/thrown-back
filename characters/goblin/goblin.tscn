@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://characters/goblin/goblin.png" type="Texture" id=1]
+
+[node name="goblin" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="base" type="Node2D" parent="."]
+
+[node name="goblin" type="Sprite" parent="base"]
+
+texture = ExtResource( 1 )
+
+
