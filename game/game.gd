@@ -9,4 +9,4 @@ func _ready():
 
 func _process(delta):
 	fuel_meter.value = player.jetpack_fuel
-	fuel_meter.max_value = player.max_jetpack_fuel
+	fuel_meter.max_value = player.MAX_JETPACK_FUEL
