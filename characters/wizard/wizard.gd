@@ -1,11 +1,12 @@
 extends KinematicBody2D
 
 const GRAVITY = Vector2(0, 1000.0)
-const JETPACK_STRAFE_SPEED = 30.0
+const JETPACK_STRAFE_SPEED = 20.0
 const JETPACK_SPEED = 40.0
 const PROJECTILE_SPEED = 700
 const MAX_JETPACK_FUEL = 100
 const WEAPON_COOLDOWN =  200
+const BOUNCING_BASELINE = 500
 
 var velocity = Vector2()
 var jetpack_fuel = 100
@@ -17,7 +18,6 @@ onready var projectile_spawn = get_node("base/projectile_spawn")
 
 func _ready():
 	set_physics_process(true)
-	velocity = Vector2(0, -1000)
 	
 func _physics_process(delta):
 	var old_velocity = velocity
@@ -26,7 +26,7 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2(0, -1), 25.0)
 	
 	if is_on_floor():
-		velocity.y = - max(min(old_velocity.y * 2, 1000), old_velocity.y * 0.8)
+		velocity.y = - max(min(old_velocity.y * 2, BOUNCING_BASELINE), old_velocity.y * 0.8)
 	
 	var using_jetpack = Input.is_action_pressed("move_left") or\
 		Input.is_action_pressed("move_right") or\
