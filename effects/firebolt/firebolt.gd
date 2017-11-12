@@ -11,7 +11,6 @@ func _process(delta):
 func _on_Timer_timeout():
 	if dying:
 		queue_free()
-		print("Freeing particles")
 	else:
 		dying = true
 		get_node("smoke").emitting = false

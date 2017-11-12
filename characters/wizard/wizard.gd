@@ -123,7 +123,7 @@ func _physics_process(delta):
 		direction = 1
 	if Input.is_action_pressed("fire") and weapon_cooldown <= 0:
 		weapon_cooldown = WEAPON_COOLDOWN
-		var projectile = preload("res://game/projectile.tscn").instance()
+		var projectile = preload("res://effects/firebolt/firebolt.tscn").instance()
 		projectile.add_collision_exception_with(self)
 		projectile.linear_velocity = Vector2(PROJECTILE_SPEED * direction, 0)
 		projectile.position = projectile_spawn.global_position
