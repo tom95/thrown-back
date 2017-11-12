@@ -30,7 +30,15 @@
          offset="0"
          id="stop994" />
       <stop
-         style="stop-color:#98dab6;stop-opacity:1"
+         id="stop5816"
+         offset="0.75481093"
+         style="stop-color:#9cd3c8;stop-opacity:1;" />
+      <stop
+         style="stop-color:#336e81;stop-opacity:1"
+         offset="0.78298891"
+         id="stop5818" />
+      <stop
+         style="stop-color:#336e81;stop-opacity:1"
          offset="1"
          id="stop996" />
     </linearGradient>
@@ -147,7 +155,7 @@
        x2="349.46344"
        y2="446.96414"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1,0,0,0.93738275,0,-0.38845899)" />
+       gradientTransform="matrix(1,0,0,0.74713462,0,84.507208)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient839"
@@ -166,11 +174,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.41280121"
-     inkscape:cx="1600.1877"
-     inkscape:cy="146.71736"
+     inkscape:zoom="0.24343548"
+     inkscape:cx="1696.7649"
+     inkscape:cy="378.26107"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:snap-global="false"
@@ -195,15 +203,14 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Layer 2"
-     transform="translate(29.985835,-52.767273)"
-     sodipodi:insensitive="true">
+     transform="translate(29.985835,-52.767273)">
     <rect
-       style="vector-effect:none;fill:url(#linearGradient1000);fill-opacity:1;stroke:none;stroke-width:0.65289152"
+       style="vector-effect:none;fill:url(#linearGradient1000);fill-opacity:1;stroke:none;stroke-width:0.58288383"
        id="rect30"
        width="922.63885"
-       height="424.10974"
+       height="338.03381"
        x="-65.136566"
-       y="-6.2037053" />
+       y="79.872208" />
   </g>
   <g
      inkscape:label="Layer 1"
@@ -277,7 +284,8 @@
        id="background"
        inkscape:label="#g5546"
        inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       inkscape:export-ydpi="96"
+       transform="translate(0,-3.1750001)">
       <path
          sodipodi:nodetypes="cccccccccccccccccccccccccccc"
          inkscape:connector-curvature="0"
@@ -398,7 +406,7 @@
        inkscape:export-xdpi="96"
        inkscape:label="#g5546"
        id="g5585"
-       transform="matrix(-1,0,0,1,783.43808,0)">
+       transform="matrix(-1,0,0,1,783.43808,-3.1750001)">
       <path
          style="fill:#4c99b0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.06735209px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 192.46714,260.72239 -0.14771,-1.13113 2.58429,-0.1906 -1.76021,-1.72334 0.8827,-0.0582 -1.48486,-1.59748 1.09331,0.009 -1.06472,-1.27483 0.55782,-0.0647 -1.30446,-1.08367 0.69918,-0.008 -1.19058,-1.34944 0.54231,-0.0463 -1.02833,-1.44864 -0.60151,1.55354 0.47164,-0.0744 -0.79806,1.45081 0.74569,-0.0636 -0.95242,1.24206 0.5946,-0.0337 -0.94046,1.58246 1.00817,-0.18843 -1.27756,1.83312 0.84304,-0.12312 -1.14593,1.97554 2.6662,-0.16183 0.0657,1.06985 z"
