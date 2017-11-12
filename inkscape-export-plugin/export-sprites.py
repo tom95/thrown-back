@@ -21,7 +21,7 @@ class ExportSprites(inkex.Effect):
       #box = computeBBox([node])
       #inkex.errormsg('%s %s %s %s = %s %s %s %s' % (self.val(box[0]), self.val(box[1]), self.val(box[2]), self.val(box[3]), box[0], box[1], box[2], box[3]))
       #inkex.errormsg(id + ' -> ' + all_boxes[id])
-      cmd = 'inkscape --export-id %s -a %s --export-id-only -e \"%s\" \"%s\"' % (id, all_boxes[id], filename, self.args[-1])
+      cmd = 'inkscape --export-id %s --export-id-only -e \"%s\" \"%s\"' % (id, filename, self.args[-1])
       p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
       p.wait()
 
@@ -50,8 +50,7 @@ class ExportSprites(inkex.Effect):
     try:
       export_file = svg.attrib[att]
     except KeyError:
-      inkex.errormsg("You need to have previously exported the document. " +
-          "Otherwise no export hints exist!")
+      inkex.errormsg("You need to export the `drawing` area once before inkscape sets export hints!")
       sys.exit(-1)
     dirname, filename = os.path.split(export_file)
     return dirname
