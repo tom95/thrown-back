@@ -19,6 +19,7 @@ sun_angle_max = 100.0
 sun_curve = 0.05
 sun_energy = 16.0
 texture_size = 2
+_sections_unfolded = [ "Ground", "Sky", "Sun", "Texture" ]
 
 [resource]
 
@@ -98,4 +99,5 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
+_sections_unfolded = [ "Background" ]
 

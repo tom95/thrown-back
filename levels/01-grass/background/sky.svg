@@ -155,7 +155,7 @@
        x2="349.46344"
        y2="446.96414"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1,0,0,0.74713462,0,84.507208)" />
+       gradientTransform="matrix(0.01209188,0,0,0.74713462,-64.348943,84.507208)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient839"
@@ -174,9 +174,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24343548"
-     inkscape:cx="1696.7649"
-     inkscape:cy="378.26107"
+     inkscape:zoom="0.34426976"
+     inkscape:cx="894.5537"
+     inkscape:cy="380.54779"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      inkscape:document-rotation="0"
@@ -205,12 +205,14 @@
      inkscape:label="Layer 2"
      transform="translate(29.985835,-52.767273)">
     <rect
-       style="vector-effect:none;fill:url(#linearGradient1000);fill-opacity:1;stroke:none;stroke-width:0.58288383"
+       style="vector-effect:none;fill:url(#linearGradient1000);fill-opacity:1;stroke:none;stroke-width:0.0640957"
        id="rect30"
-       width="922.63885"
+       width="11.156435"
        height="338.03381"
        x="-65.136566"
-       y="79.872208" />
+       y="79.872208"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
   <g
      inkscape:label="Layer 1"
