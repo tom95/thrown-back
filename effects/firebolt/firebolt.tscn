@@ -151,8 +151,8 @@ bounce = 1.0
 gravity_scale = 1.0
 custom_integrator = false
 continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
+contacts_reported = 10
+contact_monitor = true
 sleeping = false
 can_sleep = true
 linear_velocity = Vector2( 0, 0 )
@@ -172,6 +172,7 @@ _sections_unfolded = [ "Pause" ]
 [node name="collision" type="CollisionShape2D" parent="."]
 
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="fire" type="Particles2D" parent="."]
 
@@ -219,6 +220,8 @@ normal_map = null
 h_frames = 1
 v_frames = 1
 _sections_unfolded = [ "Drawing", "Material", "Process Material", "Textures", "Time" ]
+
+[connection signal="body_entered" from="." to="." method="_on_firebolt_body_entered"]
 
 [connection signal="timeout" from="timer" to="." method="_on_Timer_timeout"]
 

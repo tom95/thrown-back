@@ -19,3 +19,8 @@ func _on_Timer_timeout():
 		var timer = get_node("timer")
 		timer.start()
 		timer.wait_time = 1
+
+func _on_firebolt_body_entered( body ):
+	if (body.has_method("hit_by_firebolt")):
+		body.call("hit_by_firebolt")
+		queue_free()

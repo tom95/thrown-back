@@ -13,8 +13,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="hud" parent="." instance=ExtResource( 2 )]
 
-editor/display_folded = true
-
 [node name="level_grass" parent="." instance=ExtResource( 3 )]
 
 editor/display_folded = true
@@ -30,4 +28,3 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 211.593, 302.477 )
 
 
-[editable path="hud"]
