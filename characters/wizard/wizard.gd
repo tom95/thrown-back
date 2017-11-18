@@ -7,14 +7,17 @@ const PROJECTILE_SPEED = 700
 const MAX_JETPACK_FUEL = 100
 const WEAPON_COOLDOWN =  200
 const BOUNCING_BASELINE = 500
+const MAX_HEALTH = 1000
 
 var velocity = Vector2()
 var jetpack_fuel = 100
 var direction = 1
 var weapon_cooldown = 0
+var health = 1000
 
 onready var jetpack_exhaust = get_node("jetpack_exhaust")
 onready var projectile_spawn = get_node("base/projectile_spawn")
+onready var wizard_sprite = get_node("base")
 
 func _ready():
 	set_physics_process(true)
@@ -22,7 +25,6 @@ func _ready():
 func _physics_process(delta):
 	var old_velocity = velocity
 	velocity += delta * GRAVITY
-	
 	velocity = move_and_slide(velocity, Vector2(0, -1), 25.0)
 	
 	if is_on_floor():
@@ -40,10 +42,8 @@ func _physics_process(delta):
 		else:
 			velocity.y -= JETPACK_SPEED * 20 if is_on_floor() else JETPACK_SPEED
 		
-		var drag_magnitude = velocity.length()
-		var drag = -velocity.normalized() * (0.001 * drag_magnitude + 0.004 * drag_magnitude * drag_magnitude)
-		drag.y = max(0, drag.y)
-		velocity += drag * delta
+		apply_drag(delta)
+		
 		jetpack_exhaust.emitting = true
 	else:
 		jetpack_exhaust.emitting = false
@@ -59,14 +59,30 @@ func _physics_process(delta):
 		direction = -1
 	elif Input.is_action_pressed("move_right"):
 		direction = 1
+	wizard_sprite.scale.x = direction
+		
 	if Input.is_action_pressed("fire") and weapon_cooldown <= 0:
-		weapon_cooldown = WEAPON_COOLDOWN
-		var projectile = preload("res://effects/firebolt/firebolt.tscn").instance()
-		projectile.add_collision_exception_with(self)
-		projectile.linear_velocity = Vector2(PROJECTILE_SPEED * direction, 0)
-		projectile.position = projectile_spawn.global_position
-		get_parent().add_child(projectile)
+		shoot()
+		
 	
+func take_damage(damage):
+	health = health - damage
+	print(health)
+
+func apply_drag(delta):
+	var drag_magnitude = velocity.length()
+	var drag = -velocity.normalized() * (0.001 * drag_magnitude + 0.004 * drag_magnitude * drag_magnitude)
+	drag.y = max(0, drag.y)
+	velocity += drag * delta
+
+func shoot():
+	weapon_cooldown = WEAPON_COOLDOWN
+	var projectile = preload("res://effects/firebolt/firebolt.tscn").instance()
+	projectile.add_collision_exception_with(self)
+	projectile.linear_velocity = Vector2(PROJECTILE_SPEED * direction, 0)
+	projectile.position = projectile_spawn.global_position
+	get_parent().add_child(projectile)
+
 func can_use_jetpack():
 	return jetpack_fuel > 0
 

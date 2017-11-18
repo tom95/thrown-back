@@ -12,17 +12,17 @@
 [ext_resource path="res://levels/01-grass/tiles/grass.png" type="Texture" id=10]
 [ext_resource path="res://levels/01-grass/tiles/fence.png" type="Texture" id=11]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 35, 35 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=6]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 35, 15 )
@@ -38,7 +38,7 @@ extents = Vector2( 35, 15 )
 0/navigation_offset = Vector2( 35, 35 )
 0/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 1/name = "corner01"
@@ -50,7 +50,7 @@ extents = Vector2( 35, 15 )
 1/navigation_offset = Vector2( 35, 35 )
 1/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 2/name = "corner_lower02"
@@ -62,7 +62,7 @@ extents = Vector2( 35, 15 )
 2/navigation_offset = Vector2( 35, 35 )
 2/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 3/name = "top01"
@@ -74,7 +74,7 @@ extents = Vector2( 35, 15 )
 3/navigation_offset = Vector2( 35, 35 )
 3/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 4/name = "edge02"
@@ -86,7 +86,7 @@ extents = Vector2( 35, 15 )
 4/navigation_offset = Vector2( 35, 35 )
 4/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 5/name = "edge01"
@@ -98,7 +98,7 @@ extents = Vector2( 35, 15 )
 5/navigation_offset = Vector2( 35, 35 )
 5/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 6/name = "top02"
@@ -110,7 +110,7 @@ extents = Vector2( 35, 15 )
 6/navigation_offset = Vector2( 35, 35 )
 6/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 7/name = "rock"
@@ -122,7 +122,7 @@ extents = Vector2( 35, 15 )
 7/navigation_offset = Vector2( 35, 35 )
 7/shapes = [ {
 "one_way": false,
-"shape": SubResource( 3 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 55 )
 } ]
 8/name = "grass"
@@ -142,7 +142,7 @@ extents = Vector2( 35, 15 )
 9/navigation_offset = Vector2( 35, 35 )
 9/shapes = [ {
 "one_way": false,
-"shape": SubResource( 1 ),
+"shape": SubResource( 7 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 55 )
 } ]
 10/name = "mid_stones"
@@ -154,7 +154,7 @@ extents = Vector2( 35, 15 )
 10/navigation_offset = Vector2( 35, 35 )
 10/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 

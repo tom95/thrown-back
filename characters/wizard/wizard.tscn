@@ -18,10 +18,11 @@
 [ext_resource path="res://characters/wizard/hand_right.png" type="Texture" id=16]
 [ext_resource path="res://characters/wizard/hat.png" type="Texture" id=17]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=5]
 
 custom_solver_bias = 0.0
-radius = 35.0
+radius = 10.0
+height = 20.0
 
 [sub_resource type="Gradient" id=2]
 
@@ -82,7 +83,10 @@ script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-shape = SubResource( 1 )
+position = Vector2( -0.664386, -11.1985 )
+scale = Vector2( 2.60544, 2.39939 )
+shape = SubResource( 5 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -153,6 +157,7 @@ offset = Vector2( -2.78266, 7.65713 )
 
 [node name="body" type="Sprite" parent="base"]
 
+editor/display_folded = true
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
@@ -197,6 +202,7 @@ offset = Vector2( 9.22118, -1.4218 )
 
 [node name="arm_left" type="Sprite" parent="base"]
 
+editor/display_folded = true
 position = Vector2( -26.2058, -0.343494 )
 texture = ExtResource( 13 )
 offset = Vector2( -4.66704, 5.20427 )
