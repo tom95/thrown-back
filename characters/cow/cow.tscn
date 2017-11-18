@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://characters/cow/cow.svg" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 39.0488
+
+[node name="cow" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+position = Vector2( 2.89873, -39.001 )
+shape = SubResource( 1 )
+
+[node name="cow" type="Sprite" parent="."]
+
+position = Vector2( -6.7412, -38.1854 )
+texture = ExtResource( 1 )
+
+

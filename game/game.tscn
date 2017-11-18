@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://game/game.gd" type="Script" id=1]
 [ext_resource path="res://game/hud.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/01-grass/01-grass.tscn" type="PackedScene" id=3]
-[ext_resource path="res://characters/wizard/wizard.tscn" type="PackedScene" id=4]
-[ext_resource path="res://characters/bear/bear.tscn" type="PackedScene" id=5]
-[ext_resource path="res://characters/beholder/beholder.tscn" type="PackedScene" id=6]
-[ext_resource path="res://characters/goblin/goblin.tscn" type="PackedScene" id=7]
-[ext_resource path="res://props/stone.tscn" type="PackedScene" id=8]
+[ext_resource path="res://characters/cow/cow.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/wizard/wizard.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/bear/bear.tscn" type="PackedScene" id=6]
+[ext_resource path="res://characters/beholder/beholder.tscn" type="PackedScene" id=7]
+[ext_resource path="res://characters/goblin/goblin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://props/stone.tscn" type="PackedScene" id=9]
 
 [node name="game" type="Node2D"]
 
@@ -20,27 +21,30 @@ editor/display_folded = true
 
 [node name="level_grass" parent="." instance=ExtResource( 3 )]
 
-editor/display_folded = true
 position = Vector2( 703.748, 404.544 )
 
-[node name="wizard" parent="." instance=ExtResource( 4 )]
+[node name="cow" parent="level_grass" instance=ExtResource( 4 )]
+
+position = Vector2( -382.547, 50.0361 )
+
+[node name="wizard" parent="." instance=ExtResource( 5 )]
 
 position = Vector2( -365.586, 320.712 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="bear" parent="." instance=ExtResource( 5 )]
+[node name="bear" parent="." instance=ExtResource( 6 )]
 
 position = Vector2( 2220.6, -377.261 )
 
-[node name="beholder" parent="." instance=ExtResource( 6 )]
+[node name="beholder" parent="." instance=ExtResource( 7 )]
 
-position = Vector2( 537.282, 312.17 )
+position = Vector2( 660.022, 308.56 )
 
-[node name="goblin" parent="." instance=ExtResource( 7 )]
+[node name="goblin" parent="." instance=ExtResource( 8 )]
 
 position = Vector2( 2604.36, -572.202 )
 
-[node name="stone" parent="." instance=ExtResource( 8 )]
+[node name="stone" parent="." instance=ExtResource( 9 )]
 
 position = Vector2( -41.1441, 453.979 )
 
