@@ -19,7 +19,6 @@ sun_angle_max = 100.0
 sun_curve = 0.05
 sun_energy = 16.0
 texture_size = 2
-_sections_unfolded = [ "Ground", "Sky", "Sun", "Texture" ]
 
 [resource]
 

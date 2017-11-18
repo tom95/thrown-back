@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://props/fence.gd" type="Script" id=1]
+[ext_resource path="res://props/fence.svg" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 9.64224 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Area2D" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fence" type="Sprite" parent="."]
+
+position = Vector2( 0, -35 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+position = Vector2( 1.64596, -15.6925 )
+scale = Vector2( 3.32624, 1.9785 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+position = Vector2( 1.5, -16 )
+scale = Vector2( 1.04688, 0.5 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+
+position = Vector2( 0.239407, -0.280113 )
+scale = Vector2( 3.16961, 3.21268 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_fence_body_entered"]
+
+
