@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://levels/01-grass/background/sky.png" type="Texture" id=1]
-[ext_resource path="res://levels/01-grass/background/background.png" type="Texture" id=2]
-[ext_resource path="res://levels/01-grass/background/midground.png" type="Texture" id=3]
-[ext_resource path="res://levels/01-grass/background/foreground.png" type="Texture" id=4]
+[ext_resource path="res://levels/01-grass/background/sky_background.png" type="Texture" id=1]
+[ext_resource path="res://levels/01-grass/background/sky.png" type="Texture" id=2]
+[ext_resource path="res://levels/01-grass/background/background.png" type="Texture" id=3]
+[ext_resource path="res://levels/01-grass/background/midground.png" type="Texture" id=4]
+[ext_resource path="res://levels/01-grass/background/foreground.png" type="Texture" id=5]
 
 [node name="01-grass-background" type="ParallaxBackground"]
 
@@ -18,6 +19,21 @@ scroll_limit_begin = Vector2( 0, 0 )
 scroll_limit_end = Vector2( 0, 0 )
 scroll_ignore_camera_zoom = true
 
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2800, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="sky_background" type="Sprite" parent="ParallaxLayer5"]
+
+position = Vector2( 1399.77, 335.766 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 2800, 1450 )
+_sections_unfolded = [ "Offset", "Region" ]
+
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
 
 position = Vector2( 0, 60 )
@@ -28,8 +44,8 @@ _sections_unfolded = [ "Motion", "Transform" ]
 
 [node name="sky" type="Sprite" parent="ParallaxLayer4"]
 
-position = Vector2( 843.128, 130.281 )
-texture = ExtResource( 1 )
+position = Vector2( 843.128, 150.281 )
+texture = ExtResource( 2 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
 
@@ -41,8 +57,8 @@ _sections_unfolded = [ "Motion", "Transform" ]
 
 [node name="background" type="Sprite" parent="ParallaxLayer3"]
 
-position = Vector2( 1288.55, 304.419 )
-texture = ExtResource( 2 )
+position = Vector2( 1288.55, 308.419 )
+texture = ExtResource( 3 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 
@@ -54,8 +70,8 @@ _sections_unfolded = [ "Motion", "Transform" ]
 
 [node name="midground" type="Sprite" parent="ParallaxLayer2"]
 
-position = Vector2( 1256.33, 181.449 )
-texture = ExtResource( 3 )
+position = Vector2( 1256.33, 192.449 )
+texture = ExtResource( 4 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 
@@ -69,6 +85,6 @@ _sections_unfolded = [ "Motion", "Transform" ]
 [node name="foreground" type="Sprite" parent="ParallaxLayer"]
 
 position = Vector2( 255.5, 23.2825 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 

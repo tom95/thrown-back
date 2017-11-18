@@ -1,31 +1,43 @@
-[gd_resource type="TileSet" load_steps=15 format=2]
+[gd_resource type="TileSet" load_steps=23 format=2]
 
 [ext_resource path="res://levels/01-grass/tiles/mid.png" type="Texture" id=1]
 [ext_resource path="res://levels/01-grass/tiles/corner01.png" type="Texture" id=2]
 [ext_resource path="res://levels/01-grass/tiles/mid_stones.png" type="Texture" id=3]
-[ext_resource path="res://levels/01-grass/tiles/corner_lower02.png" type="Texture" id=4]
-[ext_resource path="res://levels/01-grass/tiles/top01.png" type="Texture" id=5]
-[ext_resource path="res://levels/01-grass/tiles/edge02.png" type="Texture" id=6]
-[ext_resource path="res://levels/01-grass/tiles/edge01.png" type="Texture" id=7]
-[ext_resource path="res://levels/01-grass/tiles/top02.png" type="Texture" id=8]
-[ext_resource path="res://levels/01-grass/tiles/rock.png" type="Texture" id=9]
-[ext_resource path="res://levels/01-grass/tiles/grass.png" type="Texture" id=10]
-[ext_resource path="res://levels/01-grass/tiles/fence.png" type="Texture" id=11]
+[ext_resource path="res://levels/01-grass/tiles/platform_corner_lower.png" type="Texture" id=4]
+[ext_resource path="res://levels/01-grass/tiles/platform_mid01.png" type="Texture" id=5]
+[ext_resource path="res://levels/01-grass/tiles/platform_mid02.png" type="Texture" id=6]
+[ext_resource path="res://levels/01-grass/tiles/platform_mid03.png" type="Texture" id=7]
+[ext_resource path="res://levels/01-grass/tiles/platform_bottom.png" type="Texture" id=8]
+[ext_resource path="res://levels/01-grass/tiles/platform_corner.png" type="Texture" id=9]
+[ext_resource path="res://levels/01-grass/tiles/haystack.png" type="Texture" id=10]
+[ext_resource path="res://levels/01-grass/tiles/corner_lower02.png" type="Texture" id=11]
+[ext_resource path="res://levels/01-grass/tiles/top01.png" type="Texture" id=12]
+[ext_resource path="res://levels/01-grass/tiles/edge02.png" type="Texture" id=13]
+[ext_resource path="res://levels/01-grass/tiles/edge01.png" type="Texture" id=14]
+[ext_resource path="res://levels/01-grass/tiles/top02.png" type="Texture" id=15]
+[ext_resource path="res://levels/01-grass/tiles/rock.png" type="Texture" id=16]
+[ext_resource path="res://levels/01-grass/tiles/grass.png" type="Texture" id=17]
+[ext_resource path="res://levels/01-grass/tiles/fence.png" type="Texture" id=18]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 35, 35 )
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
-
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 35, 15 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -32.3245, 35.0267, -11.6553, -5.04943, 12.485, -5.36499, 33.7853, 34.8689 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 
 [resource]
 
@@ -38,7 +50,7 @@ extents = Vector2( 35, 15 )
 0/navigation_offset = Vector2( 35, 35 )
 0/shapes = [ {
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 1/name = "corner01"
@@ -50,11 +62,11 @@ extents = Vector2( 35, 15 )
 1/navigation_offset = Vector2( 35, 35 )
 1/shapes = [ {
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 2/name = "corner_lower02"
-2/texture = ExtResource( 4 )
+2/texture = ExtResource( 11 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 70, 70 )
@@ -62,11 +74,11 @@ extents = Vector2( 35, 15 )
 2/navigation_offset = Vector2( 35, 35 )
 2/shapes = [ {
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 3/name = "top01"
-3/texture = ExtResource( 5 )
+3/texture = ExtResource( 12 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 70, 70 )
@@ -74,11 +86,11 @@ extents = Vector2( 35, 15 )
 3/navigation_offset = Vector2( 35, 35 )
 3/shapes = [ {
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 4/name = "edge02"
-4/texture = ExtResource( 6 )
+4/texture = ExtResource( 13 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 70, 70 )
@@ -86,11 +98,11 @@ extents = Vector2( 35, 15 )
 4/navigation_offset = Vector2( 35, 35 )
 4/shapes = [ {
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 5/name = "edge01"
-5/texture = ExtResource( 7 )
+5/texture = ExtResource( 14 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 70, 70 )
@@ -98,11 +110,11 @@ extents = Vector2( 35, 15 )
 5/navigation_offset = Vector2( 35, 35 )
 5/shapes = [ {
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 6/name = "top02"
-6/texture = ExtResource( 8 )
+6/texture = ExtResource( 15 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 70, 70 )
@@ -110,11 +122,11 @@ extents = Vector2( 35, 15 )
 6/navigation_offset = Vector2( 35, 35 )
 6/shapes = [ {
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 7/name = "rock"
-7/texture = ExtResource( 9 )
+7/texture = ExtResource( 16 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 70, 70 )
@@ -122,11 +134,11 @@ extents = Vector2( 35, 15 )
 7/navigation_offset = Vector2( 35, 35 )
 7/shapes = [ {
 "one_way": false,
-"shape": SubResource( 6 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 55 )
 } ]
 8/name = "grass"
-8/texture = ExtResource( 10 )
+8/texture = ExtResource( 17 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 70, 70 )
@@ -134,7 +146,7 @@ extents = Vector2( 35, 15 )
 8/navigation_offset = Vector2( 35, 35 )
 8/shapes = [  ]
 9/name = "fence"
-9/texture = ExtResource( 11 )
+9/texture = ExtResource( 18 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 70, 70 )
@@ -142,7 +154,7 @@ extents = Vector2( 35, 15 )
 9/navigation_offset = Vector2( 35, 35 )
 9/shapes = [ {
 "one_way": false,
-"shape": SubResource( 7 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 55 )
 } ]
 10/name = "mid_stones"
@@ -154,7 +166,103 @@ extents = Vector2( 35, 15 )
 10/navigation_offset = Vector2( 35, 35 )
 10/shapes = [ {
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
+} ]
+11/name = "platform_corner_lower2"
+11/texture = ExtResource( 4 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 70, 70 )
+11/occluder_offset = Vector2( 35, 35 )
+11/navigation_offset = Vector2( 35, 35 )
+11/shapes = [ {
+"one_way": false,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 35, 15 )
+} ]
+12/name = "platform_mid01"
+12/texture = ExtResource( 5 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 70, 70 )
+12/occluder_offset = Vector2( 35, 35 )
+12/navigation_offset = Vector2( 35, 35 )
+12/shapes = [ {
+"one_way": false,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 35, 15 )
+} ]
+13/name = "platform_mid02"
+13/texture = ExtResource( 6 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 70, 70 )
+13/occluder_offset = Vector2( 35, 35 )
+13/navigation_offset = Vector2( 35, 35 )
+13/shapes = [ {
+"one_way": false,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 35, 15 )
+} ]
+14/name = "platform_mid03"
+14/texture = ExtResource( 7 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 70, 70 )
+14/occluder_offset = Vector2( 35, 35 )
+14/navigation_offset = Vector2( 35, 35 )
+14/shapes = [ {
+"one_way": false,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 35, 15 )
+} ]
+15/name = "platform_bottom"
+15/texture = ExtResource( 8 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 70, 70 )
+15/occluder_offset = Vector2( 35, 35 )
+15/navigation_offset = Vector2( 35, 35 )
+15/shapes = [ {
+"one_way": false,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 35, 15 )
+} ]
+16/name = "platform_corner"
+16/texture = ExtResource( 9 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 70, 70 )
+16/occluder_offset = Vector2( 35, 35 )
+16/navigation_offset = Vector2( 35, 35 )
+16/shapes = [ {
+"one_way": false,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 35, 15 )
+} ]
+17/name = "platform_corner_lower"
+17/texture = ExtResource( 4 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 0, 70, 70 )
+17/occluder_offset = Vector2( 35, 35 )
+17/navigation_offset = Vector2( 35, 35 )
+17/shapes = [ {
+"one_way": false,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 35, 15 )
+} ]
+18/name = "haystack"
+18/texture = ExtResource( 10 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 0, 0, 70, 70 )
+18/occluder_offset = Vector2( 35, 35 )
+18/navigation_offset = Vector2( 35, 35 )
+18/shapes = [ {
+"one_way": false,
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 

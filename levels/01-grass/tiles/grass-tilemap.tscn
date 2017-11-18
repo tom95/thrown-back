@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://levels/01-grass/tiles/mid.png" type="Texture" id=1]
 [ext_resource path="res://levels/01-grass/tiles/corner01.png" type="Texture" id=2]
@@ -10,31 +10,26 @@
 [ext_resource path="res://levels/01-grass/tiles/rock.png" type="Texture" id=8]
 [ext_resource path="res://levels/01-grass/tiles/grass.png" type="Texture" id=9]
 [ext_resource path="res://levels/01-grass/tiles/fence.png" type="Texture" id=10]
-[ext_resource path="res://levels/01-grass/tiles/fence.gd" type="Script" id=11]
-[ext_resource path="res://levels/01-grass/tiles/mid_stones.png" type="Texture" id=12]
+[ext_resource path="res://levels/01-grass/tiles/mid_stones.png" type="Texture" id=11]
+[ext_resource path="res://levels/01-grass/tiles/platform_mid01.png" type="Texture" id=12]
+[ext_resource path="res://levels/01-grass/tiles/platform_mid02.png" type="Texture" id=13]
+[ext_resource path="res://levels/01-grass/tiles/platform_mid03.png" type="Texture" id=14]
+[ext_resource path="res://levels/01-grass/tiles/platform_bottom.png" type="Texture" id=15]
+[ext_resource path="res://levels/01-grass/tiles/platform_corner.png" type="Texture" id=16]
+[ext_resource path="res://levels/01-grass/tiles/platform_corner_lower.png" type="Texture" id=17]
+[ext_resource path="res://levels/01-grass/tiles/haystack.png" type="Texture" id=18]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 35, 35 )
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
+[sub_resource type="ConvexPolygonShape2D" id=2]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 
-[sub_resource type="GDScript" id=4]
-
-script/source = "extends StaticBody2D
-
-const DAMAGE = 200
-
-func _ready():
-	pass
-	
-func _on_coin_body_enter( body ):"
-
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 35, 15 )
@@ -60,7 +55,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mid/StaticBody2D2"]
 
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="corner01" type="Sprite" parent="."]
 
@@ -80,10 +75,11 @@ _sections_unfolded = [ "Pickable", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="corner01/StaticBody2D3"]
 
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="corner_lower02" type="Sprite" parent="."]
 
+editor/display_folded = true
 position = Vector2( 70, 0 )
 texture = ExtResource( 3 )
 
@@ -100,10 +96,11 @@ _sections_unfolded = [ "Pickable", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="corner_lower02/StaticBody2D4"]
 
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="top01" type="Sprite" parent="."]
 
+editor/display_folded = true
 position = Vector2( 70, 70 )
 texture = ExtResource( 4 )
 
@@ -120,7 +117,7 @@ _sections_unfolded = [ "Pickable", "Transform" ]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="top01/StaticBody2D5"]
 
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="edge02" type="Sprite" parent="."]
@@ -142,7 +139,7 @@ _sections_unfolded = [ "Pickable", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="edge02/StaticBody2D6"]
 
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="edge01" type="Sprite" parent="."]
 
@@ -163,7 +160,7 @@ _sections_unfolded = [ "Pickable", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="edge01/StaticBody2D7"]
 
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="top02" type="Sprite" parent="."]
 
@@ -184,10 +181,11 @@ _sections_unfolded = [ "Pickable", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="top02/StaticBody2D8"]
 
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="rock" type="Sprite" parent="."]
 
+editor/display_folded = true
 position = Vector2( 0, -70 )
 texture = ExtResource( 8 )
 
@@ -205,7 +203,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rock/StaticBody2D2"]
 
 position = Vector2( 0, 20 )
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="grass" type="Sprite" parent="."]
 
@@ -214,9 +212,9 @@ texture = ExtResource( 9 )
 
 [node name="fence" type="Sprite" parent="."]
 
+editor/display_folded = true
 position = Vector2( 140, -140 )
 texture = ExtResource( 10 )
-script = ExtResource( 11 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="fence"]
 
@@ -227,31 +225,17 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = SubResource( 4 )
-_sections_unfolded = [ "Pickable" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fence/StaticBody2D"]
 
 position = Vector2( 0, 20 )
-shape = SubResource( 7 )
-
-[node name="Area2D" type="Area2D" parent="fence"]
-
-position = Vector2( 0.0169733, 7.54232 )
-scale = Vector2( 1.09459, 0.855308 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-_sections_unfolded = [ "Collision" ]
+shape = SubResource( 3 )
 
 [node name="mid_stones" type="Sprite" parent="."]
 
+editor/display_folded = true
 position = Vector2( -70, 70 )
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="mid_stones"]
 
@@ -266,8 +250,165 @@ _sections_unfolded = [ "Pickable", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mid_stones/StaticBody2D9"]
 
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
-[connection signal="body_entered" from="fence/Area2D" to="fence" method="_on_fence_body_entered"]
+[node name="platform_mid01" type="Sprite" parent="."]
+
+position = Vector2( 490, -70 )
+texture = ExtResource( 12 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="platform_mid01"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_mid01/StaticBody2D3"]
+
+position = Vector2( 0, -20 )
+shape = SubResource( 3 )
+
+[node name="platform_mid02" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 560, -70 )
+texture = ExtResource( 13 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="platform_mid02"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_mid02/StaticBody2D4"]
+
+position = Vector2( 0, -20 )
+shape = SubResource( 3 )
+
+[node name="platform_mid03" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 630, -70 )
+texture = ExtResource( 14 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="platform_mid03"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_mid03/StaticBody2D5"]
+
+position = Vector2( 0, -20 )
+shape = SubResource( 3 )
+
+[node name="platform_bottom" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 210, -70 )
+texture = ExtResource( 15 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 70, 70 )
+region_filter_clip = true
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="platform_bottom"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_bottom/StaticBody2D6"]
+
+position = Vector2( 0, -20 )
+shape = SubResource( 3 )
+
+[node name="platform_corner" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 280, -70 )
+texture = ExtResource( 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="platform_corner"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_corner/StaticBody2D7"]
+
+position = Vector2( 0, -20 )
+shape = SubResource( 3 )
+
+[node name="platform_corner_lower" type="Sprite" parent="."]
+
+position = Vector2( 350, -70 )
+texture = ExtResource( 17 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 70, 70 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="platform_corner_lower"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_corner_lower/StaticBody2D8"]
+
+position = Vector2( 0, -20 )
+shape = SubResource( 3 )
+
+[node name="haystack" type="Sprite" parent="."]
+
+position = Vector2( -70, 0 )
+texture = ExtResource( 18 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="haystack"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="haystack/StaticBody2D9"]
+
+build_mode = 0
+polygon = PoolVector2Array( -32.3245, 35.0267, -11.6553, -5.04943, 12.485, -5.36499, 33.7853, 34.8689 )
 
 
