@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://game/game.gd" type="Script" id=1]
 [ext_resource path="res://game/hud.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://characters/bear/bear.tscn" type="PackedScene" id=5]
 [ext_resource path="res://characters/beholder/beholder.tscn" type="PackedScene" id=6]
 [ext_resource path="res://characters/goblin/goblin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://props/stone.tscn" type="PackedScene" id=8]
 
 [node name="game" type="Node2D"]
 
@@ -38,6 +39,10 @@ position = Vector2( 537.282, 312.17 )
 [node name="goblin" parent="." instance=ExtResource( 7 )]
 
 position = Vector2( 2604.36, -572.202 )
+
+[node name="stone" parent="." instance=ExtResource( 8 )]
+
+position = Vector2( -41.1441, 453.979 )
 
 
 [editable path="hud"]
