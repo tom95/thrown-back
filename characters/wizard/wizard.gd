@@ -67,7 +67,11 @@ func _physics_process(delta):
 	
 func take_damage(damage):
 	health = health - damage
-	print(health)
+	if (health <= 0):
+		game_over()
+		
+func game_over():
+	print("GAME OVER!")
 
 func apply_drag(delta):
 	var drag_magnitude = velocity.length()

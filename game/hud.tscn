@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://game/hud.gd" type="Script" id=1]
+
+[sub_resource type="Theme" id=1]
+
 
 [node name="hud" type="CanvasLayer"]
 
@@ -16,10 +19,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 822.0
-margin_top = 557.0
-margin_right = 1011.0
-margin_bottom = 589.0
+margin_left = 813.0
+margin_top = 558.0
+margin_right = 1013.0
+margin_bottom = 590.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -33,6 +36,32 @@ value = 0.0
 exp_edit = false
 rounded = false
 percent_visible = true
-_sections_unfolded = [ "Material", "Visibility" ]
+_sections_unfolded = [ "Margin", "Material", "Rect", "Visibility", "custom_styles" ]
+
+[node name="health_bar" type="ProgressBar" parent="."]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 9.0
+margin_top = 8.0
+margin_right = 209.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+theme = SubResource( 1 )
+min_value = 0.0
+max_value = 1000.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+percent_visible = false
+_sections_unfolded = [ "Hint", "Material", "Mouse", "Percent", "Rect", "Theme", "Visibility", "custom_colors", "custom_styles" ]
 
 
