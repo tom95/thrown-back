@@ -19,6 +19,29 @@ scroll_limit_begin = Vector2( 0, 0 )
 scroll_limit_end = Vector2( 0, 0 )
 scroll_ignore_camera_zoom = true
 
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
+
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 40, 40 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxLayer6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.627441, 0.799805, 0.854492, 1 )
+_sections_unfolded = [ "Grow Direction", "Rect" ]
+
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
 
 motion_scale = Vector2( 1, 1 )

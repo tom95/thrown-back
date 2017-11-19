@@ -16,8 +16,8 @@ light_mode = 1
 
 [sub_resource type="Gradient" id=3]
 
-offsets = PoolRealArray( 0, 0.207012, 0.464107, 0.777963, 0.989983 )
-colors = PoolColorArray( 1, 0.632812, 0, 0, 1, 0.486219, 0.111299, 1, 0.0859375, 0.00738525, 0.00738525, 1, 0, 0, 0, 1, 0, 0, 0, 0 )
+offsets = PoolRealArray( 0, 0.0940695, 0.280164, 1 )
+colors = PoolColorArray( 0.943359, 0.635532, 0.105022, 0, 1, 0.486219, 0.111299, 1, 0.246094, 0.0471039, 0.0471039, 1, 0.185547, 0.0369644, 0.0369644, 0 )
 
 [sub_resource type="GradientTexture" id=4]
 
@@ -52,7 +52,7 @@ damping = 0.0
 damping_random = 0.0
 angle = 0.0
 angle_random = 0.0
-scale = 1.0
+scale = 3.0
 scale_random = 0.3
 color_ramp = SubResource( 4 )
 hue_variation = 0.0
@@ -62,7 +62,7 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Animation", "Color", "Emission Shape", "Hue Variation", "Trail" ]
+_sections_unfolded = [ "Animation", "Color", "Emission Shape", "Hue Variation", "Scale", "Trail" ]
 
 [sub_resource type="CanvasItemMaterial" id=6]
 
@@ -126,7 +126,7 @@ damping = 25.0
 damping_random = 0.0
 angle = 0.0
 angle_random = 0.0
-scale = 2.0
+scale = 5.0
 scale_random = 0.0
 scale_curve = SubResource( 11 )
 color_ramp = SubResource( 9 )
@@ -141,6 +141,7 @@ _sections_unfolded = [ "Color", "Damping", "Initial Velocity", "Scale", "Spread"
 
 [node name="projectile" type="RigidBody2D"]
 
+position = Vector2( -0.794434, 0 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -195,13 +196,13 @@ texture = ExtResource( 2 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Drawing", "Material", "Pause", "Process Material", "Textures", "Time" ]
+_sections_unfolded = [ "Drawing", "Material", "Pause", "Process Material", "Textures", "Time", "Transform" ]
 
 [node name="smoke" type="Particles2D" parent="."]
 
 material = SubResource( 7 )
 position = Vector2( 0, -0.397217 )
-emitting = true
+emitting = false
 amount = 50
 lifetime = 1.0
 one_shot = false
