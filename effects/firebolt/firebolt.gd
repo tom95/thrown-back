@@ -12,15 +12,26 @@ func _on_Timer_timeout():
 	if dying:
 		queue_free()
 	else:
-		dying = true
-		get_node("smoke").emitting = false
-		get_node("fire").emitting = false
-		
-		var timer = get_node("timer")
-		timer.start()
-		timer.wait_time = 1
+		despawn()
 
-func _on_firebolt_body_entered( body ):
-	if (body.has_method("hit_by_firebolt")):
-		body.call("hit_by_firebolt")
-		queue_free()
+func despawn():
+	dying = true
+	$smoke.emitting = false
+	$fire.emitting = false
+	
+	$timer.wait_time = 1
+	$timer.start()
+	
+	mode = MODE_STATIC
+
+func _on_firebolt_body_entered(body):
+	if not body.has_method("hit_by_firebolt"):
+		return
+	
+	body.call("hit_by_firebolt")
+	despawn()
+	
+	var sparkles = preload("res://effects/hit_marker/hit_marker.tscn").instance()
+	sparkles.position = global_position
+	sparkles.rotation = (-linear_velocity).angle()
+	get_parent().add_child(sparkles)

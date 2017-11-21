@@ -18,7 +18,7 @@
 [ext_resource path="res://characters/wizard/hand_right.png" type="Texture" id=16]
 [ext_resource path="res://characters/wizard/hat.png" type="Texture" id=17]
 
-[sub_resource type="CapsuleShape2D" id=5]
+[sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 10.0
@@ -85,7 +85,7 @@ script = ExtResource( 1 )
 
 position = Vector2( -0.664386, -11.1985 )
 scale = Vector2( 2.60544, 2.39939 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Camera2D" type="Camera2D" parent="."]

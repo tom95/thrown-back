@@ -14,11 +14,14 @@ func _integrate_forces(state):
 		if (state.get_contact_local_normal(i).dot(Vector2(0, -1))):
 			var velocity_x = get_linear_velocity().x
 			set_linear_velocity(Vector2(velocity_x, -BOUNCING_BASELINE))
-		
+
 func hit_by_firebolt():
 	health = health - 250
 	if (health <= 0):
 		despawn()
-		
+
 func despawn():
+	var explosion = preload("res://effects/explosion/explosion.tscn").instance()
+	explosion.global_position = global_position
+	get_parent().add_child(explosion)
 	queue_free()
