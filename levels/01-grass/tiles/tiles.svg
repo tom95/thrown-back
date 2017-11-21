@@ -15,7 +15,7 @@
    viewBox="0 0 215.9 279.4"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.2 (unknown)"
+   inkscape:version="0.92+devel (unknown)"
    sodipodi:docname="tiles.svg"
    inkscape:export-filename="/home/tom/Code/godot/game-thing/levels/01-grass/tiles/tileset.png"
    inkscape:export-xdpi="90"
@@ -51,14 +51,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.0361747"
-     inkscape:cx="9.0626114"
-     inkscape:cy="642.2282"
+     inkscape:zoom="3.5611133"
+     inkscape:cx="608.97028"
+     inkscape:cy="518.4553"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="true"
-     inkscape:snap-global="false"
+     inkscape:snap-global="true"
      showguides="false"
      units="in"
      inkscape:snap-nodes="true"
@@ -1170,5 +1170,19 @@
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccccccccc" />
     </g>
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:#2ad4ff;stroke-width:0.13040861"
+       d="m 129.64583,150.95001 c 1.25219,-0.009 2.99861,-1.5875 4.63021,-1.5875 1.6316,0 2.99861,1.5875 4.63021,1.5875 1.6316,0 2.99861,-1.5875 4.63021,-1.5875 1.6316,0 3.44014,1.60337 4.63021,1.5875 v 16.40416 h -18.52084 z"
+       id="water"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czzzcccc"
+       inkscape:label="#rect490" />
+    <rect
+       style="font-variation-settings:normal;vector-effect:none;fill:#2ad4ff;stroke-width:0.13522673"
+       id="rect189"
+       width="18.520834"
+       height="18.520834"
+       x="148.16666"
+       y="148.83334" />
   </g>
 </svg>

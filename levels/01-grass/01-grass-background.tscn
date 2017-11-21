@@ -18,13 +18,14 @@ scroll_base_scale = Vector2( 1, 1 )
 scroll_limit_begin = Vector2( 0, 0 )
 scroll_limit_end = Vector2( 0, 0 )
 scroll_ignore_camera_zoom = true
+_sections_unfolded = [ "Scroll" ]
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
 
 motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 40, 40 )
-_sections_unfolded = [ "Motion" ]
+motion_mirroring = Vector2( 1024, 600 )
+_sections_unfolded = [ "Motion", "Transform" ]
 
 [node name="ColorRect" type="ColorRect" parent="ParallaxLayer6"]
 
