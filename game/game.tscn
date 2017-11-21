@@ -25,6 +25,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="bear" parent="." instance=ExtResource( 5 )]
 
-position = Vector2( 211.593, 302.477 )
+position = Vector2( -83.6851, 93.3217 )
 
 

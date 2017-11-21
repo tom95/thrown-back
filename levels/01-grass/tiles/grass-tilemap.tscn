@@ -19,7 +19,7 @@
 [ext_resource path="res://levels/01-grass/tiles/platform_corner_lower.png" type="Texture" id=17]
 [ext_resource path="res://levels/01-grass/tiles/haystack.png" type="Texture" id=18]
 
-[sub_resource type="GDScript" id=5]
+[sub_resource type="GDScript" id=4]
 
 script/source = ""
 
@@ -33,7 +33,7 @@ extents = Vector2( 35, 35 )
 custom_solver_bias = 0.0
 points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
@@ -45,7 +45,7 @@ extents = Vector2( 35, 15 )
 
 [node name="Node2D" type="Node2D"]
 
-script = SubResource( 5 )
+script = SubResource( 4 )
 
 [node name="mid" type="Sprite" parent="."]
 
@@ -154,6 +154,7 @@ shape = SubResource( 1 )
 
 [node name="edge01" type="Sprite" parent="."]
 
+editor/display_folded = true
 position = Vector2( 140, -70 )
 texture = ExtResource( 6 )
 
@@ -236,7 +237,7 @@ audio_bus_name = "Master"
 
 position = Vector2( 0.713623, 8.00002 )
 scale = Vector2( 2.90804, 2.4 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="s_fence" type="Sprite" parent="fence"]
 

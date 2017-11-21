@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends RigidBody2D
 
 const MAX_HEALTH = 1000
 var health = 1000
@@ -7,15 +7,13 @@ var velocity = Vector2()
 const GRAVITY = Vector2(0, 1000.0)
 
 func _ready():
-	set_physics_process(true)
-	
-func _physics_process(delta):
-	var old_velocity = velocity
-	velocity += delta * GRAVITY
-	velocity = move_and_slide(velocity, Vector2(0, -1), 25.0)
-	
-	if is_on_floor():
-		velocity.y = - BOUNCING_BASELINE
+	pass
+
+func _integrate_forces(state):
+	for i in range (state.get_contact_count()):
+		if (state.get_contact_local_normal(i).dot(Vector2(0, -1))):
+			var velocity_x = get_linear_velocity().x
+			set_linear_velocity(Vector2(velocity_x, -BOUNCING_BASELINE))
 		
 func hit_by_firebolt():
 	health = health - 250
