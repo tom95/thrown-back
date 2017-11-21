@@ -104,4 +104,6 @@ texture = ExtResource( 11 )
 position = Vector2( -0.613934, -3.74885 )
 texture = ExtResource( 12 )
 
+[connection signal="body_entered" from="." to="." method="_on_bear_body_entered"]
+
 

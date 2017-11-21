@@ -14,6 +14,7 @@ var jetpack_fuel = 100
 var direction = 1
 var weapon_cooldown = 0
 var health = 1000
+var cow_counter = 0
 
 onready var jetpack_exhaust = get_node("jetpack_exhaust")
 onready var projectile_spawn = get_node("base/projectile_spawn")
