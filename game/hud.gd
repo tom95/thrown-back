@@ -1,15 +1,19 @@
 extends CanvasLayer
 
-onready var fuel_meter = get_node("fuel_meter")
-onready var health_bar = get_node("health_bar")
 onready var player = get_node("../wizard")
 
 func _ready():
 	set_process(true)
+	
+	player.connect("update_cow_counter", self, "update_cow_counter")
 
 func _process(delta):
-	fuel_meter.value = player.jetpack_fuel
-	fuel_meter.max_value = player.MAX_JETPACK_FUEL
+	$fuel_meter.value = player.jetpack_fuel
+	$fuel_meter.max_value = player.MAX_JETPACK_FUEL
 	
-	health_bar.value = player.health
-	health_bar.max_value = player.MAX_HEALTH
+	$health_bar.value = player.health
+	$health_bar.max_value = player.MAX_HEALTH
+
+func update_cow_counter(num):
+	$cow_counter.visible = true
+	$cow_counter/counter.text = String(num)

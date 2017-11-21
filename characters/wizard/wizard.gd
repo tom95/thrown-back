@@ -20,6 +20,8 @@ onready var jetpack_exhaust = get_node("jetpack_exhaust")
 onready var projectile_spawn = get_node("base/projectile_spawn")
 onready var wizard_sprite = get_node("base")
 
+signal update_cow_counter(num)
+
 func _ready():
 	set_physics_process(true)
 	
@@ -96,3 +98,7 @@ func deplete_jetpack(delta):
 
 func charge_jetpack(delta):
 	jetpack_fuel = min(jetpack_fuel + delta * 75, MAX_JETPACK_FUEL)
+
+func increment_cow_counter():
+	cow_counter = cow_counter + 1
+	emit_signal("update_cow_counter", cow_counter)
