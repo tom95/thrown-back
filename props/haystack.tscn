@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://props/haystack.gd" type="Script" id=1]
+[ext_resource path="res://levels/01-grass/tiles/haystack.png" type="Texture" id=2]
+
+[node name="haystack" type="Area2D"]
+
+position = Vector2( 0, -35 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
+build_mode = 0
+polygon = PoolVector2Array( 38.9035, 35.598, 14.9541, -12.8997, -13.1866, -12.3009, -36.5373, 33.8018 )
+
+[node name="s_haystack" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="s_haystack"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="body_entered" from="." to="." method="_on_haystack_body_entered"]
+
+[connection signal="body_exited" from="." to="." method="_on_haystack_body_exited"]
+
+

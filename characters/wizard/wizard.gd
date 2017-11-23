@@ -15,6 +15,7 @@ var direction = 1
 var weapon_cooldown = 0
 var health = 1000
 var cow_counter = 0
+var is_in_haystack = false
 
 onready var jetpack_exhaust = get_node("jetpack_exhaust")
 onready var projectile_spawn = get_node("base/projectile_spawn")
@@ -31,7 +32,10 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2(0, -1), 25.0)
 	
 	if is_on_floor():
-		velocity.y = - max(min(old_velocity.y * 2, BOUNCING_BASELINE), old_velocity.y * 0.8)
+		if is_in_haystack:
+			velocity.y = - max(min(old_velocity.y * 2, BOUNCING_BASELINE / 4), old_velocity.y * 0.8)
+		else:
+			velocity.y = - max(min(old_velocity.y * 2, BOUNCING_BASELINE), old_velocity.y * 0.8)
 	
 	var using_jetpack = Input.is_action_pressed("move_left") or\
 		Input.is_action_pressed("move_right") or\

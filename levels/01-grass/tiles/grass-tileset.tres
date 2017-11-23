@@ -22,32 +22,32 @@
 [ext_resource path="res://levels/01-grass/tiles/rock.png" type="Texture" id=20]
 [ext_resource path="res://levels/01-grass/tiles/grass.png" type="Texture" id=21]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 35, 35 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 35, 15 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 35, 15 )
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=4]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( -32.3245, 35.0267, -11.6553, -5.04943, 12.485, -5.36499, 33.7853, 34.8689 )
 
-[sub_resource type="ShaderMaterial" id=7]
+[sub_resource type="ShaderMaterial" id=5]
 
 render_priority = 0
 shader = ExtResource( 13 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=6]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
@@ -63,7 +63,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 0/navigation_offset = Vector2( 35, 35 )
 0/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 1/name = "corner01"
@@ -75,7 +75,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 1/navigation_offset = Vector2( 35, 35 )
 1/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 2/name = "corner_lower02"
@@ -87,7 +87,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 2/navigation_offset = Vector2( 35, 35 )
 2/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 3/name = "top01"
@@ -99,7 +99,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 3/navigation_offset = Vector2( 35, 35 )
 3/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 4/name = "edge02"
@@ -111,7 +111,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 4/navigation_offset = Vector2( 35, 35 )
 4/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 5/name = "edge01"
@@ -123,7 +123,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 5/navigation_offset = Vector2( 35, 35 )
 5/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 6/name = "top02"
@@ -135,7 +135,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 6/navigation_offset = Vector2( 35, 35 )
 6/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 7/name = "rock"
@@ -147,7 +147,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 7/navigation_offset = Vector2( 35, 35 )
 7/shapes = [ {
 "one_way": false,
-"shape": SubResource( 3 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 55 )
 } ]
 8/name = "grass"
@@ -175,7 +175,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 10/navigation_offset = Vector2( 35, 35 )
 10/shapes = [ {
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 11/name = "platform_corner_lower2"
@@ -187,7 +187,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 11/navigation_offset = Vector2( 35, 35 )
 11/shapes = [ {
 "one_way": false,
-"shape": SubResource( 8 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 15 )
 } ]
 12/name = "platform_mid01"
@@ -199,7 +199,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 12/navigation_offset = Vector2( 35, 35 )
 12/shapes = [ {
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 15 )
 } ]
 13/name = "platform_mid02"
@@ -211,7 +211,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 13/navigation_offset = Vector2( 35, 35 )
 13/shapes = [ {
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 15 )
 } ]
 14/name = "platform_mid03"
@@ -223,7 +223,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 14/navigation_offset = Vector2( 35, 35 )
 14/shapes = [ {
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 15 )
 } ]
 15/name = "platform_bottom"
@@ -235,7 +235,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 15/navigation_offset = Vector2( 35, 35 )
 15/shapes = [ {
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 15 )
 } ]
 16/name = "platform_corner"
@@ -247,7 +247,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 16/navigation_offset = Vector2( 35, 35 )
 16/shapes = [ {
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 15 )
 } ]
 17/name = "platform_corner_lower"
@@ -259,7 +259,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 17/navigation_offset = Vector2( 35, 35 )
 17/shapes = [ {
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 15 )
 } ]
 18/name = "haystack"
@@ -271,7 +271,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 18/navigation_offset = Vector2( 35, 35 )
 18/shapes = [ {
 "one_way": false,
-"shape": SubResource( 9 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 35, 35 )
 } ]
 19/name = "s_fence"
@@ -285,7 +285,7 @@ points = PoolVector2Array( -25, 15, -15, -10, 20, -10, 30, 15 )
 20/name = "water"
 20/texture = ExtResource( 14 )
 20/tex_offset = Vector2( 0, 0 )
-20/material = SubResource( 7 )
+20/material = SubResource( 5 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 0, 0, 70, 70 )
 20/occluder_offset = Vector2( 35, 35 )
