@@ -1,7 +1,58 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://props/haystack.gd" type="Script" id=1]
 [ext_resource path="res://levels/01-grass/tiles/haystack.png" type="Texture" id=2]
+[ext_resource path="res://effects/particle_line.png" type="Texture" id=3]
+
+[sub_resource type="Gradient" id=2]
+
+offsets = PoolRealArray( 0, 0.991422 )
+colors = PoolColorArray( 1, 0.806, 0.0449219, 1, 1, 0.817505, 0.101562, 0 )
+
+[sub_resource type="GradientTexture" id=3]
+
+gradient = SubResource( 2 )
+width = 2048
+
+[sub_resource type="ParticlesMaterial" id=1]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 30.0
+flag_align_y = true
+flag_rotate_y = false
+flag_disable_z = true
+spread = 90.0
+flatness = 0.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 200.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 100.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 1.0
+scale_random = 0.0
+color_ramp = SubResource( 3 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Emission Shape", "Flags", "Spread" ]
 
 [node name="haystack" type="Area2D"]
 
@@ -36,6 +87,29 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Transform" ]
+
+[node name="particles" type="Particles2D" parent="."]
+
+rotation = -1.57079
+emitting = false
+amount = 200
+lifetime = 1.0
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 1.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = false
+draw_order = 0
+process_material = SubResource( 1 )
+texture = ExtResource( 3 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time" ]
 
 [connection signal="body_entered" from="." to="." method="_on_haystack_body_entered"]
 
