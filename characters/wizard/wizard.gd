@@ -45,9 +45,9 @@ func move_and_bounce(delta):
 		is_on_floor = collision.get_normal().dot(Vector2(0, -1)) >= cos(MAX_FLOOR_ANGLE)
 		if is_on_floor:
 			if is_in_haystack:
-				velocity.y = - max(min(old_velocity.y * 2, BOUNCING_BASELINE / 4), old_velocity.y * 0.8)
+				velocity.y = -clamp(old_velocity.y * 0.8, BOUNCING_BASELINE / 4, old_velocity.y * 2)
 			else:
-				velocity.y = - max(min(old_velocity.y * 2, BOUNCING_BASELINE), old_velocity.y * 0.8)
+				velocity.y = -clamp(old_velocity.y * 0.8, BOUNCING_BASELINE, old_velocity.y * 2)
 		else:
 			is_on_ceiling = collision.get_normal().dot(Vector2(0, 1)) >= cos(MAX_FLOOR_ANGLE)
 			if is_on_ceiling:
@@ -95,7 +95,9 @@ func _physics_process(delta):
 
 	velocity.x = clamp(-MAX_VELOCITY.x, velocity.x, MAX_VELOCITY.x)
 	velocity.y = clamp(-MAX_VELOCITY.y, velocity.y, MAX_VELOCITY.y)
-
+	
+	if is_on_floor:
+		print("FINAL: " + str(velocity.y))
 
 func take_damage(damage):
 	health = health - damage
