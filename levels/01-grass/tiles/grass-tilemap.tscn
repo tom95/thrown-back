@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://levels/01-grass/tiles/mid.png" type="Texture" id=1]
 [ext_resource path="res://levels/01-grass/tiles/corner01.png" type="Texture" id=2]
@@ -26,11 +26,6 @@
 
 script/source = ""
 
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 35, 35 )
-
 [sub_resource type="ConvexPolygonShape2D" id=3]
 
 custom_solver_bias = 0.0
@@ -52,7 +47,6 @@ script = SubResource( 1 )
 
 [node name="mid" type="Sprite" parent="."]
 
-editor/display_folded = true
 position = Vector2( 0, 70 )
 texture = ExtResource( 1 )
 
@@ -67,13 +61,8 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mid/StaticBody2D2"]
-
-shape = SubResource( 2 )
-
 [node name="corner01" type="Sprite" parent="."]
 
-editor/display_folded = true
 texture = ExtResource( 2 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="corner01"]
@@ -87,13 +76,8 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Pickable", "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="corner01/StaticBody2D3"]
-
-shape = SubResource( 2 )
-
 [node name="corner_lower02" type="Sprite" parent="."]
 
-editor/display_folded = true
 position = Vector2( 70, 0 )
 texture = ExtResource( 3 )
 
@@ -108,13 +92,8 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Pickable", "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="corner_lower02/StaticBody2D4"]
-
-shape = SubResource( 2 )
-
 [node name="top01" type="Sprite" parent="."]
 
-editor/display_folded = true
 position = Vector2( 70, 70 )
 texture = ExtResource( 4 )
 
@@ -129,14 +108,8 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Pickable", "Transform" ]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="top01/StaticBody2D5"]
-
-shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
 [node name="edge02" type="Sprite" parent="."]
 
-editor/display_folded = true
 position = Vector2( 140, 0 )
 texture = ExtResource( 5 )
 
@@ -151,13 +124,8 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Pickable", "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="edge02/StaticBody2D6"]
-
-shape = SubResource( 2 )
-
 [node name="edge01" type="Sprite" parent="."]
 
-editor/display_folded = true
 position = Vector2( 140, -70 )
 texture = ExtResource( 6 )
 
@@ -171,10 +139,6 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Pickable", "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="edge01/StaticBody2D7"]
-
-shape = SubResource( 2 )
 
 [node name="top02" type="Sprite" parent="."]
 
@@ -191,10 +155,6 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Pickable", "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="top02/StaticBody2D8"]
-
-shape = SubResource( 2 )
 
 [node name="rock" type="Sprite" parent="."]
 
@@ -249,7 +209,6 @@ texture = ExtResource( 10 )
 
 [node name="mid_stones" type="Sprite" parent="."]
 
-editor/display_folded = true
 position = Vector2( -70, 70 )
 texture = ExtResource( 11 )
 
@@ -264,13 +223,8 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Pickable", "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mid_stones/StaticBody2D9"]
-
-shape = SubResource( 2 )
-
 [node name="platform_mid01" type="Sprite" parent="."]
 
-editor/display_folded = true
 position = Vector2( 490, -70 )
 texture = ExtResource( 12 )
 
@@ -285,14 +239,8 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_mid01/StaticBody2D3"]
-
-position = Vector2( 0, -20 )
-shape = SubResource( 4 )
-
 [node name="platform_mid02" type="Sprite" parent="."]
 
-editor/display_folded = true
 position = Vector2( 560, -70 )
 texture = ExtResource( 13 )
 
@@ -307,14 +255,8 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_mid02/StaticBody2D4"]
-
-position = Vector2( 0, -20 )
-shape = SubResource( 4 )
-
 [node name="platform_mid03" type="Sprite" parent="."]
 
-editor/display_folded = true
 position = Vector2( 630, -70 )
 texture = ExtResource( 14 )
 
@@ -329,14 +271,8 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_mid03/StaticBody2D5"]
-
-position = Vector2( 0, -20 )
-shape = SubResource( 4 )
-
 [node name="platform_bottom" type="Sprite" parent="."]
 
-editor/display_folded = true
 position = Vector2( 210, -70 )
 texture = ExtResource( 15 )
 region_enabled = true
@@ -355,14 +291,8 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_bottom/StaticBody2D6"]
-
-position = Vector2( 0, -20 )
-shape = SubResource( 4 )
-
 [node name="platform_corner" type="Sprite" parent="."]
 
-editor/display_folded = true
 position = Vector2( 280, -70 )
 texture = ExtResource( 16 )
 _sections_unfolded = [ "Region" ]
@@ -377,11 +307,6 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_corner/StaticBody2D7"]
-
-position = Vector2( 0, -20 )
-shape = SubResource( 4 )
 
 [node name="platform_corner_lower" type="Sprite" parent="."]
 
@@ -401,11 +326,6 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_corner_lower/StaticBody2D8"]
-
-position = Vector2( 0, -20 )
-shape = SubResource( 4 )
 
 [node name="Area2D" parent="." instance=ExtResource( 18 )]
 
