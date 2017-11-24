@@ -3,12 +3,12 @@
 [ext_resource path="res://characters/goblin/goblin.gd" type="Script" id=1]
 [ext_resource path="res://characters/goblin/goblin.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32.7077, 23.2967 )
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=2]
 
 custom_solver_bias = 0.0
 radius = 30.4822
@@ -66,13 +66,13 @@ _sections_unfolded = [ "Audio Bus", "Collision", "Material", "Pickable", "Transf
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_area"]
 
 position = Vector2( -0.154541, 13.2907 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 position = Vector2( 1.62109, 2.7018 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [connection signal="body_entered" from="attack_area" to="." method="_on_attack_area_body_entered"]
 
