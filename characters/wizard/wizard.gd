@@ -93,6 +93,9 @@ func _physics_process(delta):
 
 	if Input.is_action_pressed("fire") and weapon_cooldown <= 0:
 		shoot()
+	
+	if Input.is_action_pressed("airblast") and weapon_cooldown <= 0:
+		airblast()
 
 	velocity.x = clamp(-MAX_VELOCITY.x, velocity.x, MAX_VELOCITY.x)
 	velocity.y = clamp(-MAX_VELOCITY.y, velocity.y, MAX_VELOCITY.y)
@@ -115,6 +118,10 @@ func shoot():
 	projectile.linear_velocity = Vector2(PROJECTILE_SPEED * direction, 0)
 	projectile.position = projectile_spawn.global_position
 	get_parent().add_child(projectile)
+
+func airblast():
+	weapon_cooldown = WEAPON_COOLDOWN
+	$base/projectile_spawn/airblast.emit()
 
 func can_use_jetpack():
 	return jetpack_fuel > 0

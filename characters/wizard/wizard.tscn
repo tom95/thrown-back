@@ -1,22 +1,23 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://characters/wizard/wizard.gd" type="Script" id=1]
 [ext_resource path="res://effects/particle_round.png" type="Texture" id=2]
-[ext_resource path="res://characters/wizard/leg_right.png" type="Texture" id=3]
-[ext_resource path="res://characters/wizard/leg_left.png" type="Texture" id=4]
-[ext_resource path="res://characters/wizard/body.png" type="Texture" id=5]
-[ext_resource path="res://characters/wizard/mustache.png" type="Texture" id=6]
-[ext_resource path="res://characters/wizard/eye_right.png" type="Texture" id=7]
-[ext_resource path="res://characters/wizard/pupil_right.png" type="Texture" id=8]
-[ext_resource path="res://characters/wizard/eye_left.png" type="Texture" id=9]
-[ext_resource path="res://characters/wizard/pupil_left.png" type="Texture" id=10]
-[ext_resource path="res://characters/wizard/eyebrow_left.png" type="Texture" id=11]
-[ext_resource path="res://characters/wizard/eyebrow_right.png" type="Texture" id=12]
-[ext_resource path="res://characters/wizard/arm_left.png" type="Texture" id=13]
-[ext_resource path="res://characters/wizard/hand_left.png" type="Texture" id=14]
-[ext_resource path="res://characters/wizard/arm_right.png" type="Texture" id=15]
-[ext_resource path="res://characters/wizard/hand_right.png" type="Texture" id=16]
-[ext_resource path="res://characters/wizard/hat.png" type="Texture" id=17]
+[ext_resource path="res://effects/airblast/airblast.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/wizard/leg_right.png" type="Texture" id=4]
+[ext_resource path="res://characters/wizard/leg_left.png" type="Texture" id=5]
+[ext_resource path="res://characters/wizard/body.png" type="Texture" id=6]
+[ext_resource path="res://characters/wizard/mustache.png" type="Texture" id=7]
+[ext_resource path="res://characters/wizard/eye_right.png" type="Texture" id=8]
+[ext_resource path="res://characters/wizard/pupil_right.png" type="Texture" id=9]
+[ext_resource path="res://characters/wizard/eye_left.png" type="Texture" id=10]
+[ext_resource path="res://characters/wizard/pupil_left.png" type="Texture" id=11]
+[ext_resource path="res://characters/wizard/eyebrow_left.png" type="Texture" id=12]
+[ext_resource path="res://characters/wizard/eyebrow_right.png" type="Texture" id=13]
+[ext_resource path="res://characters/wizard/arm_left.png" type="Texture" id=14]
+[ext_resource path="res://characters/wizard/hand_left.png" type="Texture" id=15]
+[ext_resource path="res://characters/wizard/arm_right.png" type="Texture" id=16]
+[ext_resource path="res://characters/wizard/hand_right.png" type="Texture" id=17]
+[ext_resource path="res://characters/wizard/hat.png" type="Texture" id=18]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -47,7 +48,7 @@ flatness = 0.0
 gravity = Vector3( 0, 98, 0 )
 initial_velocity = 200.0
 initial_velocity_random = 0.0
-angular_velocity = 1.49939e-43
+angular_velocity = 1.49939e-043
 angular_velocity_random = 0.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
@@ -142,94 +143,98 @@ _sections_unfolded = [ "Drawing", "Process Material", "Time" ]
 position = Vector2( 30.5707, 0.527931 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="airblast" parent="base/projectile_spawn" instance=ExtResource( 3 )]
+
+position = Vector2( 5.48579, -13.4649 )
+
 [node name="leg_right" type="Sprite" parent="base"]
 
 position = Vector2( 12.1887, 22.3504 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 offset = Vector2( 5.35906, 8.28226 )
 
 [node name="leg_left" type="Sprite" parent="base"]
 
 position = Vector2( -14.1562, 21.1881 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 offset = Vector2( -2.78266, 7.65713 )
 
 [node name="body" type="Sprite" parent="base"]
 
 editor/display_folded = true
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="mustache" type="Sprite" parent="base/body"]
 
 position = Vector2( 10.0439, 4.6913 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 
 [node name="eye_right" type="Sprite" parent="base/body"]
 
 position = Vector2( 16.1231, -7.41246 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="pupil_right" type="Sprite" parent="base/body/eye_right"]
 
 position = Vector2( 1.3277, -0.506506 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="eye_left" type="Sprite" parent="base/body"]
 
 position = Vector2( 3.30411, -7.8209 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="pupil_left" type="Sprite" parent="base/body/eye_left"]
 
 position = Vector2( 1.58987, -0.295063 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="eyebrow_left" type="Sprite" parent="base/body"]
 
 position = Vector2( 10.1945, -12.806 )
 rotation = -0.0224884
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 offset = Vector2( -8.67434, -1.81467 )
 
 [node name="eyebrow_right" type="Sprite" parent="base/body"]
 
 position = Vector2( 8.15333, -12.8293 )
 rotation = 0.0422089
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 offset = Vector2( 9.22118, -1.4218 )
 
 [node name="arm_left" type="Sprite" parent="base"]
 
 editor/display_folded = true
 position = Vector2( -26.2058, -0.343494 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 offset = Vector2( -4.66704, 5.20427 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="hand_left" type="Sprite" parent="base/arm_left"]
 
 position = Vector2( -10.6724, 8.79764 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 offset = Vector2( -3.84471, 4.41429 )
 
 [node name="arm_right" type="Sprite" parent="base"]
 
 position = Vector2( 25.3054, -0.312061 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 offset = Vector2( 5.56227, 5.09751 )
 _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="hand_right" type="Sprite" parent="base/arm_right"]
 
 position = Vector2( 10.6295, 8.9086 )
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 offset = Vector2( 3.41751, 4.41429 )
 
 [node name="hat" type="Sprite" parent="base"]
 
 position = Vector2( 3.29622, -12.7701 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 offset = Vector2( -1.89791, -23.497 )
 _sections_unfolded = [ "Transform" ]
 
