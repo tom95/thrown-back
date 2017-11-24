@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="59.235996mm"
+   height="6.1846538mm"
+   viewBox="0 0 209.89133 21.914127"
+   id="svg4175"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fuelmeter_over.svg">
+  <defs
+     id="defs4177" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.2"
+     inkscape:cx="26.311401"
+     inkscape:cy="25.65362"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1019"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata4180">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-168.20589,-869.95483)">
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.66300011;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4719"
+       sodipodi:sides="5"
+       sodipodi:cx="177.04518"
+       sodipodi:cy="877.94037"
+       sodipodi:r1="7.6977544"
+       sodipodi:r2="3.8488772"
+       sodipodi:arg1="0.90873586"
+       sodipodi:arg2="1.5370544"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 181.77732,884.0118 -4.60229,-2.22474 -4.44181,2.53002 0.69367,-5.06453 -3.77879,-3.44259 5.03101,-0.90531 2.10638,-4.65765 2.41567,4.50501 5.08061,0.564 -3.53805,3.68956 z"
+       inkscape:transform-center-x="-0.75738942"
+       inkscape:transform-center-y="0.45697912"
+       transform="matrix(0.97249778,0.23291215,-0.23291215,0.97249778,214.54818,-14.41583)" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.66300011;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4721"
+       sodipodi:sides="5"
+       sodipodi:cx="173.38445"
+       sodipodi:cy="883.11893"
+       sodipodi:r1="3.2586229"
+       sodipodi:r2="1.6293114"
+       sodipodi:arg1="1.735945"
+       sodipodi:arg2="2.3642635"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 172.84873,886.33324 -0.62564,-2.07152 -2.06116,-0.65899 1.7768,-1.23515 -0.0102,-2.16392 1.72376,1.30815 2.05486,-0.67838 -0.71146,2.04364 1.28017,1.74465 -2.16347,-0.0451 z"
+       inkscape:transform-center-x="0.16554482"
+       inkscape:transform-center-y="0.1494945" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.66300011;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4732"
+       sodipodi:sides="5"
+       sodipodi:cx="179.81303"
+       sodipodi:cy="887.67255"
+       sodipodi:r1="1.4779415"
+       sodipodi:r2="0.73897076"
+       sodipodi:arg1="0.43662716"
+       sodipodi:arg2="1.0649457"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 181.15232,888.29755 -0.98122,0.0214 -0.53861,0.82045 -0.32359,-0.92657 -0.94674,-0.25873 0.78123,-0.59407 -0.0465,-0.98035 0.80642,0.55941 0.918,-0.34716 -0.28284,0.93981 z"
+       inkscape:transform-center-x="0.055792487"
+       inkscape:transform-center-y="0.087012009" />
+  </g>
+</svg>

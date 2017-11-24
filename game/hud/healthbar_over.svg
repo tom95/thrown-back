@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="59.235996mm"
+   height="6.1846538mm"
+   viewBox="0 0 209.89133 21.914127"
+   id="svg4175"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="healthbar_over.svg">
+  <defs
+     id="defs4177" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="15.839192"
+     inkscape:cx="39.32359"
+     inkscape:cy="13.889881"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1019"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata4180">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-168.20589,-869.95483)">
+    <g
+       style="display:inline"
+       id="g1863"
+       transform="matrix(3.4444089,0,0,3.4444087,146.10134,164.4919)">
+      <rect
+         ry="0.26140559"
+         y="207.18414"
+         x="8.3586473"
+         height="1.1637709"
+         width="3.8335984"
+         id="rect1857"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.45214683;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.45214683;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1859"
+         width="3.8335984"
+         height="1.1637709"
+         x="205.84924"
+         y="-10.85733"
+         ry="0.22135314" />
+    </g>
+  </g>
+</svg>
