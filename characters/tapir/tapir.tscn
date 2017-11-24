@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://characters/tapir/tapir.gd" type="Script" id=1]
+[ext_resource path="res://characters/tapir/tapir.svg" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 49.9578, 35.3468 )
+
+[node name="tapir" type="RigidBody2D"]
+
+position = Vector2( -0.291992, -0.291992 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+position = Vector2( -4.5641, -35.0634 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tapir" type="Sprite" parent="."]
+
+position = Vector2( -4.67243, -34.7864 )
+scale = Vector2( 1.0466, 1.05296 )
+texture = ExtResource( 2 )
+
+

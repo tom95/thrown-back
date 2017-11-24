@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://characters/icewisp/icewisp.gd" type="Script" id=1]
 [ext_resource path="res://characters/icewisp/icewisp.svg" type="Texture" id=2]
@@ -7,6 +7,11 @@
 
 custom_solver_bias = 0.0
 extents = Vector2( 51.7654, 34.1328 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
 
 [node name="icewisp" type="RigidBody2D"]
 
@@ -17,7 +22,7 @@ mode = 0
 mass = 1.0
 friction = 1.0
 bounce = 0.0
-gravity_scale = 1.0
+gravity_scale = 0.0
 custom_integrator = false
 continuous_cd = 0
 contacts_reported = 0
@@ -30,6 +35,12 @@ angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
 
+[node name="base" type="Node2D" parent="."]
+
+[node name="projectile_spawn" type="Position2D" parent="base"]
+
+position = Vector2( 4.50742, -45.7181 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 position = Vector2( -0.323532, -42.7064 )
@@ -39,5 +50,30 @@ shape = SubResource( 1 )
 
 position = Vector2( 2.121, -41.501 )
 texture = ExtResource( 2 )
+
+[node name="detect_wizard_area" type="Area2D" parent="."]
+
+position = Vector2( 328.759, -261.52 )
+scale = Vector2( 10.7312, 8.08099 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detect_wizard_area"]
+
+position = Vector2( -30.3685, 20.2966 )
+scale = Vector2( 4.58304, 3.53074 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_icewisp_body_entered"]
+
+[connection signal="body_entered" from="detect_wizard_area" to="." method="_on_detect_wizard_area_body_entered"]
+
+[connection signal="body_exited" from="detect_wizard_area" to="." method="_on_detect_wizard_area_body_exited"]
 
 
