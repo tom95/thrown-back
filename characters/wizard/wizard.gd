@@ -54,10 +54,7 @@ func move_and_bounce(delta):
 				velocity.y = 0
 			else:
 				is_on_wall = true
-				print("ON A WALL! " + str(collision.normal) + " " + str(velocity) + " " + str(velocity.reflect(collision.normal)))
-				#velocity = velocity.reflect(collision.normal)
 				velocity = (velocity * 0.4).bounce(collision.normal)
-				#velocity.x = 0
 
 func _physics_process(delta):
 	move_and_bounce(delta)
