@@ -1,35 +1,81 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://characters/goblin/goblin.png" type="Texture" id=1]
+[ext_resource path="res://characters/goblin/goblin.gd" type="Script" id=1]
+[ext_resource path="res://characters/goblin/goblin.png" type="Texture" id=2]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 25.75
-height = 41.5
+extents = Vector2( 32.7077, 23.2967 )
 
-[node name="goblin" type="KinematicBody2D"]
+[sub_resource type="CapsuleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 30.4822
+height = 29.1097
+
+[node name="goblin" type="RigidBody2D"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
-collision/safe_margin = 0.08
+mode = 2
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 10
+contact_monitor = true
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="base" type="Node2D" parent="."]
 
+_sections_unfolded = [ "Transform" ]
+
 [node name="goblin" type="Sprite" parent="base"]
 
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="stone_spawn" type="Position2D" parent="base"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
+position = Vector2( -16.2847, 5.28152 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="attack_area" type="Area2D" parent="."]
 
-shape = SubResource( 1 )
+position = Vector2( 4.09808, -593.627 )
+scale = Vector2( 20, 20 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Audio Bus", "Collision", "Material", "Pickable", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_area"]
+
+position = Vector2( -0.154541, 13.2907 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform", "Z" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+position = Vector2( 1.62109, 2.7018 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="attack_area" to="." method="_on_attack_area_body_entered"]
+
+[connection signal="body_exited" from="attack_area" to="." method="_on_attack_area_body_exited"]
 
 
