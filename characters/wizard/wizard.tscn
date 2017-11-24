@@ -21,8 +21,8 @@
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 10.0
-height = 20.0
+radius = 25.4773
+height = 45.7349
 
 [sub_resource type="Gradient" id=2]
 
@@ -84,7 +84,6 @@ script = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 position = Vector2( -0.664386, -11.1985 )
-scale = Vector2( 2.60544, 2.39939 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
