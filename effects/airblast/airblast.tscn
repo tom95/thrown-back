@@ -1,18 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://effects/particle_round.png" type="Texture" id=1]
+[ext_resource path="res://effects/airblast/airblast.gd" type="Script" id=1]
+[ext_resource path="res://effects/particle_round.png" type="Texture" id=2]
 
-[sub_resource type="Gradient" id=2]
+[sub_resource type="Gradient" id=1]
 
 offsets = PoolRealArray( 0, 0.328638, 1 )
 colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
 
-[sub_resource type="GradientTexture" id=3]
+[sub_resource type="GradientTexture" id=2]
 
-gradient = SubResource( 2 )
+gradient = SubResource( 1 )
 width = 2048
 
-[sub_resource type="ParticlesMaterial" id=1]
+[sub_resource type="ParticlesMaterial" id=3]
 
 render_priority = 0
 trail_divisor = 1
@@ -41,7 +42,7 @@ angle = 0.0
 angle_random = 0.0
 scale = 3.0
 scale_random = 0.0
-color_ramp = SubResource( 3 )
+color_ramp = SubResource( 2 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -53,10 +54,11 @@ _sections_unfolded = [ "Color", "Damping", "Initial Velocity", "Linear Accel", "
 
 [node name="airblast" type="Node2D"]
 
-[node name="Particles2D" type="Particles2D" parent="."]
+script = ExtResource( 1 )
 
-position = Vector2( 180, 110 )
-emitting = true
+[node name="particles" type="Particles2D" parent="."]
+
+emitting = false
 amount = 100
 lifetime = 0.5
 one_shot = true
@@ -67,13 +69,30 @@ randomness = 0.0
 fixed_fps = 0
 fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
-local_coords = false
+local_coords = true
 draw_order = 0
-process_material = SubResource( 1 )
-texture = ExtResource( 1 )
+process_material = SubResource( 3 )
+texture = ExtResource( 2 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Material", "Time" ]
+_sections_unfolded = [ "Drawing", "Material", "Textures", "Time", "Transform" ]
+
+[node name="influence_area" type="Area2D" parent="."]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="influence_area"]
+
+position = Vector2( -120.501, 57.8564 )
+scale = Vector2( 4.0725, 3.79784 )
+build_mode = 0
+polygon = PoolVector2Array( 44.942, 34.6267, 682.879, 167.967, 673.057, -228.592, 45.7163, -67.4225 )
 
 

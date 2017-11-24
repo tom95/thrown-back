@@ -8,7 +8,9 @@ const GRAVITY = Vector2(0, 1000.0)
 const MAX_FLOOR_ANGLE = deg2rad(5)
 
 func _ready():
-	pass
+	contact_monitor = true
+	contacts_reported = 5
+	mode = MODE_CHARACTER
 
 func _integrate_forces(state):
 	for i in range (state.get_contact_count()):

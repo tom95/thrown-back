@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://game/game.gd" type="Script" id=1]
 [ext_resource path="res://levels/01-grass/01-grass.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/wizard/wizard.tscn" type="PackedScene" id=3]
 [ext_resource path="res://characters/bear/bear.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game/hud/hud.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/icewisp/icewisp.tscn" type="PackedScene" id=6]
 
 [node name="game" type="Node2D"]
 
@@ -23,8 +24,12 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="bear" parent="." instance=ExtResource( 4 )]
 
-position = Vector2( -83.6851, 93.3217 )
+position = Vector2( 693.306, 394.32 )
 
 [node name="hud" parent="." instance=ExtResource( 5 )]
+
+[node name="icewisp" parent="." instance=ExtResource( 6 )]
+
+position = Vector2( 78.1074, 285.842 )
 
 
