@@ -29,6 +29,7 @@ onready var projectile_spawn = get_node("base/projectile_spawn")
 onready var wizard_sprite = get_node("base")
 
 signal update_cow_counter(num)
+signal game_over()
 
 func _ready():
 	set_physics_process(true)
@@ -95,17 +96,11 @@ func _physics_process(delta):
 
 	velocity.x = clamp(-MAX_VELOCITY.x, velocity.x, MAX_VELOCITY.x)
 	velocity.y = clamp(-MAX_VELOCITY.y, velocity.y, MAX_VELOCITY.y)
-	
-	if is_on_floor:
-		print("FINAL: " + str(velocity.y))
 
 func take_damage(damage):
 	health = health - damage
 	if (health <= 0):
-		game_over()
-
-func game_over():
-	print("GAME OVER!")
+		emit_signal("game_over")
 
 func apply_drag(delta):
 	var drag_magnitude = velocity.length()
