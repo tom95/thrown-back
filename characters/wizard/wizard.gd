@@ -45,10 +45,9 @@ func move_and_bounce(delta):
 	if collision:
 		is_on_floor = collision.normal.dot(Vector2(0, -1)) >= cos(MAX_FLOOR_ANGLE)
 		if is_on_floor:
+			velocity.y = -clamp(old_velocity.y * 0.8, BOUNCING_BASELINE, old_velocity.y * 2)
 			if is_in_haystack:
-				velocity.y = -clamp(0, BOUNCING_BASELINE / 4, old_velocity.y * 2)
-			else:
-				velocity.y = -clamp(old_velocity.y * 0.8, BOUNCING_BASELINE, old_velocity.y * 2)
+				velocity.y = - 10 * sqrt(-velocity.y)
 		else:
 			is_on_ceiling = collision.normal.dot(Vector2(0, 1)) >= cos(MAX_FLOOR_ANGLE)
 			if is_on_ceiling:
