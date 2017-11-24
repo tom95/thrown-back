@@ -8,6 +8,9 @@ const MAX_JETPACK_FUEL = 100
 const WEAPON_COOLDOWN =  200
 const BOUNCING_BASELINE = 500
 const MAX_HEALTH = 1000
+const MAX_VELOCITY = Vector2(1000, 1000)
+const FLOOR_BOOST_FACTOR = 10
+const MAX_FLOOR_ANGLE = deg2rad(30)
 
 var velocity = Vector2()
 var jetpack_fuel = 100
@@ -15,7 +18,11 @@ var direction = 1
 var weapon_cooldown = 0
 var health = 1000
 var cow_counter = 0
+
 var is_in_haystack = false
+var is_on_floor = false
+var is_on_ceiling = false
+var is_on_wall = false
 
 onready var jetpack_exhaust = get_node("jetpack_exhaust")
 onready var projectile_spawn = get_node("base/projectile_spawn")
@@ -25,18 +32,33 @@ signal update_cow_counter(num)
 
 func _ready():
 	set_physics_process(true)
-	
-func _physics_process(delta):
+
+func move_and_bounce(delta):
 	var old_velocity = velocity
 	velocity += delta * GRAVITY
-	velocity = move_and_slide(velocity, Vector2(0, -1), 25.0)
-	
-	if is_on_floor():
-		if is_in_haystack:
-			velocity.y = - max(min(old_velocity.y * 2, BOUNCING_BASELINE / 4), old_velocity.y * 0.8)
+	is_on_floor = false
+	is_on_ceiling = false
+	is_on_wall = false
+
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		is_on_floor = collision.get_normal().dot(Vector2(0, -1)) >= cos(MAX_FLOOR_ANGLE)
+		if is_on_floor:
+			if is_in_haystack:
+				velocity.y = - max(min(old_velocity.y * 2, BOUNCING_BASELINE / 4), old_velocity.y * 0.8)
+			else:
+				velocity.y = - max(min(old_velocity.y * 2, BOUNCING_BASELINE), old_velocity.y * 0.8)
 		else:
-			velocity.y = - max(min(old_velocity.y * 2, BOUNCING_BASELINE), old_velocity.y * 0.8)
-	
+			is_on_ceiling = collision.get_normal().dot(Vector2(0, 1)) >= cos(MAX_FLOOR_ANGLE)
+			if is_on_ceiling:
+				velocity.y = 0
+			else:
+				is_on_wall = true
+				velocity.x = 0
+
+func _physics_process(delta):
+	move_and_bounce(delta)
+
 	var using_jetpack = Input.is_action_pressed("move_left") or\
 		Input.is_action_pressed("move_right") or\
 		Input.is_action_pressed("jump")
@@ -47,10 +69,10 @@ func _physics_process(delta):
 		elif Input.is_action_pressed("move_right"):
 			velocity.x += JETPACK_STRAFE_SPEED
 		else:
-			velocity.y -= JETPACK_SPEED * 20 if is_on_floor() else JETPACK_SPEED
-		
+			velocity.y -= JETPACK_SPEED * FLOOR_BOOST_FACTOR if is_on_floor else JETPACK_SPEED
+
 		apply_drag(delta)
-		
+
 		jetpack_exhaust.emitting = true
 	else:
 		jetpack_exhaust.emitting = false
@@ -61,22 +83,25 @@ func _physics_process(delta):
 		charge_jetpack(delta)
 
 	weapon_cooldown = max(0, weapon_cooldown - 1000 * delta)
-	
+
 	if Input.is_action_pressed("move_left"):
 		direction = -1
 	elif Input.is_action_pressed("move_right"):
 		direction = 1
 	wizard_sprite.scale.x = direction
-		
+
 	if Input.is_action_pressed("fire") and weapon_cooldown <= 0:
 		shoot()
-		
-	
+
+	velocity.x = clamp(-MAX_VELOCITY.x, velocity.x, MAX_VELOCITY.x)
+	velocity.y = clamp(-MAX_VELOCITY.y, velocity.y, MAX_VELOCITY.y)
+
+
 func take_damage(damage):
 	health = health - damage
 	if (health <= 0):
 		game_over()
-		
+
 func game_over():
 	print("GAME OVER!")
 
