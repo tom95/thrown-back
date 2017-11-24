@@ -13,7 +13,7 @@ extents = Vector2( 10, 9.64224 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Area2D" type="Area2D"]
+[node name="fence" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -25,7 +25,7 @@ audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="fence" type="Sprite" parent="."]
+[node name="sprite" type="Sprite" parent="."]
 
 position = Vector2( 0, -35 )
 texture = ExtResource( 2 )
