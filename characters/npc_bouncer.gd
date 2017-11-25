@@ -7,12 +7,17 @@ var velocity = Vector2()
 const GRAVITY = Vector2(0, 1000.0)
 const MAX_FLOOR_ANGLE = deg2rad(5)
 
+var tween
+
 signal spawn(object)
 
 func _ready():
 	contact_monitor = true
 	contacts_reported = 5
 	mode = MODE_CHARACTER
+
+	tween = Tween.new()
+	add_child(tween)
 
 func _integrate_forces(state):
 	for i in range (state.get_contact_count()):
@@ -34,4 +39,10 @@ func despawn():
 	var explosion = preload("res://effects/explosion/explosion.tscn").instance()
 	explosion.global_position = global_position
 	emit_signal("spawn", explosion)
+	$collision.disabled = true
+	set_process(false)
+	set_physics_process(false)
+	tween.interpolate_property(self, "scale", Vector2(1, 1), Vector2(0.1, 0.1), 0.5, Tween.TRANS_BACK, Tween.EASE_IN)
+	tween.start()
+	yield(tween, "tween_completed")
 	queue_free()

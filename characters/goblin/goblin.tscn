@@ -69,7 +69,7 @@ position = Vector2( -0.154541, 13.2907 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="collision" type="CollisionShape2D" parent="."]
 
 position = Vector2( 1.62109, 2.7018 )
 shape = SubResource( 2 )

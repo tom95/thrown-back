@@ -31,7 +31,7 @@ angular_damp = -1.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="collision" type="CollisionShape2D" parent="."]
 
 position = Vector2( 2.89873, -39.001 )
 shape = SubResource( 1 )

@@ -46,7 +46,7 @@ _sections_unfolded = [ "Collision", "collision" ]
 position = Vector2( -10.6109, 0.0662613 )
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="collision" type="CollisionShape2D" parent="."]
 
 shape = SubResource( 1 )
 
