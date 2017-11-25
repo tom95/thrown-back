@@ -48,7 +48,7 @@ flatness = 0.0
 gravity = Vector3( 0, 98, 0 )
 initial_velocity = 200.0
 initial_velocity_random = 0.0
-angular_velocity = 1.49939e-43
+angular_velocity = 1.49939e-043
 angular_velocity_random = 0.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
@@ -137,6 +137,13 @@ v_frames = 1
 _sections_unfolded = [ "Drawing", "Process Material", "Time" ]
 
 [node name="base" type="Node2D" parent="."]
+
+[node name="ice_timer" type="Timer" parent="base"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
 
 [node name="projectile_spawn" type="Position2D" parent="base"]
 
@@ -247,5 +254,7 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
+
+[connection signal="timeout" from="base/ice_timer" to="." method="_on_ice_timer_timeout"]
 
 
