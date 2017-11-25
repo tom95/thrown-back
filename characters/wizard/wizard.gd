@@ -22,6 +22,7 @@ var is_in_haystack = false
 var is_on_floor = false
 var is_on_ceiling = false
 var is_on_wall = false
+var is_iced = false
 
 onready var jetpack_exhaust = get_node("jetpack_exhaust")
 onready var projectile_spawn = get_node("base/projectile_spawn")
@@ -55,6 +56,9 @@ func move_and_bounce(delta):
 				velocity = (velocity * 0.4).bounce(collision.normal)
 
 func _physics_process(delta):
+	if is_iced:
+		return
+	
 	move_and_bounce(delta)
 
 	var using_jetpack = Input.is_action_pressed("move_left") or\
@@ -102,6 +106,14 @@ func take_damage(damage):
 	if (health <= 0):
 		emit_signal("killed")
 
+func hit_by_icebolt():
+	is_iced = true
+	$base/ice_timer.wait_time = 1
+	$base/ice_timer.start()
+
+func _on_ice_timer_timeout():
+	is_iced = false
+
 func apply_drag(delta):
 	var drag_magnitude = velocity.length()
 	var drag = -velocity.normalized() * (0.001 * drag_magnitude + 0.004 * drag_magnitude * drag_magnitude)
@@ -128,4 +140,3 @@ func deplete_jetpack(delta):
 
 func charge_jetpack(delta):
 	jetpack_fuel = min(jetpack_fuel + delta * 75, MAX_JETPACK_FUEL)
-
