@@ -17,7 +17,6 @@ var jetpack_fuel = 100
 var direction = 1
 var weapon_cooldown = 0
 var health = 1000
-var cow_counter = 0
 
 var is_in_haystack = false
 var is_on_floor = false
@@ -28,8 +27,7 @@ onready var jetpack_exhaust = get_node("jetpack_exhaust")
 onready var projectile_spawn = get_node("base/projectile_spawn")
 onready var wizard_sprite = get_node("base")
 
-signal update_cow_counter(num)
-signal game_over()
+signal killed()
 
 func _ready():
 	set_physics_process(true)
@@ -102,7 +100,7 @@ func _physics_process(delta):
 func take_damage(damage):
 	health = health - damage
 	if (health <= 0):
-		emit_signal("game_over")
+		emit_signal("killed")
 
 func apply_drag(delta):
 	var drag_magnitude = velocity.length()
@@ -131,6 +129,3 @@ func deplete_jetpack(delta):
 func charge_jetpack(delta):
 	jetpack_fuel = min(jetpack_fuel + delta * 75, MAX_JETPACK_FUEL)
 
-func increment_cow_counter():
-	cow_counter = cow_counter + 1
-	emit_signal("update_cow_counter", cow_counter)

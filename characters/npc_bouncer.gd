@@ -7,6 +7,8 @@ var velocity = Vector2()
 const GRAVITY = Vector2(0, 1000.0)
 const MAX_FLOOR_ANGLE = deg2rad(5)
 
+signal spawn(object)
+
 func _ready():
 	contact_monitor = true
 	contacts_reported = 5
@@ -14,6 +16,8 @@ func _ready():
 
 func _integrate_forces(state):
 	for i in range (state.get_contact_count()):
+		if not state.get_contact_collider_object(i):
+			continue
 		# Should be line below, which does not work for some reason
 		var shouldJump = state.get_contact_collider_object(i).has_method('get_cell_size')
 		#var shouldJump = state.get_contact_collider_object(i).get_type()
@@ -29,5 +33,5 @@ func hit_by_firebolt():
 func despawn():
 	var explosion = preload("res://effects/explosion/explosion.tscn").instance()
 	explosion.global_position = global_position
-	get_parent().add_child(explosion)
+	emit_signal("spawn", explosion)
 	queue_free()

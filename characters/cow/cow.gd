@@ -1,10 +1,10 @@
 extends "res://characters/npc_bouncer.gd"
 
+signal killed
+
 func _ready():
 	pass
-	
+
 func despawn():
 	.despawn()
-	if health <= 0:
-		var player = get_node("../../wizard")
-		player.increment_cow_counter()
+	emit_signal("killed")

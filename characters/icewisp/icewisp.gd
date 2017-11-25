@@ -16,12 +16,12 @@ func _process(delta):
 
 func iceblast():
 	ice_cooldown = ICE_COOLDOWN
-	
+
 	var projectile = preload("res://effects/firebolt/firebolt.tscn").instance()
 	projectile.add_collision_exception_with(self)
 	projectile.linear_velocity = Vector2(ICE_PROJECTILE_SPEED, 0)
 	projectile.position = $base/projectile_spawn.global_position
-	get_parent().add_child(projectile)
+	emit_signal("spawn", projectile)
 
 func _on_icewisp_body_entered( body ):
 	if (body is preload("res://characters/wizard/wizard.gd")):

@@ -10,7 +10,7 @@
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="level_grass" parent="." instance=ExtResource( 2 )]
+[node name="level" parent="." instance=ExtResource( 2 )]
 
 editor/display_folded = true
 position = Vector2( 703.748, 404.544 )
