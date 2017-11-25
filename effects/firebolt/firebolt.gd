@@ -18,6 +18,7 @@ func despawn():
 	dying = true
 	$smoke.emitting = false
 	$fire.emitting = false
+	$collision.disabled = true
 	
 	$timer.wait_time = 1
 	$timer.start()
