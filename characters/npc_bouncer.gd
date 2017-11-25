@@ -44,9 +44,9 @@ func _integrate_forces(state):
 	last_total_velocity = total_velocity
 
 func hit_by_firebolt():
-	take_damage(250)
+	take_damage(250, null)
 
-func take_damage(num):
+func take_damage(num, damage_dealer):
 	health = health - num
 	if health <= 0:
 		despawn()

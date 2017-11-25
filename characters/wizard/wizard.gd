@@ -106,6 +106,9 @@ func take_damage(damage, damage_dealer_image):
 	if (health <= 0):
 		emit_signal("killed", damage_dealer_image)
 
+func heal(num):
+	health = min(MAX_HEALTH, health + num)
+
 func hit_by_icebolt():
 	is_iced = true
 	$base/wizard_iceBlock.set_visible(true)
