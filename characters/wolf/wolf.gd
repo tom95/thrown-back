@@ -12,7 +12,7 @@ func _ready():
 
 func _process(delta):
 	attack_cooldown = max(0, attack_cooldown - 1000 * delta)
-	if attacking:
+	if attacking and attack_cooldown <= 0:
 		attack()
 	
 	if linear_velocity.x > 0:
@@ -23,7 +23,7 @@ func _process(delta):
 
 func attack():
 	attack_cooldown = COOLDOWN
-	linear_velocity = linear_velocity + Vector2((attackee.global_position.x - global_position.x) * 2, 0)
+	linear_velocity =  Vector2(linear_velocity.x + (attackee.global_position.x - global_position.x) * 5, linear_velocity.y + (attackee.global_position.y - global_position.y) * 5)
 
 func _on_attack_area_body_entered( body ):
 	if (body is preload("res://characters/wizard/wizard.gd")):
