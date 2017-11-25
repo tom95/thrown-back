@@ -9,16 +9,16 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="200"
-   height="200"
+   width="87.813377"
+   height="96.190277"
    viewBox="0 0 0 945"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 (unknown)"
+   inkscape:version="0.92+devel (unknown)"
    sodipodi:docname="wizard.svg"
-   inkscape:export-filename="/home/tom/Code/godot/game-thing/assets/wizard/wizard.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   inkscape:export-filename="/home/tom/Code/godot/thrown-back/characters/wizard/wizard_dead.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.6703125"
-     inkscape:cx="303.09965"
-     inkscape:cy="109.31189"
+     inkscape:zoom="3.3024096"
+     inkscape:cx="114.18395"
+     inkscape:cy="29.596164"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -45,7 +45,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:snap-global="false" />
+     inkscape:snap-global="false"
+     inkscape:document-rotation="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -63,7 +64,7 @@
      id="layer2"
      inkscape:label="Layer 2"
      sodipodi:insensitive="true"
-     transform="translate(-883.52245,-892.2683)"
+     transform="translate(-1132.1665,-936.42465)"
      style="display:inline">
     <rect
        style="fill:#ffaaee;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -77,13 +78,13 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-883.52245,-892.2683)">
+     transform="translate(-1132.1665,-936.42465)">
     <rect
        style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:0.49080399"
        id="rect6396"
        width="70"
        height="70"
-       x="1139.0934"
+       x="1039.2078"
        y="962.61493" />
     <path
        style="fill:#4e0013;fill-opacity:1;stroke:none;stroke-width:0.52867889"
@@ -765,5 +766,263 @@
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"
        inkscape:export-filename="/home/tom/Code/godot/game-thing/assets/wizard/wizard.png" />
+    <g
+       inkscape:export-filename="/home/tom/Code/godot/game-thing/assets/wizard/wizard.png"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       transform="matrix(0.2477486,0,0,0.2477486,1055.7302,761.99294)"
+       inkscape:label="#g4243"
+       id="g278">
+      <ellipse
+         ry="105.93335"
+         rx="108.40649"
+         cy="953.13904"
+         cx="1083.2334"
+         id="ellipse274"
+         style="fill:#4e0013;fill-opacity:1;stroke:none" />
+      <ellipse
+         style="fill:#74132c;fill-opacity:1;stroke:none"
+         id="ellipse276"
+         cx="1091.5371"
+         cy="948.29523"
+         rx="93.875046"
+         ry="91.733414" />
+    </g>
+    <g
+       inkscape:export-filename="/home/tom/Code/godot/game-thing/assets/wizard/wizard.png"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       transform="matrix(0.2477486,0,0,0.2477486,1055.7302,761.99294)"
+       inkscape:label="#g4253"
+       id="g292">
+      <rect
+         ry="15.029358"
+         y="1418.4143"
+         x="607.48346"
+         height="50.397846"
+         width="30.058716"
+         id="rect288"
+         style="fill:#4e0013;fill-opacity:1;stroke:none"
+         transform="rotate(-23.884848)" />
+      <rect
+         style="fill:#74132c;fill-opacity:1;stroke:none"
+         id="rect290"
+         width="23.267883"
+         height="42.375038"
+         x="612.79419"
+         y="1420.8577"
+         ry="12.636842"
+         transform="rotate(-23.884848)" />
+    </g>
+    <path
+       inkscape:export-filename="/home/tom/Code/godot/game-thing/assets/wizard/wizard.png"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:label="#path4386"
+       sodipodi:nodetypes="sssss"
+       inkscape:connector-curvature="0"
+       id="path294"
+       d="m 1364.2033,1009.3799 c 1.1176,-2.2482 5.1223,-1.6888 3.488,-3.5946 -1.6344,-1.9058 -4.5042,-2.1259 -6.41,-0.4917 -1.9058,1.6344 -1.4026,5.1615 0.2318,7.0675 1.6342,1.9057 1.6523,-0.8935 2.6902,-2.9812 z"
+       style="fill:#4e0013;fill-opacity:1;stroke:none;stroke-width:0.52867889" />
+    <g
+       inkscape:export-filename="/home/tom/Code/godot/game-thing/assets/wizard/wizard.png"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       transform="matrix(0.2477486,0,0,0.2477486,1055.7302,761.99294)"
+       inkscape:label="#g4235"
+       id="g300">
+      <rect
+         transform="rotate(-47.082641)"
+         style="fill:#4e0013;fill-opacity:1;stroke:none"
+         id="rect296"
+         width="17.584366"
+         height="44.481014"
+         x="110.03556"
+         y="1525.9482"
+         ry="8.7921829" />
+      <rect
+         ry="6.5754952"
+         y="1530.5212"
+         x="113.35421"
+         height="29.979826"
+         width="13.15099"
+         id="rect298"
+         style="fill:#74132c;fill-opacity:1;stroke:none"
+         transform="rotate(-47.082641)" />
+    </g>
+    <path
+       inkscape:export-filename="/home/tom/Code/godot/game-thing/assets/wizard/wizard.png"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:label="#path4392"
+       style="fill:#4e0013;fill-opacity:1;stroke:none;stroke-width:0.52867889"
+       d="m 1284.1393,1009.3799 c -1.1176,-2.2482 -5.1223,-1.6888 -3.4879,-3.5946 1.6343,-1.9058 4.504,-2.1259 6.41,-0.4917 1.9058,1.6344 1.4025,5.1615 -0.2318,7.0675 -1.6344,1.9057 -1.6523,-0.8935 -2.6903,-2.9812 z"
+       id="path302"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssss" />
+    <g
+       inkscape:export-filename="/home/tom/Code/godot/game-thing/assets/wizard/wizard.png"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       transform="matrix(0.2477486,0,0,0.2477486,1055.7302,761.99294)"
+       inkscape:label="#g4239"
+       id="g308">
+      <rect
+         ry="8.7921829"
+         y="-61.058105"
+         x="-1365.5983"
+         height="44.481014"
+         width="17.584366"
+         id="rect304"
+         style="fill:#4e0013;fill-opacity:1;stroke:none"
+         transform="matrix(-0.68094278,-0.73233663,-0.73233663,0.68094278,0,0)" />
+      <rect
+         transform="matrix(-0.68094278,-0.73233663,-0.73233663,0.68094278,0,0)"
+         style="fill:#74132c;fill-opacity:1;stroke:none"
+         id="rect306"
+         width="13.15099"
+         height="29.979826"
+         x="-1362.2795"
+         y="-56.485096"
+         ry="6.5754952" />
+    </g>
+    <g
+       inkscape:export-filename="/home/tom/Code/godot/game-thing/assets/wizard/wizard.png"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       transform="matrix(0.2477486,0,0,0.2477486,1055.8991,766.8348)"
+       inkscape:label="#g4247"
+       id="g318">
+      <g
+         id="g316"
+         transform="matrix(0.96876368,0,0,0.96876368,125.91895,79.117054)">
+        <path
+           style="fill:#1a1a1a;stroke:none"
+           d="m 1111.8586,819.92213 c -4.2497,15.38483 -81.1743,-1.07142 -125.35706,-1.07142 -44.1828,0 -123.2391,-0.32 -120.3572,-18.57143 2.305,-14.59777 21.4488,-26.03212 60.31,-25.19176 -2.5927,-42.36538 78.95536,-137.98261 99.33286,-129.4511 15.3546,6.42857 -9.2993,85.80021 33.2051,134.30797 38.953,10.28957 57.5283,23.10078 52.8663,39.97774 z"
+           id="path310"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ssscscs" />
+        <path
+           sodipodi:nodetypes="ssscscs"
+           inkscape:connector-curvature="0"
+           id="path312"
+           d="m 1105.5356,812.88675 c -3.8816,14.05201 -78.4352,-1.23114 -118.79026,-1.23114 -40.3552,0 -104.527,0.24343 -101.8948,-16.42685 2.1053,-13.33314 22.6666,-19.30247 58.1612,-18.53491 -2.3681,-38.6952 64.28666,-136.59493 82.89886,-128.80252 14.0244,5.87165 -9.7564,87.16542 29.0658,131.47087 35.5784,9.39816 54.8173,18.10967 50.5592,33.52455 z"
+           style="fill:#333333;stroke:none" />
+        <path
+           style="fill:#1a1a1a;fill-opacity:1;stroke:none"
+           d="m 1056.371,778.2984 c 0.8696,5.65188 -50.5674,16.82835 -67.17906,16.44954 -16.6117,-0.3788 -59.8198,-13.93891 -55.9947,-21.84607 5.0184,-10.37408 35.9595,5.07242 55.0585,5.25099 19.09896,0.17857 66.01476,-13.50675 68.11526,0.14554 z"
+           id="path314"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="szszs" />
+      </g>
+    </g>
+    <g
+       inkscape:export-filename="/home/tom/Code/godot/game-thing/assets/wizard/wizard.png"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       transform="matrix(0.2477486,0,0,0.2477486,1055.7302,761.99294)"
+       inkscape:label="#g4257"
+       id="g324">
+      <rect
+         transform="matrix(-0.91436106,-0.4048998,-0.4048998,0.91436106,0,0)"
+         style="fill:#4e0013;fill-opacity:1;stroke:none"
+         id="rect320"
+         width="30.058716"
+         height="50.397846"
+         x="-1372.4661"
+         y="541.64789"
+         ry="15.029358" />
+      <rect
+         transform="matrix(-0.91436106,-0.4048998,-0.4048998,0.91436106,0,0)"
+         ry="12.636842"
+         y="544.09119"
+         x="-1367.1553"
+         height="42.375038"
+         width="23.267883"
+         id="rect322"
+         style="fill:#74132c;fill-opacity:1;stroke:none" />
+    </g>
+    <path
+       inkscape:export-filename="/home/tom/Code/godot/game-thing/assets/wizard/wizard.png"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:label="#path4419"
+       style="fill:#380013;fill-opacity:1;stroke:none;stroke-width:0.50190532"
+       d="m 1342.8384,983.77783 -10.6172,-2.7111 -0.8995,4.96035 13.1447,2.21393 z"
+       id="path326"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       inkscape:export-filename="/home/tom/Code/godot/game-thing/assets/wizard/wizard.png"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:label="#path4421"
+       sodipodi:nodetypes="ccccc"
+       inkscape:connector-curvature="0"
+       id="path328"
+       d="m 1339.2753,1005.3097 c -3.4097,-7.34836 -7.7563,-5.71636 -12.0194,-3.2918 -2.8994,-2.54566 -8.9098,-3.97196 -11.7586,3.3112 5.727,-4.4518 9.4298,0.8881 11.8443,-1.8697 2.8084,2.8183 6.1946,-2.6912 11.9337,1.8503 z"
+       style="fill:#380013;fill-opacity:1;stroke:none;stroke-width:0.52867889" />
+    <path
+       inkscape:export-filename="/home/tom/Code/godot/game-thing/assets/wizard/wizard.png"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:label="#path4424"
+       sodipodi:nodetypes="ccccc"
+       inkscape:connector-curvature="0"
+       id="path330"
+       d="m 1311.2069,983.86803 11.5356,-3.93145 1.2632,4.86957 -14.3443,3.72197 z"
+       style="fill:#380013;fill-opacity:1;stroke:none;stroke-width:0.52867889" />
+    <g
+       id="g507"
+       transform="translate(-5.9314026,4.2709975)">
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.09158921;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect877"
+         width="11.489359"
+         height="2.3635249"
+         x="1642.2437"
+         y="-251.03351"
+         ry="0"
+         transform="rotate(45)" />
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         transform="rotate(-45)"
+         ry="0"
+         y="1646.8065"
+         x="244.10706"
+         height="2.3635249"
+         width="11.489359"
+         id="rect879"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.09158921;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       transform="translate(-23.224628,4.0574148)"
+       id="g513">
+      <rect
+         transform="rotate(45)"
+         ry="0"
+         y="-251.03351"
+         x="1642.2437"
+         height="2.3635249"
+         width="11.489359"
+         id="rect509"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.09158921;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.09158921;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect511"
+         width="11.489359"
+         height="2.3635249"
+         x="244.10706"
+         y="1646.8065"
+         ry="0"
+         transform="rotate(-45)"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+    </g>
   </g>
 </svg>

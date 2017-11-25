@@ -6,4 +6,4 @@ func _ready():
 
 func _on_bear_body_entered( body ):
 	if (body is preload("res://characters/wizard/wizard.gd")):
-		body.take_damage(DAMAGE)
+		body.take_damage(DAMAGE, $bear.texture)

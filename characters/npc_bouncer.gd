@@ -24,14 +24,14 @@ func _ready():
 
 func _integrate_forces(state):
 	var total_velocity = state.get_linear_velocity().length()
-	
+
 	if total_velocity > VELOCITY_CONTROL_THRESHOLD:
 		mode = MODE_RIGID
-	
+
 	if state.get_contact_count() > 0 and last_total_velocity > VELOCITY_EXPLODE_THRESHOLD:
 		despawn()
 		return
-	
+
 	for i in range (state.get_contact_count()):
 		if not state.get_contact_collider_object(i):
 			continue
@@ -40,7 +40,7 @@ func _integrate_forces(state):
 		if (state.get_contact_local_normal(i).dot(Vector2(0, -1)) >= cos(MAX_FLOOR_ANGLE) and shouldJump):
 			var velocity_x = get_linear_velocity().x
 			set_linear_velocity(Vector2(velocity_x, -BOUNCING_BASELINE))
-	
+
 	last_total_velocity = total_velocity
 
 func hit_by_firebolt():

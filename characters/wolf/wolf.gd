@@ -37,4 +37,4 @@ func _on_attack_area_body_exited( body ):
 
 func _on_wolf_body_entered( body ):
 	if (body is preload("res://characters/wizard/wizard.gd")):
-		body.take_damage(DAMAGE)
+		body.take_damage(DAMAGE, $base/wolf.texture)

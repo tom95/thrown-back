@@ -26,7 +26,7 @@ func iceblast():
 
 func _on_icewisp_body_entered( body ):
 	if (body is preload("res://characters/wizard/wizard.gd")):
-		body.take_damage(DAMAGE)
+		body.take_damage(DAMAGE, $icewisp.texture)
 
 func _on_detect_wizard_area_body_entered( body ):
 	if (body is preload("res://characters/wizard/wizard.gd")):

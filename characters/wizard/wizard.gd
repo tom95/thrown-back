@@ -28,7 +28,7 @@ onready var jetpack_exhaust = get_node("jetpack_exhaust")
 onready var projectile_spawn = get_node("base/projectile_spawn")
 onready var wizard_sprite = get_node("base")
 
-signal killed()
+signal killed(damage_dealer_image)
 
 func _ready():
 	set_physics_process(true)
@@ -94,17 +94,17 @@ func _physics_process(delta):
 
 	if Input.is_action_pressed("fire") and weapon_cooldown <= 0:
 		shoot()
-	
+
 	if Input.is_action_pressed("airblast") and weapon_cooldown <= 0:
 		airblast()
 
 	velocity.x = clamp(-MAX_VELOCITY.x, velocity.x, MAX_VELOCITY.x)
 	velocity.y = clamp(-MAX_VELOCITY.y, velocity.y, MAX_VELOCITY.y)
 
-func take_damage(damage):
+func take_damage(damage, damage_dealer_image):
 	health = health - damage
 	if (health <= 0):
-		emit_signal("killed")
+		emit_signal("killed", damage_dealer_image)
 
 func hit_by_icebolt():
 	is_iced = true

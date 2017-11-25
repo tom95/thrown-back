@@ -15,6 +15,3 @@ func _process(delta):
 func _on_cow_killed(num):
 	$cow_counter.visible = true
 	$cow_counter/counter.text = String(num)
-	
-func game_over():
-	print("GAME OVER!!!!!")

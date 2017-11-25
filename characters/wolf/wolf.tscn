@@ -3,12 +3,12 @@
 [ext_resource path="res://characters/wolf/wolf.gd" type="Script" id=1]
 [ext_resource path="res://characters/wolf/wolf.svg" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 41.4919, 26.3565 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 71.0445, 45.2015 )
@@ -50,12 +50,12 @@ audio_bus_name = "Master"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_area"]
 
 position = Vector2( -0.469893, 0.434116 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="collision" type="CollisionShape2D" parent="."]
 
 position = Vector2( -22.9207, -45.8414 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="base" type="Node2D" parent="."]
 
