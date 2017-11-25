@@ -16,7 +16,6 @@ func _process(delta):
 		throw_stone()
 
 func throw_stone():
-	print("throwing")
 	stone_cooldown = COOLDOWN
 	var projectile = preload("res://effects/stone/stone.tscn").instance()
 	projectile.add_collision_exception_with(self)
