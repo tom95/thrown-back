@@ -19,7 +19,7 @@ position = Vector2( 703.748, 404.544 )
 [node name="wizard" parent="." instance=ExtResource( 3 )]
 
 position = Vector2( -365.586, 320.712 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="hud" parent="." instance=ExtResource( 4 )]
 
