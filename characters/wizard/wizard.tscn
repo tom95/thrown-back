@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://characters/wizard/wizard.gd" type="Script" id=1]
 [ext_resource path="res://effects/particle_round.png" type="Texture" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://characters/wizard/arm_right.png" type="Texture" id=16]
 [ext_resource path="res://characters/wizard/hand_right.png" type="Texture" id=17]
 [ext_resource path="res://characters/wizard/hat.png" type="Texture" id=18]
+[ext_resource path="res://characters/wizard/wizard_iceBlock.svg" type="Texture" id=19]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -244,6 +245,13 @@ position = Vector2( 3.29622, -12.7701 )
 texture = ExtResource( 18 )
 offset = Vector2( -1.89791, -23.497 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="wizard_iceBlock" type="Sprite" parent="base"]
+
+visible = false
+position = Vector2( 0.215584, -6.04467 )
+texture = ExtResource( 19 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="animation_player" type="AnimationPlayer" parent="."]
 

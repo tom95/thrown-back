@@ -108,11 +108,13 @@ func take_damage(damage):
 
 func hit_by_icebolt():
 	is_iced = true
+	$base/wizard_iceBlock.set_visible(true)
 	$base/ice_timer.wait_time = 1
 	$base/ice_timer.start()
 
 func _on_ice_timer_timeout():
 	is_iced = false
+	$base/wizard_iceBlock.set_visible(false)
 
 func apply_drag(delta):
 	var drag_magnitude = velocity.length()
