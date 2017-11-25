@@ -14,7 +14,7 @@ _sections_unfolded = [ "Collision", "Transform", "collision" ]
 
 [node name="fence" parent="." instance=ExtResource( 2 )]
 
-position = Vector2( 1048.41, 559.737 )
+position = Vector2( 670, 560 )
 
 [node name="TileMap" type="TileMap" parent="."]
 

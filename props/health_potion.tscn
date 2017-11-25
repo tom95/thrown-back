@@ -40,7 +40,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="potion" type="Sprite" parent="."]
 
-scale = Vector2( 0.912321, 0.912321 )
+scale = Vector2( 0.91806, 0.91806 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
