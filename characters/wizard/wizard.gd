@@ -13,7 +13,7 @@ const FLOOR_BOOST_FACTOR = 10
 const MAX_FLOOR_ANGLE = deg2rad(30)
 const TELEKINESIS_SPEED = 400
 
-var gravity = GRAVITY
+var gravity_scale = 1
 var velocity = Vector2()
 var jetpack_fuel = 100
 var direction = 1
@@ -39,7 +39,7 @@ func _ready():
 
 func move_and_bounce(delta):
 	var old_velocity = velocity
-	velocity += delta * gravity
+	velocity += delta * GRAVITY * gravity_scale
 	is_on_floor = false
 	is_on_ceiling = false
 	is_on_wall = false
@@ -138,8 +138,8 @@ func hit_by_petrification():
 		return
 	
 	is_petrified = true
-	gravity = gravity * 7
-	#velocity.y = -100
+	gravity_scale = 7
+	velocity = Vector2(0,-100)
 	$base/wizardbody.set_visible(false)
 	$base/wizard_petrified.set_visible(true)
 	$base/petrification_timer.wait_time = 2
@@ -147,7 +147,7 @@ func hit_by_petrification():
 
 func _on_petrification_timer_timeout():
 	is_petrified = false
-	gravity = GRAVITY
+	gravity_scale = 1
 	$base/wizardbody.set_visible(true)
 	$base/wizard_petrified.set_visible(false)
 
