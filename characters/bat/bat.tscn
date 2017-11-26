@@ -35,7 +35,7 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="collision" type="CollisionShape2D" parent="."]
 
 position = Vector2( -0.814514, 6.51607 )
 shape = SubResource( 1 )

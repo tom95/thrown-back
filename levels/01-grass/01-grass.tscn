@@ -341,8 +341,6 @@ __meta__ = {
 
 [node name="characters" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="wolf" parent="characters" instance=ExtResource( 10 )]
 
 position = Vector2( 9355.17, -935.588 )
@@ -424,22 +422,22 @@ position = Vector2( -1186.89, -111.271 )
 
 [connection signal="body_entered" from="fences/fence8" to="fences/fence4" method="_on_fence_body_entered"]
 
-[connection signal="body_entered" from="fences/fence9" to="fences/fence2" method="_on_fence_body_entered"]
-
 [connection signal="body_entered" from="fences/fence9" to="fences/fence7" method="_on_fence_body_entered"]
 
-[connection signal="body_entered" from="fences/fence11" to="fences/fence6" method="_on_fence_body_entered"]
+[connection signal="body_entered" from="fences/fence9" to="fences/fence2" method="_on_fence_body_entered"]
 
 [connection signal="body_entered" from="fences/fence11" to="fences/fence10" method="_on_fence_body_entered"]
+
+[connection signal="body_entered" from="fences/fence11" to="fences/fence6" method="_on_fence_body_entered"]
 
 [connection signal="body_entered" from="fences/fence10" to="fences/fence6" method="_on_fence_body_entered"]
 
 [connection signal="body_entered" from="fences/fence7" to="fences/fence2" method="_on_fence_body_entered"]
 
-[connection signal="body_entered" from="fences/fence12" to="fences/fence6" method="_on_fence_body_entered"]
-
 [connection signal="body_entered" from="fences/fence12" to="fences/fence11" method="_on_fence_body_entered"]
 
 [connection signal="body_entered" from="fences/fence12" to="fences/fence10" method="_on_fence_body_entered"]
+
+[connection signal="body_entered" from="fences/fence12" to="fences/fence6" method="_on_fence_body_entered"]
 
 

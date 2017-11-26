@@ -18,6 +18,7 @@ func start_engaging(player, movement_area):
 	set_process(true)
 	self.player = player
 	self.movement_area = movement_area
+	update_reposition_timer()
 	$reposition_timer.start()
 	next_turn()
 
@@ -32,7 +33,10 @@ func _on_reposition_timer_timeout():
 
 func take_damage(amount, dealer):
 	health -= amount
-	$reposition_timer.wait_time = lerp(2, 0.7, health / MAX_HEALTH)
+	update_reposition_timer()
+
+func update_reposition_timer():
+	$reposition_timer.wait_time = lerp(5, 0.7, health / MAX_HEALTH)
 
 func next_turn():
 	target_position = random_position()
