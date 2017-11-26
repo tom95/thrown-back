@@ -23,6 +23,7 @@ var is_on_floor = false
 var is_on_ceiling = false
 var is_on_wall = false
 var is_iced = false
+var is_petrified = false
 
 onready var jetpack_exhaust = get_node("jetpack_exhaust")
 onready var projectile_spawn = get_node("base/projectile_spawn")
@@ -56,7 +57,7 @@ func move_and_bounce(delta):
 				velocity = (velocity * 0.4).bounce(collision.normal)
 
 func _physics_process(delta):
-	if is_iced:
+	if is_iced or is_petrified:
 		return
 	
 	move_and_bounce(delta)
@@ -117,6 +118,16 @@ func hit_by_icebolt():
 
 func _on_ice_timer_timeout():
 	is_iced = false
+	$base/wizard_iceBlock.set_visible(false)
+
+func hit_by_petrification():
+	is_petrified = true
+	$base/wizard_iceBlock.set_visible(true)
+	$base/petrification_timer.wait_time = 1
+	$base/petrification_timer.start()
+
+func _on_petrification_timer_timeout():
+	is_petrified = false
 	$base/wizard_iceBlock.set_visible(false)
 
 func apply_drag(delta):
