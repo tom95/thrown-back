@@ -20,14 +20,9 @@ func show_level(path):
 	setup_level()
 
 func setup_level():
-	$level.connect("spawn", self, "_on_spawn_requested")
 	$level.connect("cow_killed", $hud, "_on_cow_killed")
 	$wizard/light.enabled = $level.needs_light()
-	print("LIGHT: " + str($level.needs_light()))
 	$wizard.position = $level.get_spawn_position()
-
-func _on_spawn_requested(object):
-	add_child(object)
 
 func game_over(killed_by_texture):
 	var root = get_tree().get_root()
