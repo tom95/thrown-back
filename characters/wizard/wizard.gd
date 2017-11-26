@@ -12,6 +12,7 @@ const MAX_VELOCITY = Vector2(1000, 1000)
 const FLOOR_BOOST_FACTOR = 10
 const MAX_FLOOR_ANGLE = deg2rad(30)
 
+var gravity = GRAVITY
 var velocity = Vector2()
 var jetpack_fuel = 100
 var direction = 1
@@ -36,7 +37,7 @@ func _ready():
 
 func move_and_bounce(delta):
 	var old_velocity = velocity
-	velocity += delta * GRAVITY
+	velocity += delta * gravity
 	is_on_floor = false
 	is_on_ceiling = false
 	is_on_wall = false
@@ -57,10 +58,13 @@ func move_and_bounce(delta):
 				velocity = (velocity * 0.4).bounce(collision.normal)
 
 func _physics_process(delta):
-	if is_iced or is_petrified:
+	if is_iced:
 		return
 	
 	move_and_bounce(delta)
+	
+	if is_petrified:
+		return
 
 	var using_jetpack = Input.is_action_pressed("move_left") or\
 		Input.is_action_pressed("move_right") or\
@@ -111,6 +115,9 @@ func heal(num):
 	health = min(MAX_HEALTH, health + num)
 
 func hit_by_icebolt():
+	if is_iced:
+		return
+	
 	is_iced = true
 	$base/wizard_iceBlock.set_visible(true)
 	$base/ice_timer.wait_time = 1
@@ -121,14 +128,22 @@ func _on_ice_timer_timeout():
 	$base/wizard_iceBlock.set_visible(false)
 
 func hit_by_petrification():
+	if is_petrified:
+		return
+	
 	is_petrified = true
-	$base/wizard_iceBlock.set_visible(true)
-	$base/petrification_timer.wait_time = 1
+	gravity = gravity * 7
+	#velocity.y = -100
+	$base/wizardbody.set_visible(false)
+	$base/wizard_petrified.set_visible(true)
+	$base/petrification_timer.wait_time = 2
 	$base/petrification_timer.start()
 
 func _on_petrification_timer_timeout():
 	is_petrified = false
-	$base/wizard_iceBlock.set_visible(false)
+	gravity = GRAVITY
+	$base/wizardbody.set_visible(true)
+	$base/wizard_petrified.set_visible(false)
 
 func apply_drag(delta):
 	var drag_magnitude = velocity.length()

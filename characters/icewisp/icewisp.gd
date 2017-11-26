@@ -20,7 +20,6 @@ func iceblast():
 	var projectile = preload("res://effects/icebolt/icebolt.tscn").instance()
 	projectile.add_collision_exception_with(self)
 	projectile.linear_velocity = (attackee.global_position - $base/projectile_spawn.global_position) * 2
-	#projectile.linear_velocity = Vector2(ICE_PROJECTILE_SPEED, 0)
 	projectile.position = $base/projectile_spawn.global_position
 	emit_signal("spawn", projectile)
 

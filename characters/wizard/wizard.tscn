@@ -1,25 +1,26 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://characters/wizard/wizard.gd" type="Script" id=1]
 [ext_resource path="res://effects/particle_round.png" type="Texture" id=2]
-[ext_resource path="res://effects/airblast/airblast.tscn" type="PackedScene" id=3]
-[ext_resource path="res://characters/wizard/leg_right.png" type="Texture" id=4]
-[ext_resource path="res://characters/wizard/leg_left.png" type="Texture" id=5]
-[ext_resource path="res://characters/wizard/body.png" type="Texture" id=6]
-[ext_resource path="res://characters/wizard/mustache.png" type="Texture" id=7]
-[ext_resource path="res://characters/wizard/eye_right.png" type="Texture" id=8]
-[ext_resource path="res://characters/wizard/pupil_right.png" type="Texture" id=9]
-[ext_resource path="res://characters/wizard/eye_left.png" type="Texture" id=10]
-[ext_resource path="res://characters/wizard/pupil_left.png" type="Texture" id=11]
-[ext_resource path="res://characters/wizard/eyebrow_left.png" type="Texture" id=12]
-[ext_resource path="res://characters/wizard/eyebrow_right.png" type="Texture" id=13]
-[ext_resource path="res://characters/wizard/arm_left.png" type="Texture" id=14]
-[ext_resource path="res://characters/wizard/hand_left.png" type="Texture" id=15]
-[ext_resource path="res://characters/wizard/arm_right.png" type="Texture" id=16]
-[ext_resource path="res://characters/wizard/hand_right.png" type="Texture" id=17]
-[ext_resource path="res://characters/wizard/hat.png" type="Texture" id=18]
-[ext_resource path="res://characters/wizard/wizard_iceBlock.svg" type="Texture" id=19]
-[ext_resource path="res://effects/light.png" type="Texture" id=20]
+[ext_resource path="res://effects/light.png" type="Texture" id=3]
+[ext_resource path="res://effects/airblast/airblast.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/wizard/leg_right.png" type="Texture" id=5]
+[ext_resource path="res://characters/wizard/leg_left.png" type="Texture" id=6]
+[ext_resource path="res://characters/wizard/body.png" type="Texture" id=7]
+[ext_resource path="res://characters/wizard/mustache.png" type="Texture" id=8]
+[ext_resource path="res://characters/wizard/eye_right.png" type="Texture" id=9]
+[ext_resource path="res://characters/wizard/pupil_right.png" type="Texture" id=10]
+[ext_resource path="res://characters/wizard/eye_left.png" type="Texture" id=11]
+[ext_resource path="res://characters/wizard/pupil_left.png" type="Texture" id=12]
+[ext_resource path="res://characters/wizard/eyebrow_left.png" type="Texture" id=13]
+[ext_resource path="res://characters/wizard/eyebrow_right.png" type="Texture" id=14]
+[ext_resource path="res://characters/wizard/arm_left.png" type="Texture" id=15]
+[ext_resource path="res://characters/wizard/hand_left.png" type="Texture" id=16]
+[ext_resource path="res://characters/wizard/hat.png" type="Texture" id=17]
+[ext_resource path="res://characters/wizard/arm_right.png" type="Texture" id=18]
+[ext_resource path="res://characters/wizard/hand_right.png" type="Texture" id=19]
+[ext_resource path="res://characters/wizard/wizard_iceBlock.svg" type="Texture" id=20]
+[ext_resource path="res://characters/wizard/wizard_petrified.svg" type="Texture" id=21]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -142,6 +143,42 @@ h_frames = 1
 v_frames = 1
 _sections_unfolded = [ "Drawing", "Process Material", "Time" ]
 
+[node name="light" type="Light2D" parent="."]
+
+position = Vector2( -0.566814, 1.60596 )
+enabled = false
+editor_only = false
+texture = ExtResource( 3 )
+offset = Vector2( 0, 0 )
+texture_scale = 2.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 3
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Shadow" ]
+
+[node name="animation_player" type="AnimationPlayer" parent="."]
+
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+root_node = NodePath("..")
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
 [node name="base" type="Node2D" parent="."]
 
 [node name="ice_timer" type="Timer" parent="base"]
@@ -163,142 +200,118 @@ autostart = false
 position = Vector2( 30.5707, 0.527931 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="airblast" parent="base/projectile_spawn" instance=ExtResource( 3 )]
+[node name="airblast" parent="base/projectile_spawn" instance=ExtResource( 4 )]
 
 position = Vector2( 5.48579, -13.4649 )
 
-[node name="leg_right" type="Sprite" parent="base"]
+[node name="wizardbody" type="Node2D" parent="base"]
+
+_sections_unfolded = [ "Visibility" ]
+
+[node name="leg_right" type="Sprite" parent="base/wizardbody"]
 
 position = Vector2( 12.1887, 22.3504 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 offset = Vector2( 5.35906, 8.28226 )
 
-[node name="leg_left" type="Sprite" parent="base"]
+[node name="leg_left" type="Sprite" parent="base/wizardbody"]
 
 position = Vector2( -14.1562, 21.1881 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 offset = Vector2( -2.78266, 7.65713 )
 
-[node name="body" type="Sprite" parent="base"]
+[node name="body" type="Sprite" parent="base/wizardbody"]
 
 editor/display_folded = true
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="mustache" type="Sprite" parent="base/body"]
+[node name="mustache" type="Sprite" parent="base/wizardbody/body"]
 
 position = Vector2( 10.0439, 4.6913 )
-texture = ExtResource( 7 )
-
-[node name="eye_right" type="Sprite" parent="base/body"]
-
-position = Vector2( 16.1231, -7.41246 )
 texture = ExtResource( 8 )
 
-[node name="pupil_right" type="Sprite" parent="base/body/eye_right"]
+[node name="eye_right" type="Sprite" parent="base/wizardbody/body"]
 
-position = Vector2( 1.3277, -0.506506 )
+position = Vector2( 16.1231, -7.41246 )
 texture = ExtResource( 9 )
 
-[node name="eye_left" type="Sprite" parent="base/body"]
+[node name="pupil_right" type="Sprite" parent="base/wizardbody/body/eye_right"]
 
-position = Vector2( 3.30411, -7.8209 )
+position = Vector2( 1.3277, -0.506506 )
 texture = ExtResource( 10 )
 
-[node name="pupil_left" type="Sprite" parent="base/body/eye_left"]
+[node name="eye_left" type="Sprite" parent="base/wizardbody/body"]
 
-position = Vector2( 1.58987, -0.295063 )
+position = Vector2( 3.30411, -7.8209 )
 texture = ExtResource( 11 )
 
-[node name="eyebrow_left" type="Sprite" parent="base/body"]
+[node name="pupil_left" type="Sprite" parent="base/wizardbody/body/eye_left"]
+
+position = Vector2( 1.58987, -0.295063 )
+texture = ExtResource( 12 )
+
+[node name="eyebrow_left" type="Sprite" parent="base/wizardbody/body"]
 
 position = Vector2( 10.1945, -12.806 )
 rotation = -0.0224884
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 offset = Vector2( -8.67434, -1.81467 )
 
-[node name="eyebrow_right" type="Sprite" parent="base/body"]
+[node name="eyebrow_right" type="Sprite" parent="base/wizardbody/body"]
 
 position = Vector2( 8.15333, -12.8293 )
 rotation = 0.0422089
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 offset = Vector2( 9.22118, -1.4218 )
 
-[node name="arm_left" type="Sprite" parent="base"]
+[node name="arm_left" type="Sprite" parent="base/wizardbody"]
 
 editor/display_folded = true
 position = Vector2( -26.2058, -0.343494 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 offset = Vector2( -4.66704, 5.20427 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="hand_left" type="Sprite" parent="base/arm_left"]
+[node name="hand_left" type="Sprite" parent="base/wizardbody/arm_left"]
 
 position = Vector2( -10.6724, 8.79764 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 offset = Vector2( -3.84471, 4.41429 )
 
-[node name="arm_right" type="Sprite" parent="base"]
+[node name="hat" type="Sprite" parent="base/wizardbody"]
+
+position = Vector2( 3.29622, -12.7701 )
+texture = ExtResource( 17 )
+offset = Vector2( -1.89791, -23.497 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="arm_right" type="Sprite" parent="base/wizardbody"]
 
 position = Vector2( 25.3054, -0.312061 )
-texture = ExtResource( 16 )
+texture = ExtResource( 18 )
 offset = Vector2( 5.56227, 5.09751 )
 _sections_unfolded = [ "Transform", "Z" ]
 
-[node name="hand_right" type="Sprite" parent="base/arm_right"]
+[node name="hand_right" type="Sprite" parent="base/wizardbody"]
 
-position = Vector2( 10.6295, 8.9086 )
-texture = ExtResource( 17 )
+position = Vector2( 35.9349, 8.59654 )
+texture = ExtResource( 19 )
 offset = Vector2( 3.41751, 4.41429 )
-
-[node name="hat" type="Sprite" parent="base"]
-
-position = Vector2( 3.29622, -12.7701 )
-texture = ExtResource( 18 )
-offset = Vector2( -1.89791, -23.497 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="wizard_iceBlock" type="Sprite" parent="base"]
 
 visible = false
 position = Vector2( 0.215584, -6.04467 )
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="animation_player" type="AnimationPlayer" parent="."]
+[node name="wizard_petrified" type="Sprite" parent="base"]
 
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-root_node = NodePath("..")
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
-autoplay = ""
-
-[node name="light" type="Light2D" parent="."]
-
-enabled = false
-editor_only = false
-texture = ExtResource( 20 )
-offset = Vector2( 0, 0 )
-texture_scale = 2.0
-color = Color( 1, 1, 1, 1 )
-energy = 1.0
-mode = 3
-range_height = 0.0
-range_z_min = -1024
-range_z_max = 1024
-range_layer_min = 0
-range_layer_max = 0
-range_item_cull_mask = 1
-shadow_enabled = false
-shadow_color = Color( 0, 0, 0, 0 )
-shadow_buffer_size = 2048
-shadow_gradient_length = 0.0
-shadow_filter = 0
-shadow_filter_smooth = 0.0
-shadow_item_cull_mask = 1
-_sections_unfolded = [ "Shadow" ]
+visible = false
+position = Vector2( -0.220993, -13.5108 )
+texture = ExtResource( 21 )
+_sections_unfolded = [ "Visibility" ]
 
 [connection signal="timeout" from="base/ice_timer" to="." method="_on_ice_timer_timeout"]
 
