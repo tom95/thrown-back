@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends "res://characters/npc_bouncer.gd"
 
 const DAMAGE = 300
 const PETRIFICATION_COOLDOWN = 2200

@@ -13,15 +13,13 @@ _sections_unfolded = [ "Transform" ]
 [node name="level" parent="." instance=ExtResource( 2 )]
 
 editor/display_folded = true
-position = Vector2( 703.748, 404.544 )
+position = Vector2( 0, 0 )
 
 [node name="wizard" parent="." instance=ExtResource( 3 )]
 
-position = Vector2( -365.586, 320.712 )
+position = Vector2( -1051.81, -153.505 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="hud" parent="." instance=ExtResource( 4 )]
-
-_sections_unfolded = [ "Pause" ]
 
 
