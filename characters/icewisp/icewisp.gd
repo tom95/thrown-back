@@ -16,6 +16,7 @@ func _process(delta):
 		iceblast()
 
 func iceblast():
+	print("ice")
 	ice_cooldown = ICE_COOLDOWN
 	var projectile = preload("res://effects/icebolt/icebolt.tscn").instance()
 	projectile.add_collision_exception_with(self)
@@ -23,7 +24,6 @@ func iceblast():
 	#projectile.linear_velocity = Vector2(ICE_PROJECTILE_SPEED, 0)
 	projectile.position = $base/projectile_spawn.global_position
 	emit_signal("spawn", projectile)
-	print("HJI")
 
 func _on_icewisp_body_entered( body ):
 	if body.is_in_group("players"):
