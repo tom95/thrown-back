@@ -21,6 +21,7 @@ func despawn():
 	$timer.wait_time = 1
 	$timer.start()
 	
+	$collision.disabled = true
 	mode = MODE_STATIC
 
 func _on_petrificatione_body_entered( body ):
