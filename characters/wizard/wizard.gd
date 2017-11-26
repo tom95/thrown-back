@@ -8,7 +8,9 @@ const MAX_JETPACK_FUEL = 100
 const WEAPON_COOLDOWN =  200
 const BOUNCING_BASELINE = 500
 const MAX_HEALTH = 1000
-const MAX_VELOCITY = Vector2(1000, 1000)
+#const MAX_VELOCITY = Vector2(1000, 1000)
+#changed max_velocity for super jump; maybe use factor instead?
+const MAX_VELOCITY = Vector2(1000, 2000)
 const FLOOR_BOOST_FACTOR = 10
 const MAX_FLOOR_ANGLE = deg2rad(30)
 const TELEKINESIS_SPEED = 400
@@ -116,6 +118,12 @@ func take_damage(damage, damage_dealer_image):
 	health = health - damage
 	if (health <= 0):
 		emit_signal("killed", damage_dealer_image)
+
+func super_jump(jump_factor):
+	if velocity.y <= 0:
+		velocity.y = velocity.y * -1
+	
+	velocity = Vector2(0, velocity.y * jump_factor)
 
 func heal(num):
 	health = min(MAX_HEALTH, health + num)
