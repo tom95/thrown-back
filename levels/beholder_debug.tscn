@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://levels/beholder_debug.gd" type="Script" id=1]
+[ext_resource path="res://levels/02-mountains/tiles/mountains-tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://characters/wizard/wizard.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/beholder/beholder.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 928, 335 )
+
+[node name="beholder_debug" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 70, 70 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -131083, 1073741827, 0, -131082, 1073741827, 0, -131081, 1073741827, 0, -131080, 1073741827, 0, -131079, 1073741827, 0, -131078, 1073741827, 0, -131077, 1073741827, 0, -131076, 1073741827, 0, -131075, 1073741827, 0, -131074, 1073741827, 0, -131073, 1073741827, 0, -196608, 1073741827, 0, -196607, 1073741827, 0, -196606, 1073741827, 0, -196605, 1073741827, 0, -196604, 1073741827, 0, -196603, 1073741827, 0, -196602, 1073741827, 0, -196601, 1073741827, 0, -196600, 1073741827, 0, -196599, 1073741827, 0, -196598, 1073741827, 0, -196597, 1073741827, 0, -196596, 1073741827, 0, -196595, 1073741827, 0, -196594, 1073741827, 0, -196593, 1073741827, 0, -196592, 1073741827, 0, -196591, 1073741827, 0, -196590, 1073741827, 0, -196589, 1073741827, 0, -196588, 1073741827, 0, -196587, 1073741827, 0, -196586, 1073741827, 0, -196585, 1073741825, 0, -131049, -2147483645, 0, -65513, -2147483645, 0, 23, -2147483645, 0, 65559, -2147483645, 0, 131095, -2147483645, 0, 196631, -2147483645, 0, 262167, -2147483645, 0, 327703, -2147483645, 0, 393239, -2147483645, 0, 458775, -2147483645, 0, 524311, -2147483645, 0, 655348, 3, 0, 655349, 3, 0, 655350, 3, 0, 655351, 3, 0, 655352, 3, 0, 655353, 3, 0, 655354, 3, 0, 655355, 3, 0, 655356, 3, 0, 655357, 3, 0, 655358, 3, 0, 655359, 3, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0, 589841, 3, 0, 589842, 3, 0, 589843, 3, 0, 589844, 3, 0, 589845, 3, 0, 589846, 3, 0, 589847, 1, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Occluder" ]
+
+[node name="wizard" parent="." instance=ExtResource( 3 )]
+
+position = Vector2( -619, 520 )
+
+[node name="spawn" type="Position2D" parent="."]
+
+position = Vector2( -620, 429 )
+
+[node name="characters" type="Node2D" parent="."]
+
+[node name="beholder" parent="characters" instance=ExtResource( 4 )]
+
+position = Vector2( 940, 378 )
+
+[node name="beholder_influence_area" type="Area2D" parent="."]
+
+position = Vector2( 720, 252 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="collision" type="CollisionShape2D" parent="beholder_influence_area"]
+
+position = Vector2( -88, -14 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="beholder_influence_area" to="." method="_on_beholder_influence_area_body_entered"]
+
+

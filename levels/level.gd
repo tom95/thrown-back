@@ -10,7 +10,11 @@ func connect_character_signals(character):
 	character.connect("spawn", self, "_on_character_wants_spawn")
 
 func _on_character_wants_spawn(object):
-	emit_signal("spawn", object)
+	# check if we are inside a game or if we are being run by ourselves
+	if get_tree().get_root().get_child(0) == self:
+		add_child(object)
+	else:
+		emit_signal("spawn", object)
 
 func get_spawn_position():
 	return $spawn.global_position

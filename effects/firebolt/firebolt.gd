@@ -19,10 +19,10 @@ func despawn():
 	$smoke.emitting = false
 	$fire.emitting = false
 	$collision.disabled = true
-	
+
 	$timer.wait_time = 1
 	$timer.start()
-	
+
 	mode = MODE_STATIC
 
 func _on_firebolt_body_entered(body):
