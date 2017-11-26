@@ -11,6 +11,7 @@ const MAX_HEALTH = 1000
 const MAX_VELOCITY = Vector2(1000, 1000)
 const FLOOR_BOOST_FACTOR = 10
 const MAX_FLOOR_ANGLE = deg2rad(30)
+const TELEKINESIS_SPEED = 400
 
 var velocity = Vector2()
 var jetpack_fuel = 100
@@ -24,6 +25,7 @@ var is_on_ceiling = false
 var is_on_wall = false
 var is_iced = false
 var is_petrified = false
+var must_gravitate_to = null
 
 onready var jetpack_exhaust = get_node("jetpack_exhaust")
 onready var projectile_spawn = get_node("base/projectile_spawn")
@@ -59,8 +61,12 @@ func move_and_bounce(delta):
 func _physics_process(delta):
 	if is_iced or is_petrified:
 		return
-	
-	move_and_bounce(delta)
+
+	if must_gravitate_to:
+		var direction = (must_gravitate_to.global_position - global_position).normalized()
+		move_and_collide(direction * TELEKINESIS_SPEED * delta)
+	else:
+		move_and_bounce(delta)
 
 	var using_jetpack = Input.is_action_pressed("move_left") or\
 		Input.is_action_pressed("move_right") or\

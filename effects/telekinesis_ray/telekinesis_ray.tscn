@@ -95,6 +95,15 @@ _sections_unfolded = [ "Process Material", "Textures", "Time" ]
 
 shape = SubResource( 4 )
 
+[node name="timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = false
+autostart = true
+
 [connection signal="body_entered" from="." to="." method="_on_telekinesis_ray_body_entered"]
+
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
 
 

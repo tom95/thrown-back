@@ -37,7 +37,7 @@ func take_damage(amount, dealer):
 func next_turn():
 	target_position = random_position()
 
-	var attack = randi() % 2
+	var attack = randi() % 3
 	if attack == 0:
 		poison_ray()
 	elif attack == 1:
@@ -50,23 +50,26 @@ func random_position():
 		rand_range(movement_area.position.x, movement_area.end.x),
 		rand_range(movement_area.position.y, movement_area.end.y))
 
+func projectile_spawn():
+	return $projectile_spawn.global_position
+
 # attacks
 func spawn_projectile(projectile, vel):
 	projectile.add_collision_exception_with(self)
 	projectile.linear_velocity = vel
-	projectile.position = global_position
+	projectile.position = projectile_spawn()
 	emit_signal("spawn", projectile)
 
 func ice_ray():
 	spawn_projectile(preload("res://effects/icebolt/icebolt.tscn").instance(),
-		(player.global_position - global_position) * 2)
+		(player.global_position - projectile_spawn()) * 2)
 
 const NUM_POISON_PROJECTILES = 5
 const POISON_SPREAD = 5
 const POISON_SPEED = 500
 func poison_ray():
 	var base_angle = -floor(NUM_POISON_PROJECTILES / 2)
-	var base_vector = (player.global_position - global_position).normalized() * POISON_SPEED
+	var base_vector = (player.global_position - projectile_spawn()).normalized() * POISON_SPEED
 	for i in range(NUM_POISON_PROJECTILES):
 		var projectile = preload("res://effects/poison_ray/poison_ray.tscn").instance()
 		projectile.damage_dealer_texture = $base/beholder.texture
@@ -74,8 +77,10 @@ func poison_ray():
 		spawn_projectile(projectile,
 			base_vector.rotated(deg2rad((base_angle + i) * POISON_SPREAD)))
 
+const TELEKINESIS_SPEED = 300
 func telekinesis_ray():
-	spawn_projectile(preload("res://effects/telekinesis_ray/telekinesis_ray.tscn").instance(),
-		(player.global_position - global_position) * 2)
-
-
+	var ray = preload("res://effects/telekinesis_ray/telekinesis_ray.tscn").instance()
+	ray.velocity = (player.global_position - projectile_spawn()).normalized() * TELEKINESIS_SPEED
+	ray.position = projectile_spawn()
+	ray.gravitate_to = self
+	emit_signal("spawn", ray)

@@ -34,6 +34,8 @@ wait_time = 1.0
 one_shot = false
 autostart = false
 
+[node name="projectile_spawn" type="Position2D" parent="."]
+
 [connection signal="timeout" from="reposition_timer" to="." method="_on_reposition_timer_timeout"]
 
 
