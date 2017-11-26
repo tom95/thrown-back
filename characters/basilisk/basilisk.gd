@@ -13,8 +13,8 @@ func _ready():
 
 func _process(delta):
 	petrification_cooldown = max(0, petrification_cooldown - 1000 * delta)
-	if attackee.global_position.x - global_position.x < 0:
-		if global > 0:
+	if attacking:
+		if attackee.global_position.x - global_position.x > 0:
 			direction = -1
 		else:
 			direction = 1
@@ -28,7 +28,7 @@ func shoot_petrification():
 	projectile.add_collision_exception_with(self)
 	projectile.linear_velocity = (attackee.global_position - $base/projectile_spawn.global_position) * PETRIFICATION_SPEED
 	projectile.position = $base/projectile_spawn.global_position
-	get_parent().add_child(projectile)
+	emit_signal("spawn", projectile)
 
 func _on_basilisk_body_entered( body ):
 	if body.is_in_group("players"):

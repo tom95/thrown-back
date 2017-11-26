@@ -16,7 +16,6 @@ func _process(delta):
 		iceblast()
 
 func iceblast():
-	print("ice")
 	ice_cooldown = ICE_COOLDOWN
 	var projectile = preload("res://effects/icebolt/icebolt.tscn").instance()
 	projectile.add_collision_exception_with(self)
