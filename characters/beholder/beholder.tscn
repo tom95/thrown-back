@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://characters/beholder/beholder.png" type="Texture" id=1]
+[ext_resource path="res://characters/beholder/beholder.gd" type="Script" id=1]
+[ext_resource path="res://characters/beholder/beholder.png" type="Texture" id=2]
 
 [node name="beholder" type="KinematicBody2D" groups=[
 "characters",
@@ -11,6 +12,7 @@ input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
+script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "collision" ]
 
 [node name="base" type="Node2D" parent="."]
@@ -18,11 +20,20 @@ _sections_unfolded = [ "Collision", "collision" ]
 [node name="beholder" type="Sprite" parent="base"]
 
 position = Vector2( -5.43962, 1.71281 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="collision" type="CollisionPolygon2D" parent="."]
 
 build_mode = 0
 polygon = PoolVector2Array( -115.561, 60.4296, -137.567, -5.5898, -129.645, -64.127, -81.671, -77.771, 80.2966, -78.6513, 121.229, -66.7678, 127.831, -6.91017, 107.145, 59.1092 )
+
+[node name="reposition_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="reposition_timer" to="." method="_on_reposition_timer_timeout"]
 
 
