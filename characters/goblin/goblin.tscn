@@ -77,6 +77,8 @@ _sections_unfolded = [ "Transform", "Z" ]
 position = Vector2( 1.62109, 2.7018 )
 shape = SubResource( 2 )
 
+[connection signal="body_entered" from="." to="." method="_on_goblin_body_entered"]
+
 [connection signal="body_entered" from="attack_area" to="." method="_on_attack_area_body_entered"]
 
 [connection signal="body_exited" from="attack_area" to="." method="_on_attack_area_body_exited"]

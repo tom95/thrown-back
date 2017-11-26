@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://effects/stone/stone.gd" type="Script" id=1]
 [ext_resource path="res://effects/stone/stone.svg" type="Texture" id=2]
@@ -7,6 +7,11 @@
 
 custom_solver_bias = 0.0
 radius = 17.0621
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 19.4269
 
 [node name="stone" type="RigidBody2D"]
 
@@ -36,7 +41,7 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="collision" type="CollisionShape2D" parent="."]
 
 shape = SubResource( 1 )
 
@@ -47,6 +52,22 @@ wait_time = 5.0
 one_shot = false
 autostart = true
 
+[node name="damage_area" type="Area2D" parent="."]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damage_area"]
+
+shape = SubResource( 2 )
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[connection signal="body_entered" from="damage_area" to="." method="_on_damage_area_body_entered"]
 
 

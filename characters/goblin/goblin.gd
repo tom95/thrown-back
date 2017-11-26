@@ -1,6 +1,7 @@
 extends "res://characters/npc_bouncer.gd"
 
-const COOLDOWN = 1000
+const DAMAGE = 120
+const COOLDOWN = 3000
 const STONE_SPEED = 100
 var stone_cooldown = 0
 var attacking = null
@@ -19,7 +20,7 @@ func throw_stone():
 	stone_cooldown = COOLDOWN
 	var projectile = preload("res://effects/stone/stone.tscn").instance()
 	projectile.add_collision_exception_with(self)
-	projectile.linear_velocity = (attacking.global_position - stone_spawn.global_position) * 2
+	projectile.linear_velocity = (attacking.global_position - stone_spawn.global_position) * 2.5
 	projectile.position = stone_spawn.global_position
 	emit_signal("spawn", projectile)
 
@@ -30,3 +31,8 @@ func _on_attack_area_body_entered( body ):
 func _on_attack_area_body_exited( body ):
 	if body.is_in_group("players"):
 		attacking = null
+
+
+func _on_goblin_body_entered( body ):
+	if body.is_in_group("players"):
+		body.take_damage(DAMAGE, $base/goblin.texture)
