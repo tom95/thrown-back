@@ -8,7 +8,10 @@
 custom_solver_bias = 0.0
 radius = 39.0488
 
-[node name="cow" type="RigidBody2D"]
+[node name="cow" type="RigidBody2D" groups=[
+"characters",
+"neutrals",
+]]
 
 input_pickable = false
 collision_layer = 1

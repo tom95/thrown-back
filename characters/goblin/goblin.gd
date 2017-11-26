@@ -24,9 +24,9 @@ func throw_stone():
 	emit_signal("spawn", projectile)
 
 func _on_attack_area_body_entered( body ):
-	if (body is preload("res://characters/wizard/wizard.gd")):
+	if body.is_in_group("players"):
 		attacking = body
 
 func _on_attack_area_body_exited( body ):
-	if (body is preload("res://characters/wizard/wizard.gd")):
+	if body.is_in_group("players"):
 		attacking = null

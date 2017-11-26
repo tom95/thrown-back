@@ -13,7 +13,10 @@ extents = Vector2( 41.4919, 26.3565 )
 custom_solver_bias = 0.0
 extents = Vector2( 71.0445, 45.2015 )
 
-[node name="wolf" type="RigidBody2D"]
+[node name="wolf" type="RigidBody2D" groups=[
+"characters",
+"enemies",
+]]
 
 input_pickable = false
 collision_layer = 1

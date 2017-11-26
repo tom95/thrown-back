@@ -25,15 +25,15 @@ func iceblast():
 	get_parent().add_child(projectile)
 
 func _on_icewisp_body_entered( body ):
-	if (body is preload("res://characters/wizard/wizard.gd")):
+	if body.is_in_group("players"):
 		body.take_damage(DAMAGE, $icewisp.texture)
 
 func _on_detect_wizard_area_body_entered( body ):
-	if (body is preload("res://characters/wizard/wizard.gd")):
+	if body.is_in_group("players"):
 		attacking = true
 		attackee = body
 
 func _on_detect_wizard_area_body_exited( body ):
-	if (body is preload("res://characters/wizard/wizard.gd")):
+	if body.is_in_group("players"):
 		attacking = false
 		attackee = null

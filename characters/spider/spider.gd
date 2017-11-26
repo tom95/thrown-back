@@ -26,15 +26,15 @@ func attack():
 	linear_velocity =  Vector2(linear_velocity.x +(attackee.global_position.x - global_position.x), linear_velocity.y)
 
 func _on_attack_area_body_entered( body ):
-	if (body is preload("res://characters/wizard/wizard.gd")):
+	if body.in_group("players"):
 		attacking = true
 		attackee = body
 
 func _on_attack_area_body_exited( body ):
-	if (body is preload("res://characters/wizard/wizard.gd")):
+	if body.in_group("players"):
 		attacking = false
 		attackee = null
 
 func _on_spider_body_entered( body ):
-	if (body is preload("res://characters/wizard/wizard.gd")):
+	if body.in_group("players"):
 		body.take_damage(DAMAGE, $base/spider.texture)

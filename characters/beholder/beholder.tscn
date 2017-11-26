@@ -2,7 +2,10 @@
 
 [ext_resource path="res://characters/beholder/beholder.png" type="Texture" id=1]
 
-[node name="beholder" type="KinematicBody2D"]
+[node name="beholder" type="KinematicBody2D" groups=[
+"characters",
+"enemies",
+]]
 
 input_pickable = false
 collision_layer = 1

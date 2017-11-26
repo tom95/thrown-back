@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://props/stalagmites.gd" type="Script" id=1]
+[ext_resource path="res://props/stalagmites.png" type="Texture" id=2]
+
+[node name="stalagmites" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+
+[node name="stalagmites" type="Sprite" parent="."]
+
+position = Vector2( 1.71784, -2.22569 )
+texture = ExtResource( 2 )
+
+[node name="collision" type="CollisionPolygon2D" parent="."]
+
+build_mode = 0
+polygon = PoolVector2Array( -32, 32, -26, -27, 2, -36, 22, -6, 34, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="collision" type="CollisionPolygon2D" parent="StaticBody2D"]
+
+build_mode = 0
+polygon = PoolVector2Array( -26, 32, -22, -19, 1, -27, 17, -3, 26, 32 )
+
+[connection signal="body_entered" from="." to="." method="_on_stalagmites_body_entered"]
+
+

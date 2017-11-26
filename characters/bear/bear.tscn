@@ -18,7 +18,10 @@
 custom_solver_bias = 0.0
 radius = 55.1646
 
-[node name="bear" type="RigidBody2D"]
+[node name="bear" type="RigidBody2D" groups=[
+"characters",
+"enemies",
+]]
 
 input_pickable = false
 collision_layer = 1

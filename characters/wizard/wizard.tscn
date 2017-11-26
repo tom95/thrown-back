@@ -76,7 +76,10 @@ anim_offset_random = 0.0
 anim_loop = true
 _sections_unfolded = [ "Angle", "Angular Velocity", "Animation", "Color", "Damping", "Emission Shape", "Flags", "Gravity", "Hue Variation", "Initial Velocity", "Linear Accel", "Orbit Velocity", "Radial Accel", "Scale", "Spread", "Tangential Accel", "Trail" ]
 
-[node name="wizard" type="KinematicBody2D"]
+[node name="wizard" type="KinematicBody2D" groups=[
+"characters",
+"players",
+]]
 
 input_pickable = false
 collision_layer = 1

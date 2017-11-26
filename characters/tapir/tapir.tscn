@@ -8,7 +8,10 @@
 custom_solver_bias = 0.0
 extents = Vector2( 49.9578, 35.3468 )
 
-[node name="tapir" type="RigidBody2D"]
+[node name="tapir" type="RigidBody2D" groups=[
+"characters",
+"neutrals",
+]]
 
 position = Vector2( -0.291992, -0.291992 )
 input_pickable = false

@@ -13,7 +13,10 @@ extents = Vector2( 51.7654, 34.1328 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="icewisp" type="RigidBody2D"]
+[node name="icewisp" type="RigidBody2D" groups=[
+"characters",
+"enemies",
+]]
 
 input_pickable = false
 collision_layer = 1
