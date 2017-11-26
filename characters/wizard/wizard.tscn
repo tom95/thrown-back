@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://characters/wizard/wizard.gd" type="Script" id=1]
 [ext_resource path="res://effects/particle_round.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://characters/wizard/hand_right.png" type="Texture" id=17]
 [ext_resource path="res://characters/wizard/hat.png" type="Texture" id=18]
 [ext_resource path="res://characters/wizard/wizard_iceBlock.svg" type="Texture" id=19]
+[ext_resource path="res://effects/light.png" type="Texture" id=20]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -49,7 +50,7 @@ flatness = 0.0
 gravity = Vector3( 0, 98, 0 )
 initial_velocity = 200.0
 initial_velocity_random = 0.0
-angular_velocity = 1.49939e-043
+angular_velocity = 1.49939e-43
 angular_velocity_random = 0.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
@@ -82,8 +83,9 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
 
-[node name="collsion" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 position = Vector2( -0.664386, -11.1985 )
 shape = SubResource( 1 )
@@ -138,6 +140,8 @@ v_frames = 1
 _sections_unfolded = [ "Drawing", "Process Material", "Time" ]
 
 [node name="base" type="Node2D" parent="."]
+
+editor/display_folded = true
 
 [node name="ice_timer" type="Timer" parent="base"]
 
@@ -262,6 +266,31 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
+
+[node name="light" type="Light2D" parent="."]
+
+enabled = false
+editor_only = false
+texture = ExtResource( 20 )
+offset = Vector2( 0, 0 )
+texture_scale = 2.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 3
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Shadow" ]
 
 [connection signal="timeout" from="base/ice_timer" to="." method="_on_ice_timer_timeout"]
 

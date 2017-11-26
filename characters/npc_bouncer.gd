@@ -1,13 +1,15 @@
 extends RigidBody2D
 
 const MAX_HEALTH = 1000
-var health = 1000
 const BOUNCING_BASELINE = 500
-var velocity = Vector2()
 const GRAVITY = Vector2(0, 1000.0)
 const MAX_FLOOR_ANGLE = deg2rad(5)
 const VELOCITY_CONTROL_THRESHOLD = 1000
 const VELOCITY_EXPLODE_THRESHOLD = 1300
+
+var health = 1000
+var velocity = Vector2()
+var dead = false
 
 var tween
 var last_total_velocity = Vector2(0, 0)
@@ -17,6 +19,8 @@ signal spawn(object)
 func _ready():
 	contact_monitor = true
 	contacts_reported = 5
+	friction = 0.1
+	bounce = 1
 	mode = MODE_CHARACTER
 
 	tween = Tween.new()
@@ -47,14 +51,16 @@ func hit_by_firebolt():
 	take_damage(250, null)
 
 func take_damage(num, damage_dealer):
-	health = health - num
-	if health <= 0:
-		despawn()
+	if not dead:
+		health = health - num
+		if health <= 0:
+			despawn()
 
 func despawn():
+	dead = true
 	spawn_explosion()
 	disable_physics()
-	
+
 	tween.interpolate_property(self, "scale", Vector2(1, 1), Vector2(0.1, 0.1), 0.5, Tween.TRANS_BACK, Tween.EASE_IN)
 	tween.start()
 	yield(tween, "tween_completed")

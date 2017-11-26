@@ -5,13 +5,13 @@
 [ext_resource path="res://props/leaftree.svg" type="Texture" id=3]
 [ext_resource path="res://props/fence.tscn" type="PackedScene" id=4]
 [ext_resource path="res://props/haystack.tscn" type="PackedScene" id=5]
-[ext_resource path="res://characters/wolf/wolf.tscn" type="PackedScene" id=6]
-[ext_resource path="res://characters/goblin/goblin.tscn" type="PackedScene" id=7]
-[ext_resource path="res://characters/bear/bear.tscn" type="PackedScene" id=8]
-[ext_resource path="res://characters/cow/cow.tscn" type="PackedScene" id=9]
-[ext_resource path="res://levels/02-mountains/tiles/mountains-tileset.tres" type="TileSet" id=10]
-[ext_resource path="res://levels/01-grass/tiles/grass-tileset.tres" type="TileSet" id=11]
-[ext_resource path="res://levels/01-grass/01-grass-background.tscn" type="PackedScene" id=12]
+[ext_resource path="res://characters/cow/cow.tscn" type="PackedScene" id=6]
+[ext_resource path="res://levels/02-mountains/tiles/mountains-tileset.tres" type="TileSet" id=7]
+[ext_resource path="res://levels/01-grass/tiles/grass-tileset.tres" type="TileSet" id=8]
+[ext_resource path="res://levels/01-grass/01-grass-background.tscn" type="PackedScene" id=9]
+[ext_resource path="res://characters/wolf/wolf.tscn" type="PackedScene" id=10]
+[ext_resource path="res://characters/goblin/goblin.tscn" type="PackedScene" id=11]
+[ext_resource path="res://characters/bear/bear.tscn" type="PackedScene" id=12]
 [ext_resource path="res://props/moving_platform.tscn" type="PackedScene" id=13]
 [ext_resource path="res://props/health_potion.tscn" type="PackedScene" id=14]
 
@@ -253,67 +253,19 @@ position = Vector2( 10.5871, 15.5404 )
 
 position = Vector2( 9723.54, -474.945 )
 
-[node name="characters" type="Node2D" parent="."]
-
-editor/display_folded = true
-
-[node name="wolf" parent="characters" instance=ExtResource( 6 )]
-
-position = Vector2( 9355.17, -935.588 )
-
-[node name="goblin7" parent="characters" instance=ExtResource( 7 )]
-
-position = Vector2( 5909.54, -775.945 )
-
-[node name="goblin6" parent="characters" instance=ExtResource( 7 )]
-
-position = Vector2( 7606.54, -1131.94 )
-
-[node name="goblin5" parent="characters" instance=ExtResource( 7 )]
-
-position = Vector2( 13035.5, -1865.94 )
-
-[node name="goblin4" parent="characters" instance=ExtResource( 7 )]
-
-position = Vector2( 12500.5, -1913.94 )
-
-[node name="goblin3" parent="characters" instance=ExtResource( 7 )]
-
-position = Vector2( 12728.5, -2002.94 )
-
-[node name="goblin" parent="characters" instance=ExtResource( 7 )]
-
-position = Vector2( 16639.3, -710.108 )
-
-[node name="goblin2" parent="characters" instance=ExtResource( 7 )]
-
-position = Vector2( 16844.2, -632.493 )
-
-[node name="bear" parent="characters" instance=ExtResource( 8 )]
-
-position = Vector2( 1321.55, -423.472 )
-
-[node name="bear2" parent="characters" instance=ExtResource( 8 )]
-
-position = Vector2( 15807.9, -2129.11 )
-
-[node name="bear3" parent="characters" instance=ExtResource( 8 )]
-
-position = Vector2( 15240.5, -926.209 )
-
 [node name="cows" type="Node2D" parent="."]
 
 editor/display_folded = true
 
-[node name="cow" parent="cows" instance=ExtResource( 9 )]
+[node name="cow" parent="cows" instance=ExtResource( 6 )]
 
 position = Vector2( 2448.44, -345.997 )
 
-[node name="cow2" parent="cows" instance=ExtResource( 9 )]
+[node name="cow2" parent="cows" instance=ExtResource( 6 )]
 
 position = Vector2( 17084.7, -1736.2 )
 
-[node name="cow3" parent="cows" instance=ExtResource( 9 )]
+[node name="cow3" parent="cows" instance=ExtResource( 6 )]
 
 position = Vector2( 10386.5, -665.945 )
 
@@ -339,7 +291,7 @@ _sections_unfolded = [ "Rect" ]
 
 position = Vector2( -80, 50 )
 mode = 0
-tile_set = ExtResource( 10 )
+tile_set = ExtResource( 7 )
 cell_size = Vector2( 70, 70 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -364,7 +316,7 @@ __meta__ = {
 
 position = Vector2( -80, 50 )
 mode = 0
-tile_set = ExtResource( 11 )
+tile_set = ExtResource( 8 )
 cell_size = Vector2( 70, 70 )
 cell_quadrant_size = 70
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -385,50 +337,109 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ParallaxBackground" parent="." instance=ExtResource( 12 )]
+[node name="sky_background" parent="." instance=ExtResource( 9 )]
 
-[node name="moving_platform" parent="." instance=ExtResource( 13 )]
+[node name="characters" type="Node2D" parent="."]
 
-position = Vector2( 11210, -1797 )
+editor/display_folded = true
 
-[node name="moving_platform2" parent="." instance=ExtResource( 13 )]
+[node name="wolf" parent="characters" instance=ExtResource( 10 )]
 
-position = Vector2( 14256.6, -1856.36 )
+position = Vector2( 9355.17, -935.588 )
 
-[node name="moving_platform3" parent="." instance=ExtResource( 13 )]
+[node name="goblin7" parent="characters" instance=ExtResource( 11 )]
+
+position = Vector2( 5909.54, -775.945 )
+
+[node name="goblin6" parent="characters" instance=ExtResource( 11 )]
+
+position = Vector2( 7606.54, -1131.94 )
+
+[node name="goblin5" parent="characters" instance=ExtResource( 11 )]
+
+position = Vector2( 13035.5, -1865.94 )
+
+[node name="goblin4" parent="characters" instance=ExtResource( 11 )]
+
+position = Vector2( 12500.5, -1913.94 )
+
+[node name="goblin3" parent="characters" instance=ExtResource( 11 )]
+
+position = Vector2( 12728.5, -2002.94 )
+
+[node name="goblin" parent="characters" instance=ExtResource( 11 )]
+
+position = Vector2( 16639.3, -710.108 )
+
+[node name="goblin2" parent="characters" instance=ExtResource( 11 )]
+
+position = Vector2( 16844.2, -632.493 )
+
+[node name="bear" parent="characters" instance=ExtResource( 12 )]
+
+position = Vector2( 1321.55, -423.472 )
+
+[node name="bear2" parent="characters" instance=ExtResource( 12 )]
+
+position = Vector2( 15807.9, -2129.11 )
+
+[node name="bear3" parent="characters" instance=ExtResource( 12 )]
+
+position = Vector2( 15240.5, -926.209 )
+
+[node name="moving_platforms" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="moving_platform3" parent="moving_platforms" instance=ExtResource( 13 )]
 
 position = Vector2( 14947, -1851.2 )
 
-[node name="health_potion" parent="." instance=ExtResource( 14 )]
+[node name="moving_platform2" parent="moving_platforms" instance=ExtResource( 13 )]
 
+position = Vector2( 14256.6, -1856.36 )
+
+[node name="moving_platform" parent="moving_platforms" instance=ExtResource( 13 )]
+
+position = Vector2( 11210, -1797 )
+
+[node name="potions" type="Node2D" parent="."]
+
+editor/display_folded = true
 position = Vector2( 15708.8, -876.97 )
 
-[node name="health_potion2" parent="." instance=ExtResource( 14 )]
+[node name="health_potion" parent="potions" instance=ExtResource( 14 )]
 
-position = Vector2( 4032.64, 692.585 )
+[node name="health_potion2" parent="potions" instance=ExtResource( 14 )]
 
-[node name="health_potion3" parent="." instance=ExtResource( 14 )]
+position = Vector2( -11676.2, 1569.55 )
 
-position = Vector2( 13447.4, -1750.77 )
+[node name="health_potion3" parent="potions" instance=ExtResource( 14 )]
+
+position = Vector2( -2261.35, -873.799 )
+
+[node name="spawn" type="Position2D" parent="."]
+
+position = Vector2( -1186.89, -111.271 )
 
 [connection signal="body_entered" from="fences/fence8" to="fences/fence4" method="_on_fence_body_entered"]
 
-[connection signal="body_entered" from="fences/fence9" to="fences/fence7" method="_on_fence_body_entered"]
-
 [connection signal="body_entered" from="fences/fence9" to="fences/fence2" method="_on_fence_body_entered"]
 
-[connection signal="body_entered" from="fences/fence11" to="fences/fence10" method="_on_fence_body_entered"]
+[connection signal="body_entered" from="fences/fence9" to="fences/fence7" method="_on_fence_body_entered"]
 
 [connection signal="body_entered" from="fences/fence11" to="fences/fence6" method="_on_fence_body_entered"]
+
+[connection signal="body_entered" from="fences/fence11" to="fences/fence10" method="_on_fence_body_entered"]
 
 [connection signal="body_entered" from="fences/fence10" to="fences/fence6" method="_on_fence_body_entered"]
 
 [connection signal="body_entered" from="fences/fence7" to="fences/fence2" method="_on_fence_body_entered"]
 
-[connection signal="body_entered" from="fences/fence12" to="fences/fence10" method="_on_fence_body_entered"]
-
 [connection signal="body_entered" from="fences/fence12" to="fences/fence6" method="_on_fence_body_entered"]
 
 [connection signal="body_entered" from="fences/fence12" to="fences/fence11" method="_on_fence_body_entered"]
+
+[connection signal="body_entered" from="fences/fence12" to="fences/fence10" method="_on_fence_body_entered"]
 
 

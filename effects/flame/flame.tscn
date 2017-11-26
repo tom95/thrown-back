@@ -43,7 +43,7 @@ flatness = 0.0
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 60.0
 initial_velocity_random = 0.5
-angular_velocity = 1.44334e-043
+angular_velocity = 1.44334e-43
 angular_velocity_random = 0.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
@@ -70,7 +70,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Gravity", "Hue Variation", "Initial Velocity", "Orbit Velocity", "Tangential Accel" ]
 
-[node name="Node2D" type="Node2D"]
+[node name="flame" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 

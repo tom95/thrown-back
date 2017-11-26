@@ -1,13 +1,30 @@
 extends Node2D
 
 func _ready():
-	set_process(true)
-	$level.connect("spawn", self, "_on_spawn_requested")
-	$level.connect("cow_killed", $hud, "_on_cow_killed")
 	$wizard.connect("killed", self, "game_over")
+	set_process(true)
+	setup_level()
 
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed("debug_change_level_1"):
+		show_level("res://levels/01-grass/01-grass.tscn")
+	elif Input.is_action_just_pressed("debug_change_level_4"):
+		show_level("res://levels/04-cave/04-cave.tscn")
+
+func show_level(path):
+	remove_child($level)
+	var new_level = load(path).instance()
+	new_level.set_name("level")
+	add_child(new_level)
+	move_child($level, 0)
+	setup_level()
+
+func setup_level():
+	$level.connect("spawn", self, "_on_spawn_requested")
+	$level.connect("cow_killed", $hud, "_on_cow_killed")
+	$wizard/light.enabled = $level.needs_light()
+	print("LIGHT: " + str($level.needs_light()))
+	$wizard.position = $level.get_spawn_position()
 
 func _on_spawn_requested(object):
 	add_child(object)
