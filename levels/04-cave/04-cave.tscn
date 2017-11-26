@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://levels/04-cave/04-cave.gd" type="Script" id=1]
 [ext_resource path="res://levels/02-mountains/tiles/mountains-tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://effects/flame/flame.tscn" type="PackedScene" id=3]
 
 [node name="04-cave" type="Node2D"]
 
@@ -74,5 +75,9 @@ _sections_unfolded = [ "Motion" ]
 [node name="spawn" type="Position2D" parent="."]
 
 position = Vector2( -106.168, 147.266 )
+
+[node name="flame" parent="." instance=ExtResource( 3 )]
+
+position = Vector2( 781.21, 307.798 )
 
 
