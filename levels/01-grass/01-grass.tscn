@@ -429,7 +429,7 @@ position = Vector2( -2261.35, -873.799 )
 
 [node name="spawn" type="Position2D" parent="."]
 
-position = Vector2( -1186.89, -111.271 )
+position = Vector2( 18798.3, -940.578 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="super_jump" type="Node2D" parent="."]

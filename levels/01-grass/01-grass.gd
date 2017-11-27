@@ -19,3 +19,9 @@ func _on_cow_killed():
 func _on_level_end_area_body_entered( body ):
 	if body.is_in_group("players"):
 		emit_signal("next_level", NEXT_LEVEL)
+	spawn_farmer()
+	
+func spawn_farmer():
+	var farmer = preload("res://characters/farmer/farmer.tscn").instance()
+	farmer.position = get_node("farmer_spawn").global_position + Vector2(cows_killed * 50, 0)
+	add_child(farmer)
