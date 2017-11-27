@@ -20,6 +20,7 @@ func throw_stone():
 	stone_cooldown = COOLDOWN
 	var projectile = preload("res://effects/stone/stone.tscn").instance()
 	projectile.add_collision_exception_with(self)
+	projectile.target_group = "players"
 	projectile.linear_velocity = (attacking.global_position - stone_spawn.global_position) * 2.5
 	projectile.position = stone_spawn.global_position
 	emit_signal("spawn", projectile)
