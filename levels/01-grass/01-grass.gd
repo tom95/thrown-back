@@ -1,6 +1,9 @@
 extends "res://levels/level.gd"
 
+const NEXT_LEVEL = "res://levels/04-cave/04-cave.tscn"
+
 signal cow_killed(num_total)
+signal next_level(next_level)
 
 var cows_killed = 0
 
@@ -12,3 +15,7 @@ func _ready():
 func _on_cow_killed():
 	cows_killed = cows_killed + 1
 	emit_signal("cow_killed", cows_killed)
+
+func _on_level_end_area_body_entered( body ):
+	if body.is_in_group("players"):
+		emit_signal("next_level", NEXT_LEVEL)

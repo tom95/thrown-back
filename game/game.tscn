@@ -22,4 +22,6 @@ _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="hud" parent="." instance=ExtResource( 4 )]
 
+[connection signal="next_level" from="level" to="." method="_on_level_next_level"]
+
 

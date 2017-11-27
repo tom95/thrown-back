@@ -32,3 +32,6 @@ func game_over(killed_by_texture):
 	var game_over = preload("res://levels/game-over/game-over.tscn").instance()
 	game_over.set_killed_by(killed_by_texture)
 	root.add_child(game_over)
+
+func _on_level_next_level( next_level ):
+	show_level(next_level)
