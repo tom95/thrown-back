@@ -15,11 +15,11 @@ func _ready():
 func _on_cow_killed():
 	cows_killed = cows_killed + 1
 	emit_signal("cow_killed", cows_killed)
+	spawn_farmer()
 
 func _on_level_end_area_body_entered( body ):
 	if body.is_in_group("players"):
 		emit_signal("next_level", NEXT_LEVEL)
-	spawn_farmer()
 	
 func spawn_farmer():
 	var farmer = preload("res://characters/farmer/farmer.tscn").instance()
