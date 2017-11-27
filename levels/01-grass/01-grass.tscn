@@ -181,8 +181,6 @@ texture = ExtResource( 2 )
 
 [node name="fences" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="fence3" parent="fences" instance=ExtResource( 4 )]
 
 position = Vector2( 12225.5, -1696.94 )
@@ -229,8 +227,6 @@ position = Vector2( 3027, -229 )
 
 [node name="haystacks" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="haystack4" parent="haystacks" instance=ExtResource( 5 )]
 
 position = Vector2( 10191.5, -544.945 )
@@ -257,15 +253,13 @@ position = Vector2( 9723.54, -474.945 )
 
 [node name="cows" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="cow" parent="cows" instance=ExtResource( 6 )]
 
 position = Vector2( 2448.44, -345.997 )
 
 [node name="cow2" parent="cows" instance=ExtResource( 6 )]
 
-position = Vector2( 17084.7, -1736.2 )
+position = Vector2( 17064.9, -1668.28 )
 
 [node name="cow3" parent="cows" instance=ExtResource( 6 )]
 
@@ -373,7 +367,7 @@ position = Vector2( 16639.3, -710.108 )
 
 [node name="goblin2" parent="characters" instance=ExtResource( 11 )]
 
-position = Vector2( 16844.2, -632.493 )
+position = Vector2( 16847.5, -632.493 )
 
 [node name="bear" parent="characters" instance=ExtResource( 12 )]
 
@@ -401,8 +395,6 @@ position = Vector2( 15131.5, -803.907 )
 
 [node name="moving_platforms" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="moving_platform3" parent="moving_platforms" instance=ExtResource( 15 )]
 
 position = Vector2( 14947, -1851.2 )
@@ -417,7 +409,6 @@ position = Vector2( 11210, -1797 )
 
 [node name="potions" type="Node2D" parent="."]
 
-editor/display_folded = true
 position = Vector2( 15708.8, -876.97 )
 
 [node name="health_potion" parent="potions" instance=ExtResource( 16 )]
@@ -433,25 +424,6 @@ position = Vector2( -2261.35, -873.799 )
 [node name="spawn" type="Position2D" parent="."]
 
 position = Vector2( -1186.89, -111.271 )
-
-[connection signal="body_entered" from="fences/fence8" to="fences/fence4" method="_on_fence_body_entered"]
-
-[connection signal="body_entered" from="fences/fence9" to="fences/fence7" method="_on_fence_body_entered"]
-
-[connection signal="body_entered" from="fences/fence9" to="fences/fence2" method="_on_fence_body_entered"]
-
-[connection signal="body_entered" from="fences/fence11" to="fences/fence10" method="_on_fence_body_entered"]
-
-[connection signal="body_entered" from="fences/fence11" to="fences/fence6" method="_on_fence_body_entered"]
-
-[connection signal="body_entered" from="fences/fence10" to="fences/fence6" method="_on_fence_body_entered"]
-
-[connection signal="body_entered" from="fences/fence7" to="fences/fence2" method="_on_fence_body_entered"]
-
-[connection signal="body_entered" from="fences/fence12" to="fences/fence11" method="_on_fence_body_entered"]
-
-[connection signal="body_entered" from="fences/fence12" to="fences/fence10" method="_on_fence_body_entered"]
-
-[connection signal="body_entered" from="fences/fence12" to="fences/fence6" method="_on_fence_body_entered"]
+_sections_unfolded = [ "Transform" ]
 
 

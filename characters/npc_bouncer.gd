@@ -12,7 +12,7 @@ var velocity = Vector2()
 var dead = false
 
 var tween
-var last_total_velocity = Vector2(0, 0)
+var last_total_velocity = 0
 
 signal spawn(object)
 
