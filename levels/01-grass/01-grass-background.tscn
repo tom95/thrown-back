@@ -45,7 +45,7 @@ _sections_unfolded = [ "Grow Direction", "Rect" ]
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
 
-position = Vector2( 0, -200 )
+position = Vector2( 0, -700 )
 motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 2800, 0 )
@@ -61,7 +61,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
 
-position = Vector2( 0, -160 )
+position = Vector2( 0, -660 )
 motion_scale = Vector2( 0.05, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 1600, 0 )
@@ -74,7 +74,7 @@ texture = ExtResource( 2 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
 
-position = Vector2( 0, -160 )
+position = Vector2( 0, -660 )
 motion_scale = Vector2( 0.1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 2500, 0 )
@@ -87,7 +87,7 @@ texture = ExtResource( 3 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 
-position = Vector2( 0, -160 )
+position = Vector2( 0, -660 )
 motion_scale = Vector2( 0.15, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 2500, 0 )
@@ -102,7 +102,7 @@ texture = ExtResource( 4 )
 
 editor/display_folded = true
 visible = false
-position = Vector2( 0, -160 )
+position = Vector2( 0, -660 )
 motion_scale = Vector2( 0.6, 0.4 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
