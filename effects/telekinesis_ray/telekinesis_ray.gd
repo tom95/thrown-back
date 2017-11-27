@@ -1,7 +1,5 @@
 extends Area2D
 
-const Util = preload("res://util.gd")
-
 const DURATION = 1
 
 var velocity = Vector2(0, 0)

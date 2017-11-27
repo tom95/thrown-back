@@ -4,6 +4,12 @@ var dying = false
 
 func _ready():
 	set_process(true)
+	
+	set_collision_layer_bit(0, false)
+	set_collision_layer_bit(1, true)
+
+	set_collision_mask_bit(0, true)
+	set_collision_mask_bit(1, false)
 
 func _process(delta):
 	pass
