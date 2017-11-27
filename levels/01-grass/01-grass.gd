@@ -12,3 +12,9 @@ func _ready():
 func _on_cow_killed():
 	cows_killed = cows_killed + 1
 	emit_signal("cow_killed", cows_killed)
+	spawn_farmer()
+	
+func spawn_farmer():
+	var farmer = preload("res://characters/farmer/farmer.tscn").instance()
+	farmer.position = get_node("farmer_spawn").global_position + Vector2(cows_killed * 50, 0)
+	add_child(farmer)

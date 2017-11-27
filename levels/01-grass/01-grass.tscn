@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://levels/01-grass/01-grass.gd" type="Script" id=1]
 [ext_resource path="res://props/firtree.svg" type="Texture" id=2]
@@ -12,10 +12,9 @@
 [ext_resource path="res://characters/wolf/wolf.tscn" type="PackedScene" id=10]
 [ext_resource path="res://characters/goblin/goblin.tscn" type="PackedScene" id=11]
 [ext_resource path="res://characters/bear/bear.tscn" type="PackedScene" id=12]
-[ext_resource path="res://characters/farmer/farmer.tscn" type="PackedScene" id=13]
-[ext_resource path="res://characters/spider/spider.tscn" type="PackedScene" id=14]
-[ext_resource path="res://props/moving_platform.tscn" type="PackedScene" id=15]
-[ext_resource path="res://props/health_potion.tscn" type="PackedScene" id=16]
+[ext_resource path="res://characters/spider/spider.tscn" type="PackedScene" id=13]
+[ext_resource path="res://props/moving_platform.tscn" type="PackedScene" id=14]
+[ext_resource path="res://props/health_potion.tscn" type="PackedScene" id=15]
 
 [node name="level_grass" type="Node2D"]
 
@@ -383,53 +382,50 @@ position = Vector2( 1321.55, -423.472 )
 
 position = Vector2( 15807.9, -2129.11 )
 
-[node name="farmer" parent="characters" instance=ExtResource( 13 )]
-
-position = Vector2( 18182.6, -586.626 )
-
-[node name="farmer2" parent="characters" instance=ExtResource( 13 )]
-
-position = Vector2( 17779.8, -656.249 )
-
-[node name="farmer3" parent="characters" instance=ExtResource( 13 )]
-
-position = Vector2( 17993.8, -694.249 )
-
-[node name="spider" parent="characters" instance=ExtResource( 14 )]
+[node name="spider" parent="characters" instance=ExtResource( 13 )]
 
 position = Vector2( 15131.5, -803.907 )
 
 [node name="moving_platforms" type="Node2D" parent="."]
 
-[node name="moving_platform3" parent="moving_platforms" instance=ExtResource( 15 )]
+editor/display_folded = true
+
+[node name="moving_platform3" parent="moving_platforms" instance=ExtResource( 14 )]
 
 position = Vector2( 14947, -1851.2 )
 
-[node name="moving_platform2" parent="moving_platforms" instance=ExtResource( 15 )]
+[node name="moving_platform2" parent="moving_platforms" instance=ExtResource( 14 )]
 
 position = Vector2( 14256.6, -1856.36 )
 
-[node name="moving_platform" parent="moving_platforms" instance=ExtResource( 15 )]
+[node name="moving_platform" parent="moving_platforms" instance=ExtResource( 14 )]
 
 position = Vector2( 11210, -1797 )
 
 [node name="potions" type="Node2D" parent="."]
 
-position = Vector2( 15708.8, -876.97 )
+editor/display_folded = true
+position = Vector2( 15708.8, -586.626 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="health_potion" parent="potions" instance=ExtResource( 16 )]
+[node name="health_potion" parent="potions" instance=ExtResource( 15 )]
 
-[node name="health_potion2" parent="potions" instance=ExtResource( 16 )]
+[node name="health_potion2" parent="potions" instance=ExtResource( 15 )]
 
 position = Vector2( -11676.2, 1569.55 )
 
-[node name="health_potion3" parent="potions" instance=ExtResource( 16 )]
+[node name="health_potion3" parent="potions" instance=ExtResource( 15 )]
 
 position = Vector2( -2261.35, -873.799 )
 
 [node name="spawn" type="Position2D" parent="."]
 
 position = Vector2( -1186.89, -111.271 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="farmer_spawn" type="Position2D" parent="."]
+
+position = Vector2( 17796.6, -603.151 )
 _sections_unfolded = [ "Transform" ]
 
 
