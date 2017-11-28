@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 signal spawn(object)
+signal update_boss_health(health)
 
 const MAX_VELOCITY = 200
 const MAX_HEALTH = 10000
@@ -30,10 +31,14 @@ func _process(delta):
 
 func _on_reposition_timer_timeout():
 	next_turn()
+	
+func hit_by_firebolt():
+	take_damage(250, null)
 
 func take_damage(amount, dealer):
 	health -= amount
 	update_reposition_timer()
+	emit_signal("update_boss_health", health)
 
 func update_reposition_timer():
 	$reposition_timer.wait_time = lerp(5, 0.7, health / MAX_HEALTH)

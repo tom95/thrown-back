@@ -21,6 +21,8 @@ func show_level(path):
 
 func setup_level():
 	$level.connect("cow_killed", $hud, "_on_cow_killed")
+	$level.connect("boss_fight_started", $hud, "_on_boss_fight_started")
+	$level.connect("boss_health_updated", $hud, "_on_boss_health_updated")
 	$wizard/light.enabled = $level.needs_light()
 	$wizard.position = $level.get_spawn_position()
 
