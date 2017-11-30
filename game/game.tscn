@@ -1,27 +1,22 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://game/game.gd" type="Script" id=1]
-[ext_resource path="res://levels/01-grass/01-grass.tscn" type="PackedScene" id=2]
-[ext_resource path="res://characters/wizard/wizard.tscn" type="PackedScene" id=3]
-[ext_resource path="res://game/hud/hud.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/wizard/wizard.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/hud/hud.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levels/training/training.tscn" type="PackedScene" id=4]
 
 [node name="game" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="level" parent="." instance=ExtResource( 2 )]
-
-editor/display_folded = true
-position = Vector2( 0, 0 )
-
-[node name="wizard" parent="." instance=ExtResource( 3 )]
+[node name="wizard" parent="." instance=ExtResource( 2 )]
 
 position = Vector2( -1051.81, -153.505 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
-[node name="hud" parent="." instance=ExtResource( 4 )]
+[node name="hud" parent="." instance=ExtResource( 3 )]
 
-[connection signal="next_level" from="level" to="." method="_on_level_next_level"]
+[node name="level" parent="." instance=ExtResource( 4 )]
 
 
