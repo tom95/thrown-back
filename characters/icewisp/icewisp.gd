@@ -36,3 +36,6 @@ func _on_detect_wizard_area_body_exited( body ):
 	if body.is_in_group("players"):
 		attacking = false
 		attackee = null
+
+func get_resource_path():
+	return "res://characters/icewisp/icewisp.tscn"

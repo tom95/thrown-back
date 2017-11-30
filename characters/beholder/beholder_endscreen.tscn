@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://characters/beholder/beholder_endscreen.gd" type="Script" id=1]
+[ext_resource path="res://characters/beholder/beholder.png" type="Texture" id=2]
+
+[node name="beholder" type="RigidBody2D" groups=[
+"characters",
+"enemies",
+]]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "collision" ]
+
+[node name="base" type="Node2D" parent="."]
+
+[node name="beholder" type="Sprite" parent="base"]
+
+position = Vector2( -5.43962, 1.71281 )
+texture = ExtResource( 2 )
+
+[node name="collision" type="CollisionPolygon2D" parent="."]
+
+build_mode = 0
+polygon = PoolVector2Array( -115.561, 60.4296, -137.567, -5.5898, -129.645, -64.127, -81.671, -77.771, 80.2966, -78.6513, 121.229, -66.7678, 127.831, -6.91017, 107.145, 59.1092 )
+
+

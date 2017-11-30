@@ -50,6 +50,8 @@ func game_over(killed_by_texture):
 	root.add_child(game_over)
 
 func you_won():
+	killed_enemies["res://characters/beholder/beholder_endscreen.tscn"] = 1
+	
 	yield(get_tree().create_timer(4), "timeout")
 	
 	var root = stop_level()
