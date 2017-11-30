@@ -12,7 +12,7 @@ const MAX_HEALTH = 1000
 #changed max_velocity for super jump; maybe use factor instead?
 const MAX_VELOCITY = Vector2(1000, 2000)
 const FLOOR_BOOST_FACTOR = 10
-const MAX_FLOOR_ANGLE = deg2rad(30)
+const MAX_FLOOR_ANGLE = deg2rad(46)
 const TELEKINESIS_SPEED = 400
 
 var gravity_scale = 1
