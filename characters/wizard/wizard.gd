@@ -60,7 +60,7 @@ func move_and_bounce(delta):
 				velocity.y = 0
 			else:
 				is_on_wall = true
-				velocity = (velocity * 0.4).bounce(collision.normal)
+				velocity = (velocity * 0.2).bounce(collision.normal)
 
 func _physics_process(delta):
 	if is_iced:
