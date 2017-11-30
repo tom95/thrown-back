@@ -38,7 +38,7 @@ func _process(delta):
 
 func _on_reposition_timer_timeout():
 	next_turn()
-	
+
 func hit_by_firebolt():
 	take_damage(250, null)
 
@@ -65,11 +65,11 @@ func despawn():
 	tween.interpolate_property(self, "scale", Vector2(1, 1), Vector2(0.1, 0.1), 0.5, Tween.TRANS_BACK, Tween.EASE_IN)
 	tween.start()
 	yield(tween, "tween_completed")
-	
+
 	queue_free()
 
 func update_reposition_timer():
-	$reposition_timer.wait_time = lerp(5, 0.7, health / MAX_HEALTH)
+	$reposition_timer.wait_time = lerp(1, 3, float(health) / MAX_HEALTH)
 
 func next_turn():
 	if dead:
@@ -81,7 +81,7 @@ func next_turn():
 	if attack == 0:
 		poison_ray()
 	elif attack == 1:
-		ice_ray()
+		petrifiation_ray()
 	elif attack == 2:
 		telekinesis_ray()
 
@@ -100,8 +100,8 @@ func spawn_projectile(projectile, vel):
 	projectile.position = projectile_spawn()
 	emit_signal("spawn", projectile)
 
-func ice_ray():
-	spawn_projectile(preload("res://effects/icebolt/icebolt.tscn").instance(),
+func petrifiation_ray():
+	spawn_projectile(preload("res://effects/petrification/petrification.tscn").instance(),
 		(player.global_position - projectile_spawn()) * 2)
 
 const NUM_POISON_PROJECTILES = 5
