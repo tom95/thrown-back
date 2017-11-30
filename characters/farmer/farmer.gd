@@ -7,6 +7,8 @@ var attacking = false
 var attackee = null
 var direction = 1
 
+signal farmer_killed
+
 func _ready():
 	pass
 
@@ -48,7 +50,6 @@ func _on_attack_area_body_entered( body ):
 		attacking = true
 		attackee = body
 
-
 func _on_attack_area_body_exited( body ):
 	if body.is_in_group("players"):
 		attacking = false
@@ -57,3 +58,7 @@ func _on_attack_area_body_exited( body ):
 func _on_farmer_body_entered( body ):
 	if body.is_in_group("players"):
 		body.take_damage(DAMAGE, $base/farmer.texture)
+
+func despawn():
+	.despawn()
+	emit_signal("farmer_killed")

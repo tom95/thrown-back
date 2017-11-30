@@ -12,6 +12,10 @@ func _process(delta):
 		show_level("res://levels/01-grass/01-grass.tscn")
 	elif Input.is_action_just_pressed("debug_change_level_4"):
 		show_level("res://levels/04-cave/04-cave.tscn")
+	elif Input.is_action_just_pressed("debug_godmode_on"):
+		$wizard.is_in_godmode = true
+	elif Input.is_action_just_pressed("debug_godmode_off"):
+		$wizard.is_in_godmode = false
 
 func show_level(path):
 	remove_child($level)

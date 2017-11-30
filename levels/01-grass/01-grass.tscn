@@ -348,6 +348,8 @@ __meta__ = {
 
 [node name="characters" type="Node2D" parent="."]
 
+editor/display_folded = true
+
 [node name="wolf" parent="characters" instance=ExtResource( 10 )]
 
 position = Vector2( 15178.1, -849.788 )
@@ -430,13 +432,12 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -1176.99, -112.888 )
 
-[node name="super_jump" type="Node2D" parent="."]
+[node name="superjump" type="Node2D" parent="."]
 
-editor/display_folded = true
-
-[node name="superjump_prop" parent="super_jump" instance=ExtResource( 16 )]
+[node name="superjump_prop" parent="superjump" instance=ExtResource( 16 )]
 
 position = Vector2( 18799.9, -454.442 )
+_sections_unfolded = [ "Pause" ]
 
 [node name="level_end" type="Node2D" parent="."]
 
