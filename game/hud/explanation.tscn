@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/hud/explanation.gd" type="Script" id=1]
+[ext_resource path="res://game/hud/control-explanation.svg" type="Texture" id=2]
+
+
+[node name="explanation" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="image" type="Sprite" parent="."]
+
+position = Vector2( 583, 163 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="tween" type="Tween" parent="."]
+
+playback_process_mode = 1
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+

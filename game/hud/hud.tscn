@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://game/hud/hud.gd" type="Script" id=1]
 [ext_resource path="res://game/hud/hud_material.tres" type="Material" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://game/hud/healthbar_over.svg" type="Texture" id=7]
 [ext_resource path="res://game/hud/healthbar.svg" type="Texture" id=8]
 [ext_resource path="res://game/hud/cow-icon.svg" type="Texture" id=9]
+[ext_resource path="res://game/hud/explanation.tscn" type="PackedScene" id=10]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -172,5 +173,9 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Material", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="explanation" parent="." instance=ExtResource( 10 )]
+
+position = Vector2( 42, -8 )
 
 

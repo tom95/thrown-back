@@ -118,7 +118,7 @@ func _physics_process(delta):
 func take_damage(damage, damage_dealer_image):
 	if is_in_godmode:
 		return
-	
+
 	health = health - damage
 	if (health <= 0):
 		emit_signal("killed", damage_dealer_image)
@@ -126,7 +126,7 @@ func take_damage(damage, damage_dealer_image):
 func super_jump(jump_factor):
 	if velocity.y <= 0:
 		velocity.y = velocity.y * -1
-	
+
 	velocity = Vector2(0, velocity.y * jump_factor)
 
 func heal(num):
@@ -135,7 +135,7 @@ func heal(num):
 func hit_by_icebolt():
 	if is_iced:
 		return
-	
+
 	is_iced = true
 	$base/wizard_iceBlock.set_visible(true)
 	$base/ice_timer.wait_time = 1
@@ -148,7 +148,7 @@ func _on_ice_timer_timeout():
 func hit_by_petrification():
 	if is_petrified:
 		return
-	
+
 	is_petrified = true
 	gravity_scale = 7
 	velocity = Vector2(0,-100)
@@ -184,7 +184,7 @@ func airblast():
 func can_use_jetpack():
 	if is_in_godmode:
 		return true
-	
+
 	return jetpack_fuel > 0
 
 func deplete_jetpack(delta):

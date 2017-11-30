@@ -1,6 +1,6 @@
 extends Area2D
 
-const DAMAGE = 100
+const DAMAGE = 200
 
 func _ready():
 	pass
