@@ -31,6 +31,7 @@ func setup_level():
 	$level.connect("boss_health_updated", $hud, "_on_boss_health_updated")
 	$level.connect("boss_killed", self, "you_won")
 	$level.connect("enemy_killed", self, "_on_enemy_killed")
+	$level.connect("next_level", self, "show_level")
 	$wizard/light.enabled = $level.needs_light()
 	$wizard.position = $level.get_spawn_position()
 	
@@ -66,9 +67,6 @@ func add_enemies(scene):
 			instance.friction = 0
 			scene.add_child(instance)
 			instance.mode = RigidBody2D.MODE_RIGID
-
-func _on_level_next_level( next_level ):
-	show_level(next_level)
 
 func _on_enemy_killed(path):
 	if not path in killed_enemies:
