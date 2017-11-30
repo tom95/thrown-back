@@ -15,7 +15,7 @@ var dying = false
 func _ready():
 	contacts_reported = 5
 	contact_monitor = true
-	
+
 	set_collision_mask_bit(0, true)
 	set_collision_mask_bit(1, false)
 	set_collision_layer_bit(0, false)
