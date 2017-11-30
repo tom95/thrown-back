@@ -21,12 +21,12 @@ func _on_cow_killed():
 func _on_farmer_killed():
 	farmer_count -= 1
 	if farmer_count < 1:
-		$super_jump/superjump_prop.activate()
+		$superjump/superjump_prop.activate()
 
 func spawn_farmer():
 	farmer_count += 1
 	if farmer_count > 0:
-		$super_jump/superjump_prop.deactivate()
+		$superjump/superjump_prop.deactivate()
 	var farmer = preload("res://characters/farmer/farmer.tscn").instance()
 	farmer.position = get_node("farmer_spawn").global_position + Vector2(cows_killed * 50, 0)
 	connect_character_signals(farmer)
