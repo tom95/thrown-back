@@ -7,4 +7,6 @@ func _ready():
 	pass
 
 func _on_training_end_body_entered( body ):
-	emit_signal("next_level", NEXT_LEVEL)
+	if body.is_in_group("players"):
+
+		emit_signal("next_level", NEXT_LEVEL)

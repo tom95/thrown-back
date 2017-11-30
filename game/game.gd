@@ -34,7 +34,8 @@ func setup_level():
 	$level.connect("next_level", self, "show_level")
 	$wizard/light.enabled = $level.needs_light()
 	$wizard.position = $level.get_spawn_position()
-	
+	$wizard.velocity = Vector2(0, 0)
+
 func stop_level():
 	var root = get_tree().get_root()
 	var current_scene = root.get_child(root.get_child_count() - 1)
