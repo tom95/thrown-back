@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://levels/you_won/you-won-text.svg" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -80,5 +82,10 @@ bounce = 0.0
 
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="you-won-text" type="Sprite" parent="."]
+
+position = Vector2( 625.147, 248.472 )
+texture = ExtResource( 1 )
 
 
