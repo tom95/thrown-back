@@ -21,6 +21,7 @@ var jetpack_fuel = 100
 var direction = 1
 var weapon_cooldown = 0
 var health = 1000
+var is_in_godmode = false
 
 var is_in_haystack = false
 var is_on_floor = false
@@ -115,6 +116,9 @@ func _physics_process(delta):
 	velocity.y = clamp(-MAX_VELOCITY.y, velocity.y, MAX_VELOCITY.y)
 
 func take_damage(damage, damage_dealer_image):
+	if is_in_godmode:
+		return
+	
 	health = health - damage
 	if (health <= 0):
 		emit_signal("killed", damage_dealer_image)
@@ -178,6 +182,9 @@ func airblast():
 	$base/projectile_spawn/airblast.emit()
 
 func can_use_jetpack():
+	if is_in_godmode:
+		return true
+	
 	return jetpack_fuel > 0
 
 func deplete_jetpack(delta):
