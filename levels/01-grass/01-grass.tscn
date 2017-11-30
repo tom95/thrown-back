@@ -350,7 +350,7 @@ __meta__ = {
 
 [node name="wolf" parent="characters" instance=ExtResource( 10 )]
 
-position = Vector2( 9355.17, -935.588 )
+position = Vector2( 15178.1, -849.788 )
 
 [node name="goblin7" parent="characters" instance=ExtResource( 11 )]
 
@@ -390,7 +390,7 @@ position = Vector2( 15807.9, -2129.11 )
 
 [node name="spider" parent="characters" instance=ExtResource( 13 )]
 
-position = Vector2( 15131.5, -803.907 )
+position = Vector2( 9176.96, -969.787 )
 
 [node name="moving_platforms" type="Node2D" parent="."]
 

@@ -6,12 +6,12 @@
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 17.0621
+radius = 14.5243
 
 [sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 19.4269
+radius = 11.5
 
 [node name="stone" type="RigidBody2D"]
 
@@ -34,10 +34,10 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="stone" type="Sprite" parent="."]
 
-scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
