@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 380 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 660, 10 )
+
+[node name="you_won" type="Node2D"]
+
+[node name="edges" type="Node2D" parent="."]
+
+position = Vector2( 640, 730 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="edges"]
+
+position = Vector2( -650, -740 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D"]
+
+position = Vector2( 0, 360 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="edges"]
+
+position = Vector2( 650, -720 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D2"]
+
+position = Vector2( 0, 360 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="edges"]
+
+editor/display_folded = true
+position = Vector2( 0, -740 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D3"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="edges"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D4"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+

@@ -38,3 +38,6 @@ func _on_attack_area_body_exited( body ):
 func _on_spider_body_entered( body ):
 	if body.is_in_group("players"):
 		body.take_damage(DAMAGE, $base/spider.texture)
+
+func get_resource_path():
+	return "res://characters/spider/spider.tscn"

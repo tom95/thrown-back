@@ -1,25 +1,25 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://levels/game-over/game-over.gd" type="Script" id=1]
-[ext_resource path="res://levels/game-over/game-over-text.svg" type="Texture" id=2]
+[ext_resource path="res://levels/game_over/game_over.gd" type="Script" id=1]
+[ext_resource path="res://levels/game_over/game_over_text.svg" type="Texture" id=2]
 [ext_resource path="res://characters/wizard/wizard_dead.png" type="Texture" id=3]
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 38.1241
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 380 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 660, 10 )
 
-[node name="game-over" type="Node2D"]
+[node name="game_over" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -62,59 +62,16 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wizard"]
 
 position = Vector2( 0.385544, 8.48187 )
-shape = SubResource( 3 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-position = Vector2( -10, -10 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-
-position = Vector2( 0, 360 )
 shape = SubResource( 1 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-
-position = Vector2( 1290, 10 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-
-position = Vector2( 0, 360 )
-shape = SubResource( 1 )
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-
-position = Vector2( 640, -10 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-
-shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+[node name="edges" type="Node2D" parent="."]
 
 position = Vector2( 640, 730 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="edges"]
+
+editor/display_folded = true
+position = Vector2( -650, -740 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -123,9 +80,59 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D"]
 
+position = Vector2( 0, 360 )
 shape = SubResource( 2 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="edges"]
+
+editor/display_folded = true
+position = Vector2( 650, -720 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D2"]
+
+position = Vector2( 0, 360 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="edges"]
+
+editor/display_folded = true
+position = Vector2( 0, -740 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D3"]
+
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="edges"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D4"]
+
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 

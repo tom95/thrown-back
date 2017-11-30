@@ -7,3 +7,6 @@ func _ready():
 func _on_bear_body_entered( body ):
 	if body.is_in_group("players"):
 		body.take_damage(DAMAGE, $bear.texture)
+
+func get_resource_path():
+	return "res://characters/bear/bear.tscn"

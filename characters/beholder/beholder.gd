@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 signal spawn(object)
 signal update_boss_health(health)
+signal killed
+signal boss_killed
 
 const MAX_VELOCITY = 200
 const MAX_HEALTH = 10000
@@ -11,9 +13,14 @@ var velocity = Vector2(0, 0)
 var player
 var target_position
 var movement_area
+var tween
+var dead
 
 func _ready():
 	set_process(false)
+	tween = Tween.new()
+	add_child(tween)
+	dead = false
 
 func start_engaging(player, movement_area):
 	set_process(true)
@@ -35,15 +42,39 @@ func _on_reposition_timer_timeout():
 func hit_by_firebolt():
 	take_damage(250, null)
 
-func take_damage(amount, dealer):
-	health -= amount
-	update_reposition_timer()
-	emit_signal("update_boss_health", health)
+func take_damage(num, damage_dealer):
+	if not dead:
+		health -= num
+		emit_signal("update_boss_health", health)
+		update_reposition_timer()
+		if health <= 0:
+			despawn()
+
+func despawn():
+	dead = true
+	if player.must_gravitate_to == self:
+		player.must_gravitate_to = null
+	emit_signal("killed")
+	emit_signal("boss_killed")
+	$reposition_timer.stop()
+
+	var explosion = preload("res://effects/explosion/explosion.tscn").instance()
+	explosion.global_position = global_position
+	explosion.big_explosion()
+	emit_signal("spawn", explosion)
+	tween.interpolate_property(self, "scale", Vector2(1, 1), Vector2(0.1, 0.1), 0.5, Tween.TRANS_BACK, Tween.EASE_IN)
+	tween.start()
+	yield(tween, "tween_completed")
+	
+	queue_free()
 
 func update_reposition_timer():
 	$reposition_timer.wait_time = lerp(5, 0.7, health / MAX_HEALTH)
 
 func next_turn():
+	if dead:
+		return
+
 	target_position = random_position()
 
 	var attack = randi() % 3

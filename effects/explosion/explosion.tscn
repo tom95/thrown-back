@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://effects/particle_line.png" type="Texture" id=1]
-[ext_resource path="res://effects/particle_round.png" type="Texture" id=2]
+[ext_resource path="res://effects/explosion/explosion.gd" type="Script" id=1]
+[ext_resource path="res://effects/particle_line.png" type="Texture" id=2]
+[ext_resource path="res://effects/particle_round.png" type="Texture" id=3]
 
 [sub_resource type="Gradient" id=1]
 
@@ -172,7 +173,10 @@ _sections_unfolded = [ "Color", "Initial Velocity", "Scale", "Spread" ]
 
 [node name="explosion" type="Node2D"]
 
-[node name="white streaks" type="Particles2D" parent="."]
+script = ExtResource( 1 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z" ]
+
+[node name="white_streaks" type="Particles2D" parent="."]
 
 emitting = true
 amount = 100
@@ -188,7 +192,7 @@ visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
 draw_order = 1
 process_material = SubResource( 3 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 normal_map = null
 h_frames = 1
 v_frames = 1
@@ -211,7 +215,7 @@ visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
 process_material = SubResource( 7 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 normal_map = null
 h_frames = 1
 v_frames = 1
@@ -234,7 +238,7 @@ visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
 process_material = SubResource( 12 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 normal_map = null
 h_frames = 1
 v_frames = 1

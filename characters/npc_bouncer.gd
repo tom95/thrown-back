@@ -15,6 +15,7 @@ var tween
 var last_total_velocity = 0
 
 signal spawn(object)
+signal enemy_killed(type)
 
 func _ready():
 	contact_monitor = true
@@ -56,8 +57,12 @@ func take_damage(num, damage_dealer):
 		if health <= 0:
 			despawn()
 
+func get_resource_path():
+	return null
+
 func despawn():
 	dead = true
+	emit_signal("enemy_killed", get_resource_path())
 	spawn_explosion()
 	disable_physics()
 

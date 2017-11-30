@@ -1,5 +1,7 @@
 extends Node2D
 
+var killed_enemies = {}
+
 func _ready():
 	$wizard.connect("killed", self, "game_over")
 	set_process(true)
@@ -23,17 +25,49 @@ func setup_level():
 	$level.connect("cow_killed", $hud, "_on_cow_killed")
 	$level.connect("boss_fight_started", $hud, "_on_boss_fight_started")
 	$level.connect("boss_health_updated", $hud, "_on_boss_health_updated")
+	$level.connect("boss_killed", self, "you_won")
+	$level.connect("enemy_killed", self, "_on_enemy_killed")
 	$wizard/light.enabled = $level.needs_light()
 	$wizard.position = $level.get_spawn_position()
-
-func game_over(killed_by_texture):
+	
+func stop_level():
 	var root = get_tree().get_root()
 	var current_scene = root.get_child(root.get_child_count() - 1)
 	current_scene.queue_free()
+	return root
+
+func game_over(killed_by_texture):
+	var root = stop_level()
 	
-	var game_over = preload("res://levels/game-over/game-over.tscn").instance()
+	var game_over = preload("res://levels/game_over/game_over.tscn").instance()
 	game_over.set_killed_by(killed_by_texture)
 	root.add_child(game_over)
 
+func you_won():
+	yield(get_tree().create_timer(4), "timeout")
+	
+	var root = stop_level()
+	var you_won = preload("res://levels/you_won/you_won.tscn").instance()
+	root.add_child(you_won)
+	add_enemies(you_won)
+
+func add_enemies(scene):
+	for path in killed_enemies:
+		var enemy = load(path)
+		for i in range(killed_enemies[path]):
+			var instance = enemy.instance()
+			var size = scene.get_viewport().size
+			instance.linear_velocity = Vector2(500, 0).rotated(rand_range(0, 2 * PI))
+			instance.position = Vector2(rand_range(0, size.x), rand_range(0, size.y))
+			instance.friction = 0
+			scene.add_child(instance)
+			instance.mode = RigidBody2D.MODE_RIGID
+
 func _on_level_next_level( next_level ):
 	show_level(next_level)
+
+func _on_enemy_killed(path):
+	if not path in killed_enemies:
+		killed_enemies[path] = 1
+	else:
+		killed_enemies[path] += 1
