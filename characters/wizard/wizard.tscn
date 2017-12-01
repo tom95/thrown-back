@@ -150,7 +150,7 @@ _sections_unfolded = [ "Drawing", "Process Material", "Time" ]
 
 [node name="light" type="Light2D" parent="."]
 
-position = Vector2( -0.566814, 1.60596 )
+position = Vector2( 50, 0 )
 enabled = false
 editor_only = false
 texture = ExtResource( 3 )

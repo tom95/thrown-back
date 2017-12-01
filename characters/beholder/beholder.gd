@@ -50,6 +50,9 @@ func take_damage(num, damage_dealer):
 		update_reposition_timer()
 		if health <= 0:
 			despawn()
+			play_random_sound("death")
+		else:
+			play_random_sound("damage")
 
 func despawn():
 	dead = true
@@ -131,3 +134,13 @@ func telekinesis_ray():
 	ray.position = projectile_spawn()
 	ray.gravitate_to = self
 	emit_signal("spawn", ray)
+
+# checks if a group exists for this sound type and if
+# not if a sound with that name exists, then plays it
+func play_random_sound(group):
+	if has_node("sounds"):
+		var n = $sounds.get_node(group)
+		if n is AudioStreamPlayer2D:
+			n.play()
+		else:
+			n.get_node(str((randi() % n.get_child_count()) + 1)).play()
