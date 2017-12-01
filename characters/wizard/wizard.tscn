@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://characters/wizard/wizard.gd" type="Script" id=1]
 [ext_resource path="res://effects/particle_round.png" type="Texture" id=2]
@@ -22,6 +22,9 @@
 [ext_resource path="res://characters/wizard/wizard_iceBlock.svg" type="Texture" id=20]
 [ext_resource path="res://characters/wizard/wizard_petrified.svg" type="Texture" id=21]
 [ext_resource path="res://sounds/bounce.wav" type="AudioStream" id=22]
+[ext_resource path="res://sounds/wizard_damage1.wav" type="AudioStream" id=23]
+[ext_resource path="res://sounds/wizard_damage2.wav" type="AudioStream" id=24]
+[ext_resource path="res://sounds/wizard_damage3.wav" type="AudioStream" id=25]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -314,7 +317,9 @@ position = Vector2( -0.220993, -13.5108 )
 texture = ExtResource( 21 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="audio_bounce" type="AudioStreamPlayer2D" parent="."]
+[node name="audio" type="Node2D" parent="."]
+
+[node name="bounce" type="AudioStreamPlayer2D" parent="audio"]
 
 stream = ExtResource( 22 )
 volume_db = 0.0
@@ -322,6 +327,38 @@ autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
 bus = "bouncing"
+area_mask = 1
+
+[node name="damage" type="Node2D" parent="audio"]
+
+[node name="1" type="AudioStreamPlayer2D" parent="audio/damage"]
+
+stream = ExtResource( 23 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "wizard_fx"
+area_mask = 1
+
+[node name="2" type="AudioStreamPlayer2D" parent="audio/damage"]
+
+stream = ExtResource( 24 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "wizard_fx"
+area_mask = 1
+
+[node name="3" type="AudioStreamPlayer2D" parent="audio/damage"]
+
+stream = ExtResource( 25 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "wizard_fx"
 area_mask = 1
 
 [connection signal="timeout" from="base/ice_timer" to="." method="_on_ice_timer_timeout"]
