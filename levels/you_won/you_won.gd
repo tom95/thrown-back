@@ -1,0 +1,1 @@
+extends "res://levels/try_again.gd"
