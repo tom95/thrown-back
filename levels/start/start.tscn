@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://start.gd" type="Script" id=1]
+[ext_resource path="res://levels/start/start.gd" type="Script" id=1]
 [ext_resource path="res://levels/01-grass/background/sky.svg" type="Texture" id=2]
 [ext_resource path="res://levels/start/start_playing.svg" type="Texture" id=3]
 [ext_resource path="res://levels/start/intro.svg" type="Texture" id=4]

@@ -80,3 +80,6 @@ func _on_enemy_killed(path):
 		killed_enemies[path] = 1
 	else:
 		killed_enemies[path] += 1
+		
+func show_instructions(show):
+	$hud/explanation.visible = show

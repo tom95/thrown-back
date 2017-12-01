@@ -13,6 +13,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="wizard" parent="." instance=ExtResource( 2 )]
 
 position = Vector2( -1051.81, -153.505 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="hud" parent="." instance=ExtResource( 3 )]
 
