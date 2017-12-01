@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://characters/wizard/wizard.gd" type="Script" id=1]
 [ext_resource path="res://effects/particle_round.png" type="Texture" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://characters/wizard/hand_right.png" type="Texture" id=19]
 [ext_resource path="res://characters/wizard/wizard_iceBlock.svg" type="Texture" id=20]
 [ext_resource path="res://characters/wizard/wizard_petrified.svg" type="Texture" id=21]
+[ext_resource path="res://sounds/bounce.wav" type="AudioStream" id=22]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -51,7 +52,7 @@ flatness = 0.0
 gravity = Vector3( 0, 98, 0 )
 initial_velocity = 200.0
 initial_velocity_random = 0.0
-angular_velocity = 1.49939e-043
+angular_velocity = 1.49939e-43
 angular_velocity_random = 0.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
@@ -312,6 +313,16 @@ visible = false
 position = Vector2( -0.220993, -13.5108 )
 texture = ExtResource( 21 )
 _sections_unfolded = [ "Visibility" ]
+
+[node name="audio_bounce" type="AudioStreamPlayer2D" parent="."]
+
+stream = ExtResource( 22 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "bouncing"
+area_mask = 1
 
 [connection signal="timeout" from="base/ice_timer" to="." method="_on_ice_timer_timeout"]
 
