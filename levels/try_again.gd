@@ -6,7 +6,7 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	if Input.is_action_pressed("fire"):
+	if Input.is_action_pressed("start"):
 		var game = load("res://game/game.tscn").instance()
 		get_parent().add_child(game)
 		game.show_level(FIRST_LEVEL)
