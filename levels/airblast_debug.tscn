@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://levels/02-mountains/tiles/mountains-tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://characters/wizard/wizard.tscn" type="PackedScene" id=2]
+[ext_resource path="res://characters/bear/bear.tscn" type="PackedScene" id=3]
+
+[node name="airblast_debug" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 70, 70 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -720892, 1073741827, 0, -720891, 1073741827, 0, -720890, 1073741827, 0, -720889, 1073741827, 0, -720888, 1073741827, 0, -720887, 1073741827, 0, -720886, 1073741827, 0, -720885, 1073741827, 0, -720884, 1073741827, 0, -720883, 1073741827, 0, -720882, 1073741827, 0, -720881, 1073741827, 0, -720880, 1073741827, 0, -720879, 1073741827, 0, -720878, 1073741827, 0, -720877, 1073741827, 0, -720876, 1073741827, 0, -720875, 1073741827, 0, -720874, 1073741824, 0, -655338, -2147483645, 0, -589802, -2147483645, 0, -524266, -2147483645, 0, -458730, -2147483645, 0, -393194, -2147483645, 0, -327658, -2147483645, 0, -262122, -2147483645, 0, -196586, -2147483645, 0, -131050, -2147483645, 0, -65514, -2147483645, 0, 22, -2147483645, 0, 65558, -2147483645, 0, 131094, -2147483645, 0, 196630, -2147483645, 0, 262166, -2147483645, 0, 327702, -2147483645, 0, 393238, -2147483645, 0, 458774, -2147483645, 0, 524310, -2147483645, 0, 655355, 3, 0, 655356, 3, 0, 655357, 3, 0, 655358, 3, 0, 655359, 3, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0, 589841, 3, 0, 589842, 3, 0, 589843, 3, 0, 589844, 3, 0, 589845, 3, 0, 589846, 3, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="wizard" parent="." instance=ExtResource( 2 )]
+
+position = Vector2( -220.268, 530.592 )
+
+[node name="bear" parent="." instance=ExtResource( 3 )]
+
+position = Vector2( 394.01, 490.311 )
+
+
