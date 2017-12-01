@@ -12,6 +12,7 @@ var velocity = Vector2()
 var dead = false
 
 var tween
+var bounce_sound
 var last_total_velocity = 0
 
 signal spawn(object)
@@ -26,6 +27,11 @@ func _ready():
 
 	tween = Tween.new()
 	add_child(tween)
+
+	bounce_sound = AudioStreamPlayer2D.new()
+	bounce_sound.stream = preload("res://sounds/bounce.wav")
+	bounce_sound.bus = "bounce"
+	add_child(bounce_sound)
 
 func _integrate_forces(state):
 	var total_velocity = state.get_linear_velocity().length()
@@ -45,6 +51,7 @@ func _integrate_forces(state):
 		if (state.get_contact_local_normal(i).dot(Vector2(0, -1)) >= cos(MAX_FLOOR_ANGLE) and shouldJump):
 			var velocity_x = get_linear_velocity().x
 			set_linear_velocity(Vector2(velocity_x, -BOUNCING_BASELINE))
+			bounce_sound.play()
 
 	last_total_velocity = total_velocity
 
