@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://levels/01-grass/01-grass.gd" type="Script" id=1]
 [ext_resource path="res://props/firtree.svg" type="Texture" id=2]
@@ -16,7 +16,6 @@
 [ext_resource path="res://props/moving_platform.tscn" type="PackedScene" id=14]
 [ext_resource path="res://props/health_potion.tscn" type="PackedScene" id=15]
 [ext_resource path="res://props/superjump_prop.tscn" type="PackedScene" id=16]
-[ext_resource path="res://music/bensound-anewbeginning.ogg" type="AudioStream" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -484,14 +483,6 @@ shape = SubResource( 1 )
 [node name="boss_fight" type="Position2D" parent="."]
 
 position = Vector2( 16358.7, -2039.37 )
-
-[node name="background_music" type="AudioStreamPlayer" parent="."]
-
-stream = ExtResource( 17 )
-volume_db = 0.0
-autoplay = true
-mix_target = 0
-bus = "music"
 
 [connection signal="body_entered" from="level_end/level_end_area" to="." method="_on_level_end_area_body_entered"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://levels/04-cave/04-cave.gd" type="Script" id=1]
 [ext_resource path="res://props/stalagmites.tscn" type="PackedScene" id=2]
@@ -10,8 +10,7 @@
 [ext_resource path="res://effects/flame/flame.tscn" type="PackedScene" id=8]
 [ext_resource path="res://props/moving_platform.tscn" type="PackedScene" id=9]
 [ext_resource path="res://props/health_potion.tscn" type="PackedScene" id=10]
-[ext_resource path="res://music/bensound-badass.ogg" type="AudioStream" id=11]
-[ext_resource path="res://sounds/level_complete.wav" type="AudioStream" id=12]
+[ext_resource path="res://sounds/level_complete.wav" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -199,17 +198,9 @@ audio_bus_name = "Master"
 position = Vector2( 20, 10 )
 shape = SubResource( 1 )
 
-[node name="background_music" type="AudioStreamPlayer" parent="."]
-
-stream = ExtResource( 11 )
-volume_db = 0.0
-autoplay = true
-mix_target = 0
-bus = "music"
-
 [node name="level_complete_sound" type="AudioStreamPlayer" parent="."]
 
-stream = ExtResource( 12 )
+stream = ExtResource( 11 )
 volume_db = 0.0
 autoplay = true
 mix_target = 0
