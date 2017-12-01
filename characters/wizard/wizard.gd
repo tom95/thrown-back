@@ -51,6 +51,7 @@ func move_and_bounce(delta):
 	if collision:
 		is_on_floor = collision.normal.dot(Vector2(0, -1)) >= cos(MAX_FLOOR_ANGLE)
 		if is_on_floor:
+			$audio_bounce.play()
 			velocity.y = -clamp(old_velocity.y * 0.8, BOUNCING_BASELINE, old_velocity.y * 2)
 			# damp horizontal movement when we hit a slope
 			velocity.x *= 1.0 - abs(collision.normal.angle_to(Vector2(0, -1))) / MAX_FLOOR_ANGLE
