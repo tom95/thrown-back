@@ -78,7 +78,13 @@ func next_turn():
 
 	target_position = random_position()
 
+	var health_percentage = float(health) /MAX_HEALTH
 	var attack = randi() % 3
+	if health_percentage >= 0.66:
+		attack = 0
+	elif health_percentage >= 0.33:
+		attack = randi() % 2
+	
 	if attack == 0:
 		poison_ray()
 	elif attack == 1:
