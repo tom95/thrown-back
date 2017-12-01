@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://characters/wizard/wizard.gd" type="Script" id=1]
 [ext_resource path="res://effects/particle_round.png" type="Texture" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://sounds/wizard_damage1.wav" type="AudioStream" id=23]
 [ext_resource path="res://sounds/wizard_damage2.wav" type="AudioStream" id=24]
 [ext_resource path="res://sounds/wizard_damage3.wav" type="AudioStream" id=25]
+[ext_resource path="res://sounds/levitationloop.wav" type="AudioStream" id=26]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -359,6 +360,16 @@ autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
 bus = "wizard_fx"
+area_mask = 1
+
+[node name="levitation" type="AudioStreamPlayer2D" parent="audio"]
+
+stream = ExtResource( 26 )
+volume_db = -15.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
 area_mask = 1
 
 [connection signal="timeout" from="base/ice_timer" to="." method="_on_ice_timer_timeout"]
