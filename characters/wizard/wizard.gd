@@ -82,9 +82,10 @@ func _physics_process(delta):
 		Input.is_action_pressed("move_right")
 
 	var using_jetpack = is_strafing or is_jumping
+	var strafing_and_jumping_penalty = 0.4
 
 	if using_jetpack and can_use_jetpack():
-		var strafe_speed = JETPACK_STRAFE_SPEED if not is_jumping else JETPACK_STRAFE_SPEED / 2
+		var strafe_speed = JETPACK_STRAFE_SPEED if not is_jumping else JETPACK_STRAFE_SPEED * strafing_and_jumping_penalty
 		if Input.is_action_pressed("move_left"):
 			velocity.x -= strafe_speed
 		elif Input.is_action_pressed("move_right"):
@@ -100,7 +101,10 @@ func _physics_process(delta):
 		jetpack_exhaust.emitting = false
 
 	if using_jetpack:
-		deplete_jetpack(delta)
+		var depletion = delta
+		if is_jumping and is_strafing:
+			depletion *= 1+ strafing_and_jumping_penalty
+		deplete_jetpack(depletion)
 	else:
 		charge_jetpack(delta)
 
