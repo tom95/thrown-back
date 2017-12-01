@@ -31,5 +31,3 @@ func _on_boss_health_updated(health):
 func _on_boss_killed():
 	emit_signal("boss_killed")
 	
-func get_boss_fight_position():
-	return $boss_fight.global_position

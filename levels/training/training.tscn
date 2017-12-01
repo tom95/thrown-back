@@ -56,6 +56,10 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 137.168, 113.482 )
 
+[node name="boss_fight" type="Position2D" parent="."]
+
+position = Vector2( 1449.13, -13.2775 )
+
 [node name="01-grass-background" parent="." instance=ExtResource( 3 )]
 
 offset = Vector2( 0, 500 )

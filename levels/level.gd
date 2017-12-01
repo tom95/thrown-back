@@ -19,5 +19,8 @@ func _on_enemy_killed(type):
 func get_spawn_position():
 	return $spawn.global_position
 
+func get_boss_fight_position():
+	return $boss_fight.global_position
+
 func needs_light():
 	return false

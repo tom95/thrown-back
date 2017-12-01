@@ -17,7 +17,6 @@ func _process(delta):
 	elif Input.is_action_just_pressed("debug_godmode_off"):
 		$wizard.is_in_godmode = false
 	elif Input.is_action_just_pressed("teleport_to_boss"):
-		show_level("res://levels/04-cave/04-cave.tscn")
 		$wizard.position = $level.get_boss_fight_position()
 
 func show_level(path):
