@@ -56,6 +56,19 @@ func take_damage(num, damage_dealer):
 		health = health - num
 		if health <= 0:
 			despawn()
+			play_random_sound("death")
+		else:
+			play_random_sound("damage")
+
+# checks if a group exists for this sound type and if
+# not if a sound with that name exists, then plays it
+func play_random_sound(group):
+	if has_node("sound"):
+		var n = $sound.get_node(group)
+		if n is AudioStreamPlayer2D:
+			n.play()
+		else:
+			n.get_node(str((randi() % n.get_child_count()) + 1)).play()
 
 func get_resource_path():
 	return null

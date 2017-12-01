@@ -91,7 +91,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Material", "Visibility" ]
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
@@ -121,7 +121,7 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Smoothing", "Transform" ]
+_sections_unfolded = [ "Limit", "Transform" ]
 
 [node name="jetpack_exhaust" type="Particles2D" parent="."]
 
