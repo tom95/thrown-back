@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://characters/bear/bear.gd" type="Script" id=1]
 [ext_resource path="res://characters/bear/bear.png" type="Texture" id=2]
@@ -12,6 +12,10 @@
 [ext_resource path="res://characters/bear/pupil_left.png" type="Texture" id=10]
 [ext_resource path="res://characters/bear/eyebrow_left.png" type="Texture" id=11]
 [ext_resource path="res://characters/bear/eyebrow_right.png" type="Texture" id=12]
+[ext_resource path="res://sounds/bear_damage1.wav" type="AudioStream" id=13]
+[ext_resource path="res://sounds/bear_damage2.wav" type="AudioStream" id=14]
+[ext_resource path="res://sounds/bear_damage3.wav" type="AudioStream" id=15]
+[ext_resource path="res://sounds/bear_death.wav" type="AudioStream" id=16]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -106,6 +110,50 @@ texture = ExtResource( 11 )
 
 position = Vector2( -0.613934, -3.74885 )
 texture = ExtResource( 12 )
+
+[node name="sound" type="Node2D" parent="."]
+
+[node name="damage" type="Node2D" parent="sound"]
+
+[node name="1" type="AudioStreamPlayer2D" parent="sound/damage"]
+
+stream = ExtResource( 13 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="2" type="AudioStreamPlayer2D" parent="sound/damage"]
+
+stream = ExtResource( 14 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="3" type="AudioStreamPlayer2D" parent="sound/damage"]
+
+stream = ExtResource( 15 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="death" type="AudioStreamPlayer2D" parent="sound"]
+
+stream = ExtResource( 16 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 [connection signal="body_entered" from="." to="." method="_on_bear_body_entered"]
 
