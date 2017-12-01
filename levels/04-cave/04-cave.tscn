@@ -112,6 +112,8 @@ position = Vector2( 1720, 610 )
 
 [node name="flames" type="Node2D" parent="."]
 
+editor/display_folded = true
+
 [node name="flame" parent="flames" instance=ExtResource( 8 )]
 
 position = Vector2( 196, 216 )
@@ -150,11 +152,10 @@ position = Vector2( 9064.18, -1330.91 )
 
 [node name="moving_platforms" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="moving_platform2" parent="moving_platforms" instance=ExtResource( 9 )]
 
-position = Vector2( 4690, -1000 )
+position = Vector2( 4765.28, -1032.15 )
+motion = Vector2( 250, 0 )
 
 [node name="moving_platform" parent="moving_platforms" instance=ExtResource( 9 )]
 
@@ -162,7 +163,7 @@ position = Vector2( 4100, -850 )
 
 [node name="moving_platform3" parent="moving_platforms" instance=ExtResource( 9 )]
 
-position = Vector2( 5220, -1140 )
+position = Vector2( 5391.19, -1200.42 )
 
 [node name="potions" type="Node2D" parent="."]
 
