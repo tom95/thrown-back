@@ -63,8 +63,8 @@ func take_damage(num, damage_dealer):
 # checks if a group exists for this sound type and if
 # not if a sound with that name exists, then plays it
 func play_random_sound(group):
-	if has_node("sound"):
-		var n = $sound.get_node(group)
+	if has_node("sounds"):
+		var n = $sounds.get_node(group)
 		if n is AudioStreamPlayer2D:
 			n.play()
 		else:
