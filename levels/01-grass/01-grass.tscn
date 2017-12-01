@@ -459,6 +459,10 @@ audio_bus_name = "Master"
 position = Vector2( -17.8613, -4.35425 )
 shape = SubResource( 1 )
 
+[node name="boss_fight" type="Position2D" parent="."]
+
+position = Vector2( 16358.7, -2039.37 )
+
 [connection signal="body_entered" from="level_end/level_end_area" to="." method="_on_level_end_area_body_entered"]
 
 

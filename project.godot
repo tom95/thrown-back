@@ -50,6 +50,8 @@ debug_godmode_on=[ Object(InputEventKey,"resource_local_to_scene":false,"resourc
  ]
 debug_godmode_off=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":true,"shift":false,"control":true,"meta":false,"command":true,"pressed":false,"scancode":80,"unicode":0,"echo":false,"script":null)
  ]
+teleport_to_boss=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":true,"shift":false,"control":true,"meta":false,"command":true,"pressed":false,"scancode":66,"unicode":0,"echo":false,"script":null)
+ ]
 
 [physics]
 

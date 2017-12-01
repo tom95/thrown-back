@@ -30,3 +30,4 @@ func _on_boss_health_updated(health):
 	
 func _on_boss_killed():
 	emit_signal("boss_killed")
+	

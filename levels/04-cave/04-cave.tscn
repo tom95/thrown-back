@@ -173,8 +173,13 @@ editor/display_folded = true
 
 position = Vector2( 5620, 720 )
 
+[node name="boss_fight" type="Position2D" parent="."]
+
+position = Vector2( 6517.87, -1766.4 )
+
 [node name="lair" type="Node2D" parent="."]
 
+editor/display_folded = true
 position = Vector2( 8640, -1080 )
 
 [node name="area" type="Area2D" parent="lair"]
