@@ -10,6 +10,7 @@ func _on_haystack_body_entered( body ):
 		$particles.emitting = true
 		$particles.restart()
 		body.is_in_haystack = true
+		$sound.play()
 
 func _on_haystack_body_exited( body ):
 	if body.is_in_group("players"):
