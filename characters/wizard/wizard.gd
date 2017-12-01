@@ -100,8 +100,11 @@ func _physics_process(delta):
 		apply_drag(delta)
 
 		jetpack_exhaust.emitting = true
+		if not $audio/levitation.playing:
+			$audio/levitation.playing = true
 	else:
 		jetpack_exhaust.emitting = false
+		$audio/levitation.playing = false
 
 	if using_jetpack:
 		var depletion = delta
