@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://levels/start/start.gd" type="Script" id=1]
 [ext_resource path="res://levels/01-grass/background/sky.svg" type="Texture" id=2]
 [ext_resource path="res://levels/start/start_playing.svg" type="Texture" id=3]
 [ext_resource path="res://levels/start/intro.svg" type="Texture" id=4]
+[ext_resource path="res://game/hud/credits.svg" type="Texture" id=5]
 
 [node name="start" type="Node2D"]
 
@@ -43,5 +44,10 @@ _sections_unfolded = [ "Transform", "Z" ]
 position = Vector2( 640, 324.806 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="credits" type="Sprite" parent="."]
+
+position = Vector2( 1043.41, 711.796 )
+texture = ExtResource( 5 )
 
 
