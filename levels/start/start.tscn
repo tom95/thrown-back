@@ -16,7 +16,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="intro" type="Sprite" parent="."]
 
-position = Vector2( 640, 223.908 )
+position = Vector2( 640, 353.724 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
