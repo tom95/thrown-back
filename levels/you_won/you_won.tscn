@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://levels/you_won/you_won.gd" type="Script" id=1]
 [ext_resource path="res://levels/you_won/you-won-text.svg" type="Texture" id=2]
+[ext_resource path="res://levels/try_again.svg" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -90,5 +91,11 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 625.147, 248.472 )
 texture = ExtResource( 2 )
+
+[node name="try_again" type="Sprite" parent="."]
+
+position = Vector2( 640, 650 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Animation", "Transform", "Visibility" ]
 
 
