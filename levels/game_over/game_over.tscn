@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://levels/game_over/game_over.gd" type="Script" id=1]
 [ext_resource path="res://levels/game_over/game_over_text.svg" type="Texture" id=2]
 [ext_resource path="res://characters/wizard/wizard_dead.png" type="Texture" id=3]
+[ext_resource path="res://levels/try_again.svg" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -133,6 +134,12 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D4"]
 
 shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="try_again" type="Sprite" parent="."]
+
+position = Vector2( 640, 650 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 
