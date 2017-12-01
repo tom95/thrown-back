@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://levels/training/training.gd" type="Script" id=1]
 [ext_resource path="res://levels/01-grass/tiles/grass-tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://characters/tapir/tapir.tscn" type="PackedScene" id=3]
 [ext_resource path="res://levels/01-grass/01-grass-background.tscn" type="PackedScene" id=4]
+[ext_resource path="res://music/bensound-acousticbreeze.ogg" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -55,7 +56,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="tapir" parent="characters" instance=ExtResource( 3 )]
 
-position = Vector2( 634.8, 573.898 )
+position = Vector2( 980, 610 )
 
 [node name="spawn" type="Position2D" parent="."]
 
@@ -68,6 +69,14 @@ position = Vector2( 1449.13, -13.2775 )
 [node name="01-grass-background" parent="." instance=ExtResource( 4 )]
 
 offset = Vector2( 0, 500 )
+
+[node name="background_music" type="AudioStreamPlayer" parent="."]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "music"
 
 [connection signal="body_entered" from="training_end" to="." method="_on_training_end_body_entered"]
 

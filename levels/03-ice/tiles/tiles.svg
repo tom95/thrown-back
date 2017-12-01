@@ -51,9 +51,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.179432"
-     inkscape:cx="271.54255"
-     inkscape:cy="-19.344505"
+     inkscape:zoom="1.9672557"
+     inkscape:cx="222.28688"
+     inkscape:cy="-33.289424"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -860,20 +860,29 @@
        sodipodi:nodetypes="ccccccccc" />
     <path
        style="fill:#d5f6ff;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 43.977132,277.35257 c -1.201342,0.0428 -2.563731,-0.50157 -3.604948,0.0992 -0.728783,0.4205 -1.675745,1.3859 -1.322916,2.14974 0.332144,0.71906 2.348177,0.3638 2.348177,0.3638 l 5.258594,-0.66146 c 0,0 3.356309,0.57577 4.99401,0.26458 0.964462,-0.18326 2.77262,-0.24645 2.678906,-1.22369 -0.165653,-1.72741 -3.332936,-1.05603 -5.060156,-1.2237 -1.757315,-0.1706 -3.52721,0.16866 -5.291667,0.23153 z"
+       d="m 44.246119,282.86681 c -1.201342,0.0428 -2.563731,-0.50157 -3.604948,0.0992 -0.728783,0.4205 -1.675745,1.3859 -1.322916,2.14974 0.332144,0.71906 2.348177,0.3638 2.348177,0.3638 l 5.258594,-0.66146 c 0,0 3.356309,0.57577 4.99401,0.26458 0.964462,-0.18326 2.77262,-0.24645 2.678906,-1.22369 -0.165653,-1.72741 -3.332936,-1.05603 -5.060156,-1.2237 -1.757315,-0.1706 -3.52721,0.16866 -5.291667,0.23153 z"
        id="path5558"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="sssccssss" />
+       sodipodi:nodetypes="sssccssss"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/home/tom/Code/godot/thrown-back/props/ice_spike.png" />
     <path
        style="fill:#aaeeff;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 40.769059,279.37002 4.564063,7.54062 0.760677,-8.00365 z"
+       d="m 41.038046,284.88426 4.564063,7.54062 0.760677,-8.00365 z"
        id="path5560"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/home/tom/Code/godot/thrown-back/props/ice_spike.png" />
     <path
        style="fill:#55ddff;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 46.093799,278.90699 4.828646,0.16537 -5.589323,7.83828 z"
+       d="m 46.362786,284.42123 4.828646,0.16537 -5.589323,7.83828 z"
        id="path5562"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/home/tom/Code/godot/thrown-back/props/ice_spike.png" />
     <path
        style="fill:#d5f6ff;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 137.04523,249.691 c -0.28166,0.79285 0.12035,1.64579 0.88446,1.99805 0.71931,0.33158 1.44398,-0.23819 1.44398,-0.23819 l 1.52144,-1.99731 c 0,0 2.46434,-1.49172 3.50853,-2.79119 0.61492,-0.76527 2.01587,-1.7882 1.31043,-2.47096 -1.04269,-0.0467 -1.78065,-0.46827 -2.68908,-0.10463 -1.08122,0.43281 -2.32809,2.2653 -3.19099,3.07202 -1.72907,1.61646 -2.58169,1.94222 -2.78877,2.53221 z"
