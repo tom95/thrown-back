@@ -77,16 +77,20 @@ func _physics_process(delta):
 	if is_petrified:
 		return
 
-	var using_jetpack = Input.is_action_pressed("move_left") or\
-		Input.is_action_pressed("move_right") or\
-		Input.is_action_pressed("jump")
+	var is_jumping = Input.is_action_pressed("jump")
+	var is_strafing = Input.is_action_pressed("move_left") or\
+		Input.is_action_pressed("move_right")
+
+	var using_jetpack = is_strafing or is_jumping
 
 	if using_jetpack and can_use_jetpack():
+		var strafe_speed = JETPACK_STRAFE_SPEED if not is_jumping else JETPACK_STRAFE_SPEED / 2
 		if Input.is_action_pressed("move_left"):
-			velocity.x -= JETPACK_STRAFE_SPEED
+			velocity.x -= strafe_speed
 		elif Input.is_action_pressed("move_right"):
-			velocity.x += JETPACK_STRAFE_SPEED
-		else:
+			velocity.x += strafe_speed
+
+		if is_jumping:
 			velocity.y -= JETPACK_SPEED * FLOOR_BOOST_FACTOR if is_on_floor else JETPACK_SPEED
 
 		apply_drag(delta)
