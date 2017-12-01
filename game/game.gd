@@ -10,6 +10,8 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("debug_change_level_1"):
 		show_level("res://levels/01-grass/01-grass.tscn")
+	elif Input.is_action_just_pressed("debug_change_level_3"):
+		show_level("res://levels/03-ice/03-ice.tscn")
 	elif Input.is_action_just_pressed("debug_change_level_4"):
 		show_level("res://levels/04-cave/04-cave.tscn")
 	elif Input.is_action_just_pressed("debug_godmode_on"):
