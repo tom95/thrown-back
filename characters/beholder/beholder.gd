@@ -45,6 +45,7 @@ func hit_by_firebolt():
 func take_damage(num, damage_dealer):
 	if not dead:
 		health -= num
+		$reposition_timer.wait_time = max(lerp(1, 3, float(health) / MAX_HEALTH), 2)
 		emit_signal("update_boss_health", health)
 		update_reposition_timer()
 		if health <= 0:
