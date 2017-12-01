@@ -1,4 +1,4 @@
-extends Node2D
+extends "res://levels/try_again.gd"
 
 func _ready():
 	var size = get_viewport().size
