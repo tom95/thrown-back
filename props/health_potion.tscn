@@ -37,7 +37,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Transform" ]
+_sections_unfolded = [ "Collision", "Material", "Transform", "Visibility" ]
 
 [node name="potion" type="Sprite" parent="."]
 
@@ -64,7 +64,7 @@ _sections_unfolded = [ "Playback Options", "playback" ]
 [node name="picked" type="AudioStreamPlayer2D" parent="."]
 
 stream = ExtResource( 3 )
-volume_db = 0.0
+volume_db = 5.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0

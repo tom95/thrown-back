@@ -30,6 +30,8 @@ func _on_telekinesis_ray_body_entered(body):
 		queue_free()
 
 func _on_timer_timeout():
+	if attached_to:
+		attached_to.must_gravitate_to = null
 	despawn()
 
 func despawn():
