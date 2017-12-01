@@ -5,7 +5,8 @@ const JETPACK_STRAFE_SPEED = 20.0
 const JETPACK_SPEED = 40.0
 const PROJECTILE_SPEED = 700
 const MAX_JETPACK_FUEL = 100
-const WEAPON_COOLDOWN =  600
+const FIREBOLT_COOLDOWN =  600
+const AIRBLAST_COOLDOWN = 600
 const BOUNCING_BASELINE = 500
 const MAX_HEALTH = 1000
 #const MAX_VELOCITY = Vector2(1000, 1000)
@@ -19,7 +20,8 @@ var gravity_scale = 1
 var velocity = Vector2()
 var jetpack_fuel = 100
 var direction = 1
-var weapon_cooldown = 0
+var firebolt_cooldown = 0
+var airblast_cooldown = 0
 var health = 1000
 var is_in_godmode = false
 
@@ -108,19 +110,19 @@ func _physics_process(delta):
 		deplete_jetpack(depletion)
 	else:
 		charge_jetpack(delta)
-
-	weapon_cooldown = max(0, weapon_cooldown - 1000 * delta)
-
+	
+	elapse_cooldowns(delta)
+	
 	if Input.is_action_pressed("move_left"):
 		direction = -1
 	elif Input.is_action_pressed("move_right"):
 		direction = 1
 	wizard_sprite.scale.x = direction
 
-	if Input.is_action_pressed("fire") and weapon_cooldown <= 0:
-		shoot()
+	if Input.is_action_pressed("fire") and firebolt_cooldown <= 0:
+		firebolt()
 
-	if Input.is_action_pressed("airblast") and weapon_cooldown <= 0:
+	if Input.is_action_pressed("airblast") and airblast_cooldown <= 0:
 		airblast()
 
 	velocity.x = clamp(-MAX_VELOCITY.x, velocity.x, MAX_VELOCITY.x)
@@ -182,8 +184,8 @@ func apply_drag(delta):
 	drag.y = max(0, drag.y)
 	velocity += drag * delta
 
-func shoot():
-	weapon_cooldown = WEAPON_COOLDOWN
+func firebolt():
+	firebolt_cooldown = FIREBOLT_COOLDOWN
 	var projectile = preload("res://effects/firebolt/firebolt.tscn").instance()
 	projectile.add_collision_exception_with(self)
 	projectile.linear_velocity = Vector2(PROJECTILE_SPEED * direction, 0)
@@ -191,8 +193,12 @@ func shoot():
 	get_parent().add_child(projectile)
 
 func airblast():
-	weapon_cooldown = WEAPON_COOLDOWN
+	airblast_cooldown = AIRBLAST_COOLDOWN
 	$base/projectile_spawn/airblast.emit()
+	
+func elapse_cooldowns(delta):
+	firebolt_cooldown = max(0, firebolt_cooldown - 1000 * delta)
+	airblast_cooldown = max(0, airblast_cooldown - 1000 * delta)
 
 func can_use_jetpack():
 	if is_in_godmode:
