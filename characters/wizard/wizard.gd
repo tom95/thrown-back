@@ -15,6 +15,7 @@ const MAX_VELOCITY = Vector2(1000, 2000)
 const FLOOR_BOOST_FACTOR = 10
 const MAX_FLOOR_ANGLE = deg2rad(46)
 const TELEKINESIS_SPEED = 400
+const RAM_VELOCITY = Vector2(900, 100)
 
 var gravity_scale = 1
 var velocity = Vector2()
@@ -24,6 +25,7 @@ var firebolt_cooldown = 0
 var airblast_cooldown = 0
 var health = 1000
 var is_in_godmode = false
+
 
 var is_in_haystack = false
 var is_on_floor = false
@@ -140,6 +142,12 @@ func take_damage(damage, damage_dealer_image):
 		emit_signal("killed", damage_dealer_image)
 	else:
 		$audio/damage.get_node(str(randi() % 3 + 1)).play()
+
+func rammed(ram_velocity):
+	var ram_direction = 1
+	if ram_velocity.x < 0:
+		ram_direction = -1
+	velocity = RAM_VELOCITY * ram_direction
 
 func super_jump(jump_factor):
 	if velocity.y <= 0:
