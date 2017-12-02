@@ -28,3 +28,6 @@ func _on_trigger_area_body_entered( body ):
 func _on_trigger_area_body_exited( body ):
 	if body.is_in_group("players"):
 		enemy = null
+
+func get_resource_path():
+	return "res://characters/hedgehog/hedgehog.tscn"
