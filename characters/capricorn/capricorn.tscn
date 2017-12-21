@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/capricorn/capricorn.gd" type="Script" id=1]
 [ext_resource path="res://characters/capricorn/capricorn.svg" type="Texture" id=2]
+[ext_resource path="res://accessoires/xmas_hat.svg" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -41,6 +42,13 @@ script = ExtResource( 1 )
 
 position = Vector2( -4.87397, -4.84359 )
 texture = ExtResource( 2 )
+
+[node name="xmas_hat" type="Sprite" parent="base"]
+
+position = Vector2( -38.3527, -43.5188 )
+rotation = 0.53432
+scale = Vector2( 0.37047, 0.508646 )
+texture = ExtResource( 3 )
 
 [node name="collision" type="CollisionShape2D" parent="."]
 

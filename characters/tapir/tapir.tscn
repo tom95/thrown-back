@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://characters/tapir/tapir.gd" type="Script" id=1]
 [ext_resource path="res://characters/tapir/tapir.svg" type="Texture" id=2]
+[ext_resource path="res://accessoires/xmas_hat.svg" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -40,10 +41,18 @@ position = Vector2( -4.5641, -35.0634 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="tapir" type="Sprite" parent="."]
+[node name="base" type="Node2D" parent="."]
+
+[node name="tapir" type="Sprite" parent="base"]
 
 position = Vector2( -4.67243, -34.7864 )
 scale = Vector2( 1.0466, 1.05296 )
 texture = ExtResource( 2 )
+
+[node name="xmas_hat" type="Sprite" parent="base"]
+
+position = Vector2( -34.1826, -73.9953 )
+scale = Vector2( 1.1136, 1.11061 )
+texture = ExtResource( 3 )
 
 

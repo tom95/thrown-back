@@ -43,6 +43,11 @@ signal killed(damage_dealer_image)
 
 func _ready():
 	set_physics_process(true)
+	
+	if OS.get_datetime().month == 12:
+		enter_xmas_mode(true)
+	else:
+		enter_xmas_mode(false)
 
 func move_and_bounce(delta):
 	var old_velocity = velocity
@@ -222,3 +227,6 @@ func deplete_jetpack(delta):
 
 func charge_jetpack(delta):
 	jetpack_fuel = min(jetpack_fuel + delta * 75, MAX_JETPACK_FUEL)
+
+func enter_xmas_mode(aBoolean):
+	$base/xmas_hat.set_visible(aBoolean)

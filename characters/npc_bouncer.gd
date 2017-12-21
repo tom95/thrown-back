@@ -19,6 +19,11 @@ signal spawn(object)
 signal enemy_killed(type)
 
 func _ready():
+	if OS.get_datetime().month == 12:
+		enter_xmas_mode(true)
+	else:
+		enter_xmas_mode(false)
+	
 	contact_monitor = true
 	contacts_reported = 5
 	friction = 0.1
@@ -102,3 +107,20 @@ func disable_physics():
 	$collision.disabled = true
 	set_process(false)
 	set_physics_process(false)
+
+func enter_xmas_mode(boolean):
+	$base/xmas_hat.set_visible(boolean)
+
+func turn_to_direction_of_velocity():
+	var direction = 1
+	if linear_velocity.x > 0:
+		direction = -1
+	$base.scale.x = direction
+
+func turn_to_body(body, scale_inverted = false):
+	var direction = 1
+	if body.global_position.x - global_position.x > 0:
+			direction = -1
+	if scale_inverted:
+		direction = direction*-1
+	$base.scale.x = direction

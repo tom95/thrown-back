@@ -15,11 +15,7 @@ func _process(delta):
 	if attacking and ram_cooldown <= 0:
 		ram()
 	
-	if linear_velocity.x > 0:
-		direction = -1
-	else:
-		direction = 1
-	$base/capricorn.scale.x = direction
+	turn_to_direction_of_velocity()
 
 func ram():
 	ram_cooldown = COOLDOWN

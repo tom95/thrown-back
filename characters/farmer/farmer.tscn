@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/farmer/farmer.gd" type="Script" id=1]
 [ext_resource path="res://characters/farmer/farmer.svg" type="Texture" id=2]
+[ext_resource path="res://accessoires/xmas_hat.svg" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -64,6 +65,13 @@ texture = ExtResource( 2 )
 [node name="stone_spawn" type="Position2D" parent="base"]
 
 position = Vector2( 45.6218, 11.6946 )
+
+[node name="xmas_hat" type="Sprite" parent="base"]
+
+position = Vector2( 1.09164, -48.4268 )
+rotation = -0.0971197
+scale = Vector2( 1.51901, 1.61198 )
+texture = ExtResource( 3 )
 
 [connection signal="body_entered" from="." to="." method="_on_farmer_body_entered"]
 

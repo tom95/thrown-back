@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://characters/basilisk/basilisk.gd" type="Script" id=1]
 [ext_resource path="res://characters/basilisk/basilisk.svg" type="Texture" id=2]
-[ext_resource path="res://sounds/snake_death.wav" type="AudioStream" id=3]
-[ext_resource path="res://sounds/snake_damage1.wav" type="AudioStream" id=4]
-[ext_resource path="res://sounds/snake_damage2.wav" type="AudioStream" id=5]
+[ext_resource path="res://accessoires/xmas_hat.svg" type="Texture" id=3]
+[ext_resource path="res://sounds/snake_death.wav" type="AudioStream" id=4]
+[ext_resource path="res://sounds/snake_damage1.wav" type="AudioStream" id=5]
+[ext_resource path="res://sounds/snake_damage2.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -78,11 +79,16 @@ texture = ExtResource( 2 )
 
 position = Vector2( -69.5402, 20.686 )
 
+[node name="xmas_hat" type="Sprite" parent="base"]
+
+position = Vector2( -63.194, -0.354008 )
+texture = ExtResource( 3 )
+
 [node name="sounds" type="Node2D" parent="."]
 
 [node name="death" type="AudioStreamPlayer2D" parent="sounds"]
 
-stream = ExtResource( 3 )
+stream = ExtResource( 4 )
 volume_db = 0.0
 autoplay = false
 max_distance = 2000.0
@@ -94,7 +100,7 @@ area_mask = 1
 
 [node name="1" type="AudioStreamPlayer2D" parent="sounds/damage"]
 
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 volume_db = 0.0
 autoplay = false
 max_distance = 2000.0
@@ -104,7 +110,7 @@ area_mask = 1
 
 [node name="2" type="AudioStreamPlayer2D" parent="sounds/damage"]
 
-stream = ExtResource( 5 )
+stream = ExtResource( 6 )
 volume_db = 0.0
 autoplay = false
 max_distance = 2000.0

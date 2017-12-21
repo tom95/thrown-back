@@ -14,11 +14,7 @@ func _ready():
 func _process(delta):
 	petrification_cooldown = max(0, petrification_cooldown - 1000 * delta)
 	if attacking:
-		if attackee.global_position.x - global_position.x > 0:
-			direction = -1
-		else:
-			direction = 1
-		$base/basilisk.scale.x = direction
+		turn_to_body(attackee)
 		if petrification_cooldown <= 0:
 			shoot_petrification()
 

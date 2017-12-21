@@ -21,6 +21,11 @@ func _ready():
 	tween = Tween.new()
 	add_child(tween)
 	dead = false
+	
+	if OS.get_datetime().month == 12:
+		enter_xmas_mode(true)
+	else:
+		enter_xmas_mode(false)
 
 func start_engaging(player, movement_area):
 	set_process(true)
@@ -144,3 +149,6 @@ func play_random_sound(group):
 			n.play()
 		else:
 			n.get_node(str((randi() % n.get_child_count()) + 1)).play()
+
+func enter_xmas_mode(aBoolean):
+	$base/xmas_hat.set_visible(aBoolean)

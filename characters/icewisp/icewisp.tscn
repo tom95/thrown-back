@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/icewisp/icewisp.gd" type="Script" id=1]
 [ext_resource path="res://characters/icewisp/icewisp.svg" type="Texture" id=2]
+[ext_resource path="res://accessoires/xmas_hat.svg" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -44,15 +45,21 @@ script = ExtResource( 1 )
 
 position = Vector2( 4.50742, -45.7181 )
 
+[node name="icewisp" type="Sprite" parent="base"]
+
+position = Vector2( 2.121, -41.501 )
+texture = ExtResource( 2 )
+
+[node name="xmas_hat" type="Sprite" parent="base"]
+
+position = Vector2( 5.81925, -57.7008 )
+scale = Vector2( 0.432953, 0.463049 )
+texture = ExtResource( 3 )
+
 [node name="collision" type="CollisionShape2D" parent="."]
 
 position = Vector2( -0.323532, -42.7064 )
 shape = SubResource( 1 )
-
-[node name="icewisp" type="Sprite" parent="."]
-
-position = Vector2( 2.121, -41.501 )
-texture = ExtResource( 2 )
 
 [node name="detect_wizard_area" type="Area2D" parent="."]
 

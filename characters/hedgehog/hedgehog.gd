@@ -9,11 +9,7 @@ func _ready():
 
 func _process(delta):
 	if enemy:
-		if enemy.global_position.x - global_position.x > 0:
-			direction = 1
-		else:
-			direction = -1
-		$base/hedgehog.scale.x = direction
+		turn_to_body(enemy, true)
 
 func _on_damage_area_body_entered( body ):
 	if body.is_in_group("players"):

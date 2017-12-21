@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://characters/wizard/wizard.gd" type="Script" id=1]
 [ext_resource path="res://effects/particle_round.png" type="Texture" id=2]
@@ -21,11 +21,12 @@
 [ext_resource path="res://characters/wizard/hand_right.png" type="Texture" id=19]
 [ext_resource path="res://characters/wizard/wizard_iceBlock.svg" type="Texture" id=20]
 [ext_resource path="res://characters/wizard/wizard_petrified.svg" type="Texture" id=21]
-[ext_resource path="res://sounds/bounce.wav" type="AudioStream" id=22]
-[ext_resource path="res://sounds/wizard_damage1.wav" type="AudioStream" id=23]
-[ext_resource path="res://sounds/wizard_damage2.wav" type="AudioStream" id=24]
-[ext_resource path="res://sounds/wizard_damage3.wav" type="AudioStream" id=25]
-[ext_resource path="res://sounds/levitationloop.wav" type="AudioStream" id=26]
+[ext_resource path="res://accessoires/xmas_hat.svg" type="Texture" id=22]
+[ext_resource path="res://sounds/bounce.wav" type="AudioStream" id=23]
+[ext_resource path="res://sounds/wizard_damage1.wav" type="AudioStream" id=24]
+[ext_resource path="res://sounds/wizard_damage2.wav" type="AudioStream" id=25]
+[ext_resource path="res://sounds/wizard_damage3.wav" type="AudioStream" id=26]
+[ext_resource path="res://sounds/levitationloop.wav" type="AudioStream" id=27]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -83,8 +84,8 @@ anim_loop = true
 _sections_unfolded = [ "Angle", "Angular Velocity", "Animation", "Color", "Damping", "Emission Shape", "Flags", "Gravity", "Hue Variation", "Initial Velocity", "Linear Accel", "Orbit Velocity", "Radial Accel", "Scale", "Spread", "Tangential Accel", "Trail" ]
 
 [node name="wizard" type="KinematicBody2D" groups=[
-"characters",
 "players",
+"characters",
 ]]
 
 input_pickable = false
@@ -318,11 +319,16 @@ position = Vector2( -0.220993, -13.5108 )
 texture = ExtResource( 21 )
 _sections_unfolded = [ "Visibility" ]
 
+[node name="xmas_hat" type="Sprite" parent="base"]
+
+position = Vector2( 2.31037, -51.1168 )
+texture = ExtResource( 22 )
+
 [node name="audio" type="Node2D" parent="."]
 
 [node name="bounce" type="AudioStreamPlayer2D" parent="audio"]
 
-stream = ExtResource( 22 )
+stream = ExtResource( 23 )
 volume_db = 0.0
 autoplay = false
 max_distance = 2000.0
@@ -334,7 +340,7 @@ area_mask = 1
 
 [node name="1" type="AudioStreamPlayer2D" parent="audio/damage"]
 
-stream = ExtResource( 23 )
+stream = ExtResource( 24 )
 volume_db = 0.0
 autoplay = false
 max_distance = 2000.0
@@ -344,7 +350,7 @@ area_mask = 1
 
 [node name="2" type="AudioStreamPlayer2D" parent="audio/damage"]
 
-stream = ExtResource( 24 )
+stream = ExtResource( 25 )
 volume_db = 0.0
 autoplay = false
 max_distance = 2000.0
@@ -354,7 +360,7 @@ area_mask = 1
 
 [node name="3" type="AudioStreamPlayer2D" parent="audio/damage"]
 
-stream = ExtResource( 25 )
+stream = ExtResource( 26 )
 volume_db = 0.0
 autoplay = false
 max_distance = 2000.0
@@ -364,7 +370,7 @@ area_mask = 1
 
 [node name="levitation" type="AudioStreamPlayer2D" parent="audio"]
 
-stream = ExtResource( 26 )
+stream = ExtResource( 27 )
 volume_db = -15.0
 autoplay = false
 max_distance = 2000.0

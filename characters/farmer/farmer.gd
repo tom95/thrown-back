@@ -20,11 +20,7 @@ func _process(delta):
 	if attacking and attack_cooldown <= 0:
 		attack()
 	
-	if linear_velocity.x > 0:
-		direction = -1
-	else:
-		direction = 1
-	$base/farmer.scale.x = direction
+	turn_to_direction_of_velocity()
 
 func attack():
 	if (randi() % 2) == 0:

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/bat/evilbat.gd" type="Script" id=1]
 [ext_resource path="res://characters/bat/evilbat.svg" type="Texture" id=2]
+[ext_resource path="res://accessoires/xmas_hat.svg" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -61,6 +62,13 @@ shape = SubResource( 2 )
 
 position = Vector2( 0.480107, 0.761524 )
 texture = ExtResource( 2 )
+
+[node name="xmas_hat" type="Sprite" parent="base"]
+
+position = Vector2( 16.0525, -42.3231 )
+rotation = 0.113881
+scale = Vector2( 1.37786, 1.36051 )
+texture = ExtResource( 3 )
 
 [connection signal="body_entered" from="." to="." method="_on_evilbat_body_entered"]
 

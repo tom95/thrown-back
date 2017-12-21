@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://characters/cow/cow.gd" type="Script" id=1]
 [ext_resource path="res://characters/cow/cow.svg" type="Texture" id=2]
-[ext_resource path="res://sounds/cow_damage1.wav" type="AudioStream" id=3]
-[ext_resource path="res://sounds/cow_damage2.wav" type="AudioStream" id=4]
-[ext_resource path="res://sounds/cow_damage3.wav" type="AudioStream" id=5]
-[ext_resource path="res://sounds/cow_damage4.wav" type="AudioStream" id=6]
-[ext_resource path="res://sounds/cow_death.wav" type="AudioStream" id=7]
+[ext_resource path="res://accessoires/xmas_hat.svg" type="Texture" id=3]
+[ext_resource path="res://sounds/cow_damage1.wav" type="AudioStream" id=4]
+[ext_resource path="res://sounds/cow_damage2.wav" type="AudioStream" id=5]
+[ext_resource path="res://sounds/cow_damage3.wav" type="AudioStream" id=6]
+[ext_resource path="res://sounds/cow_damage4.wav" type="AudioStream" id=7]
+[ext_resource path="res://sounds/cow_death.wav" type="AudioStream" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -14,8 +15,8 @@ custom_solver_bias = 0.0
 radius = 39.0488
 
 [node name="cow" type="RigidBody2D" groups=[
-"characters",
 "neutrals",
+"characters",
 ]]
 
 input_pickable = false
@@ -44,26 +45,23 @@ _sections_unfolded = [ "Collision", "Material", "Pause", "Pickable", "Transform"
 position = Vector2( 2.89873, -39.001 )
 shape = SubResource( 1 )
 
-[node name="cow" type="Sprite" parent="."]
+[node name="base" type="Node2D" parent="."]
+
+[node name="cow" type="Sprite" parent="base"]
 
 position = Vector2( -6.7412, -38.1854 )
 texture = ExtResource( 2 )
+
+[node name="xmas_hat" type="Sprite" parent="base"]
+
+position = Vector2( -34.4363, -72.6521 )
+texture = ExtResource( 3 )
 
 [node name="sounds" type="Node2D" parent="."]
 
 [node name="damage" type="Node2D" parent="sounds"]
 
 [node name="1" type="AudioStreamPlayer2D" parent="sounds/damage"]
-
-stream = ExtResource( 3 )
-volume_db = 0.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Master"
-area_mask = 1
-
-[node name="2" type="AudioStreamPlayer2D" parent="sounds/damage"]
 
 stream = ExtResource( 4 )
 volume_db = 0.0
@@ -73,7 +71,7 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="3" type="AudioStreamPlayer2D" parent="sounds/damage"]
+[node name="2" type="AudioStreamPlayer2D" parent="sounds/damage"]
 
 stream = ExtResource( 5 )
 volume_db = 0.0
@@ -83,7 +81,7 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="4" type="AudioStreamPlayer2D" parent="sounds/damage"]
+[node name="3" type="AudioStreamPlayer2D" parent="sounds/damage"]
 
 stream = ExtResource( 6 )
 volume_db = 0.0
@@ -93,9 +91,19 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="death" type="AudioStreamPlayer2D" parent="sounds"]
+[node name="4" type="AudioStreamPlayer2D" parent="sounds/damage"]
 
 stream = ExtResource( 7 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="death" type="AudioStreamPlayer2D" parent="sounds"]
+
+stream = ExtResource( 8 )
 volume_db = 0.0
 autoplay = false
 max_distance = 2000.0

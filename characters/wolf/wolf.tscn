@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/wolf/wolf.gd" type="Script" id=1]
 [ext_resource path="res://characters/wolf/wolf.svg" type="Texture" id=2]
+[ext_resource path="res://accessoires/xmas_hat.svg" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -67,6 +68,11 @@ position = Vector2( 2.54761, -48.7153 )
 [node name="wolf" type="Sprite" parent="base"]
 
 texture = ExtResource( 2 )
+
+[node name="xmas_hat" type="Sprite" parent="base"]
+
+position = Vector2( -51.141, -37.5936 )
+texture = ExtResource( 3 )
 
 [connection signal="body_entered" from="." to="." method="_on_wolf_body_entered"]
 
