@@ -5,6 +5,10 @@ signal enemy_killed(type)
 func _ready():
 	for character in $characters.get_children():
 		connect_character_signals(character)
+	
+	if OS.get_datetime().month == 12:
+		$background_music.stream = preload("res://music/Scott_Holmes-Jingle_Bells.ogg")
+		$background_music.play()
 
 func connect_character_signals(character):
 	character.connect("spawn", self, "_on_character_wants_spawn")

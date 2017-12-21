@@ -149,6 +149,8 @@ func take_damage(damage, damage_dealer_image):
 		$audio/damage.get_node(str(randi() % 3 + 1)).play()
 
 func rammed(ram_velocity):
+	if is_in_godmode:
+		return
 	var ram_direction = 1
 	if ram_velocity.x < 0:
 		ram_direction = -1
@@ -164,7 +166,7 @@ func heal(num):
 	health = min(MAX_HEALTH, health + num)
 
 func hit_by_icebolt():
-	if is_iced:
+	if is_iced or is_in_godmode:
 		return
 
 	is_iced = true
@@ -177,7 +179,7 @@ func _on_ice_timer_timeout():
 	$base/wizard_iceBlock.set_visible(false)
 
 func hit_by_petrification():
-	if is_petrified:
+	if is_petrified or is_in_godmode:
 		return
 
 	is_petrified = true

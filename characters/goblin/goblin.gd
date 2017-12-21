@@ -13,8 +13,10 @@ func _ready():
 
 func _process(delta):
 	stone_cooldown = max(0, stone_cooldown - 1000 * delta)
-	if attacking and stone_cooldown <= 0:
-		throw_stone()
+	if attacking:
+		turn_to_body(attacking)
+		if stone_cooldown <= 0:
+			throw_stone()
 
 func throw_stone():
 	stone_cooldown = COOLDOWN

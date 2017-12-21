@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://characters/beholder/beholder_endscreen.gd" type="Script" id=1]
 [ext_resource path="res://characters/beholder/beholder.png" type="Texture" id=2]
+[ext_resource path="res://accessoires/xmas_hat.svg" type="Texture" id=3]
 
 [node name="beholder" type="RigidBody2D" groups=[
 "characters",
@@ -35,6 +36,13 @@ _sections_unfolded = [ "Collision", "collision" ]
 
 position = Vector2( -5.43962, 1.71281 )
 texture = ExtResource( 2 )
+
+[node name="xmas_hat" type="Sprite" parent="base"]
+
+position = Vector2( -3.76902, -91.9939 )
+rotation = -0.147512
+scale = Vector2( 2.85775, 3.23388 )
+texture = ExtResource( 3 )
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
 

@@ -25,7 +25,7 @@ func iceblast():
 
 func _on_icewisp_body_entered( body ):
 	if body.is_in_group("players"):
-		body.take_damage(DAMAGE, $icewisp.texture)
+		body.take_damage(DAMAGE, $base/icewisp.texture)
 
 func _on_detect_wizard_area_body_entered( body ):
 	if body.is_in_group("players"):
