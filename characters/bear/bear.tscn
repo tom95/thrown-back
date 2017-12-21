@@ -1,17 +1,17 @@
 [gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://characters/bear/bear.gd" type="Script" id=1]
-[ext_resource path="res://characters/bear/bear.png" type="Texture" id=2]
-[ext_resource path="res://characters/bear/body.png" type="Texture" id=3]
-[ext_resource path="res://characters/bear/foot_left.png" type="Texture" id=4]
-[ext_resource path="res://characters/bear/foot_right.png" type="Texture" id=5]
-[ext_resource path="res://characters/bear/head.png" type="Texture" id=6]
-[ext_resource path="res://characters/bear/eye_right.png" type="Texture" id=7]
-[ext_resource path="res://characters/bear/pupil_right.png" type="Texture" id=8]
-[ext_resource path="res://characters/bear/eye_left.png" type="Texture" id=9]
-[ext_resource path="res://characters/bear/pupil_left.png" type="Texture" id=10]
-[ext_resource path="res://characters/bear/eyebrow_left.png" type="Texture" id=11]
-[ext_resource path="res://characters/bear/eyebrow_right.png" type="Texture" id=12]
+[ext_resource path="res://characters/bear/body.png" type="Texture" id=2]
+[ext_resource path="res://characters/bear/foot_left.png" type="Texture" id=3]
+[ext_resource path="res://characters/bear/foot_right.png" type="Texture" id=4]
+[ext_resource path="res://characters/bear/head.png" type="Texture" id=5]
+[ext_resource path="res://characters/bear/eye_right.png" type="Texture" id=6]
+[ext_resource path="res://characters/bear/pupil_right.png" type="Texture" id=7]
+[ext_resource path="res://characters/bear/eye_left.png" type="Texture" id=8]
+[ext_resource path="res://characters/bear/pupil_left.png" type="Texture" id=9]
+[ext_resource path="res://characters/bear/eyebrow_left.png" type="Texture" id=10]
+[ext_resource path="res://characters/bear/eyebrow_right.png" type="Texture" id=11]
+[ext_resource path="res://characters/bear/bear.png" type="Texture" id=12]
 [ext_resource path="res://accessoires/xmas_hat.svg" type="Texture" id=13]
 [ext_resource path="res://sounds/bear_damage1.wav" type="AudioStream" id=14]
 [ext_resource path="res://sounds/bear_damage2.wav" type="AudioStream" id=15]
@@ -49,67 +49,65 @@ angular_damp = -1.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "collision" ]
 
-[node name="bear" type="Sprite" parent="."]
-
-position = Vector2( -10.6109, 0.0662613 )
-texture = ExtResource( 2 )
-
 [node name="collision" type="CollisionShape2D" parent="."]
 
 shape = SubResource( 1 )
 
 [node name="base" type="Node2D" parent="."]
 
-visible = false
-
 [node name="body" type="Sprite" parent="base"]
 
 position = Vector2( 9.16991, -1.21087 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="foot_left" type="Sprite" parent="base/body"]
 
 position = Vector2( -16.2514, 31.2405 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="foot_right" type="Sprite" parent="base/body"]
 
 position = Vector2( 15.6202, 31.2405 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="head" type="Sprite" parent="base/body"]
 
 position = Vector2( -38.3206, -6.05461 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="eye_right" type="Sprite" parent="base/body/head"]
 
 position = Vector2( -0.950394, 0.175097 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="pupil_right" type="Sprite" parent="base/body/head/eye_right"]
 
 position = Vector2( -1.94534, -0.586661 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 
 [node name="eye_left" type="Sprite" parent="base/body/head"]
 
 position = Vector2( -8.00266, 0.0553341 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="pupil_left" type="Sprite" parent="base/body/head/eye_left"]
 
 position = Vector2( -1.42369, -0.467453 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="eyebrow_left" type="Sprite" parent="base/body/head"]
 
 position = Vector2( -8.59771, -4.0276 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 
 [node name="eyebrow_right" type="Sprite" parent="base/body/head"]
 
 position = Vector2( -0.613934, -3.74885 )
+texture = ExtResource( 11 )
+
+[node name="bear" type="Sprite" parent="base"]
+
+position = Vector2( -10.6109, 0.0662613 )
 texture = ExtResource( 12 )
 
 [node name="xmas_hat" type="Sprite" parent="base"]
