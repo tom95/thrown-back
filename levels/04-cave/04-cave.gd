@@ -24,9 +24,7 @@ func _on_lair_area_body_entered( body ):
 		boss_fight_started = true
 		$characters/beholder.start_engaging(body, get_beholder_area())
 		emit_signal("boss_fight_started", $characters/beholder.MAX_HEALTH)
-		$background_music.stream = preload("res://music/bensound-extremeaction.ogg")
-		$background_music.play()
-		
+
 func _on_boss_health_updated(health):
 	emit_signal("boss_health_updated", health)
 	

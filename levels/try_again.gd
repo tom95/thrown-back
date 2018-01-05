@@ -8,8 +8,16 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_pressed("start"):
-		var game = load("res://game/game.tscn").instance()
+		print("a")
+		var gamec = load("res://game/game.tscn")
+		print("b")
+		var game = gamec.instance()
+		print("c")
 		get_parent().add_child(game)
+		print("d")
 		game.show_level(FIRST_LEVEL)
+		print("e")
 		game.show_instructions(SHOW_INSTRUCTIONS)
+		print("f")
 		queue_free()
+		print("z")

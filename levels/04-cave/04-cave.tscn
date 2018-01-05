@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://levels/04-cave/04-cave.gd" type="Script" id=1]
 [ext_resource path="res://props/stalagmites.tscn" type="PackedScene" id=2]
@@ -10,19 +10,18 @@
 [ext_resource path="res://effects/flame/flame.tscn" type="PackedScene" id=8]
 [ext_resource path="res://props/moving_platform.tscn" type="PackedScene" id=9]
 [ext_resource path="res://props/health_potion.tscn" type="PackedScene" id=10]
-[ext_resource path="res://music/bensound-badass.ogg" type="AudioStream" id=11]
-[ext_resource path="res://sounds/level_complete.wav" type="AudioStream" id=12]
+[ext_resource path="res://sounds/level_complete.wav" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 810, 450 )
 
-[node name="04-cave" type="Node2D"]
+[node name="04-cave" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
-[node name="background" type="ColorRect" parent="."]
+[node name="background" type="ColorRect" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -33,34 +32,33 @@ margin_top = -2461.0
 margin_right = 11550.0
 margin_bottom = 1539.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 0.0820312, 0.0820312, 0.0820312, 1 )
 _sections_unfolded = [ "Rect" ]
 
-[node name="stalagmites" type="Node2D" parent="."]
+[node name="stalagmites" type="Node2D" parent="." index="1"]
 
 editor/display_folded = true
 
-[node name="stalagmites" parent="stalagmites" instance=ExtResource( 2 )]
+[node name="stalagmites" parent="stalagmites" index="0" instance=ExtResource( 2 )]
 
 position = Vector2( 374, 530 )
 
-[node name="stalagmites2" parent="stalagmites" instance=ExtResource( 2 )]
+[node name="stalagmites2" parent="stalagmites" index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 1386, 671 )
 
-[node name="stalagmites4" parent="stalagmites" instance=ExtResource( 2 )]
+[node name="stalagmites4" parent="stalagmites" index="2" instance=ExtResource( 2 )]
 
 position = Vector2( 5180, 740 )
 
-[node name="stalagmites3" parent="stalagmites" instance=ExtResource( 2 )]
+[node name="stalagmites3" parent="stalagmites" index="3" instance=ExtResource( 2 )]
 
 position = Vector2( 4200, 740 )
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." index="2"]
 
 mode = 0
 tile_set = ExtResource( 3 )
@@ -84,107 +82,107 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="spawn" type="Position2D" parent="."]
+[node name="spawn" type="Position2D" parent="." index="3"]
 
 position = Vector2( -106.168, 147.266 )
 
-[node name="characters" type="Node2D" parent="."]
+[node name="characters" type="Node2D" parent="." index="4"]
 
 editor/display_folded = true
 
-[node name="basilisk" parent="characters" instance=ExtResource( 4 )]
+[node name="basilisk" parent="characters" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 5380, 630 )
 
-[node name="bat" parent="characters" instance=ExtResource( 5 )]
+[node name="bat" parent="characters" index="1" instance=ExtResource( 5 )]
 
 position = Vector2( 2765, -1071 )
 
-[node name="bat2" parent="characters" instance=ExtResource( 5 )]
+[node name="bat2" parent="characters" index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 3253, -1069 )
 
-[node name="beholder" parent="characters" instance=ExtResource( 6 )]
+[node name="beholder" parent="characters" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( 9330, -700 )
 
-[node name="spider" parent="characters" instance=ExtResource( 7 )]
+[node name="spider" parent="characters" index="4" instance=ExtResource( 7 )]
 
 position = Vector2( 1720, 610 )
 
-[node name="flames" type="Node2D" parent="."]
+[node name="flames" type="Node2D" parent="." index="5"]
 
 editor/display_folded = true
 
-[node name="flame" parent="flames" instance=ExtResource( 8 )]
+[node name="flame" parent="flames" index="0" instance=ExtResource( 8 )]
 
 position = Vector2( 196, 216 )
 
-[node name="flame2" parent="flames" instance=ExtResource( 8 )]
+[node name="flame2" parent="flames" index="1" instance=ExtResource( 8 )]
 
 position = Vector2( 3800, 600 )
 
-[node name="flame3" parent="flames" instance=ExtResource( 8 )]
+[node name="flame3" parent="flames" index="2" instance=ExtResource( 8 )]
 
 position = Vector2( 5960, -1770 )
 
-[node name="flame4" parent="flames" instance=ExtResource( 8 )]
+[node name="flame4" parent="flames" index="3" instance=ExtResource( 8 )]
 
 position = Vector2( 6330, -1760 )
 
-[node name="flame5" parent="flames" instance=ExtResource( 8 )]
+[node name="flame5" parent="flames" index="4" instance=ExtResource( 8 )]
 
 position = Vector2( 6730, -1750 )
 
-[node name="flame6" parent="flames" instance=ExtResource( 8 )]
+[node name="flame6" parent="flames" index="5" instance=ExtResource( 8 )]
 
 position = Vector2( 8091.51, -784.032 )
 
-[node name="flame7" parent="flames" instance=ExtResource( 8 )]
+[node name="flame7" parent="flames" index="6" instance=ExtResource( 8 )]
 
 position = Vector2( 9047.86, -763.626 )
 
-[node name="flame8" parent="flames" instance=ExtResource( 8 )]
+[node name="flame8" parent="flames" index="7" instance=ExtResource( 8 )]
 
 position = Vector2( 8106.47, -1351.31 )
 
-[node name="flame9" parent="flames" instance=ExtResource( 8 )]
+[node name="flame9" parent="flames" index="8" instance=ExtResource( 8 )]
 
 position = Vector2( 9064.18, -1330.91 )
 
-[node name="moving_platforms" type="Node2D" parent="."]
+[node name="moving_platforms" type="Node2D" parent="." index="6"]
 
-[node name="moving_platform2" parent="moving_platforms" instance=ExtResource( 9 )]
+[node name="moving_platform2" parent="moving_platforms" index="0" instance=ExtResource( 9 )]
 
 position = Vector2( 4765.28, -1032.15 )
 motion = Vector2( 250, 0 )
 
-[node name="moving_platform" parent="moving_platforms" instance=ExtResource( 9 )]
+[node name="moving_platform" parent="moving_platforms" index="1" instance=ExtResource( 9 )]
 
 position = Vector2( 4100, -850 )
 
-[node name="moving_platform3" parent="moving_platforms" instance=ExtResource( 9 )]
+[node name="moving_platform3" parent="moving_platforms" index="2" instance=ExtResource( 9 )]
 
 position = Vector2( 5391.19, -1200.42 )
 
-[node name="potions" type="Node2D" parent="."]
+[node name="potions" type="Node2D" parent="." index="7"]
 
 editor/display_folded = true
 
-[node name="health_potion" parent="potions" instance=ExtResource( 10 )]
+[node name="health_potion" parent="potions" index="0" instance=ExtResource( 10 )]
 
 position = Vector2( 5620, 720 )
 
-[node name="boss_fight" type="Position2D" parent="."]
+[node name="boss_fight" type="Position2D" parent="." index="8"]
 
 position = Vector2( 6517.87, -1766.4 )
 
-[node name="lair" type="Node2D" parent="."]
+[node name="lair" type="Node2D" parent="." index="9"]
 
 editor/display_folded = true
 position = Vector2( 8640, -1080 )
 
-[node name="area" type="Area2D" parent="lair"]
+[node name="area" type="Area2D" parent="lair" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -194,22 +192,14 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="collision" type="CollisionShape2D" parent="lair/area"]
+[node name="collision" type="CollisionShape2D" parent="lair/area" index="0"]
 
 position = Vector2( 20, 10 )
 shape = SubResource( 1 )
 
-[node name="background_music" type="AudioStreamPlayer" parent="."]
+[node name="level_complete_sound" type="AudioStreamPlayer" parent="." index="10"]
 
 stream = ExtResource( 11 )
-volume_db = 0.0
-autoplay = true
-mix_target = 0
-bus = "music"
-
-[node name="level_complete_sound" type="AudioStreamPlayer" parent="."]
-
-stream = ExtResource( 12 )
 volume_db = 0.0
 autoplay = true
 mix_target = 0
