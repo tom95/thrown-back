@@ -19,7 +19,7 @@
 [ext_resource path="res://levels/01-grass/tiles/platform_corner_lower.png" type="Texture" id=17]
 [ext_resource path="res://props/haystack.tscn" type="PackedScene" id=18]
 [ext_resource path="res://levels/01-grass/tiles/water_mid.png" type="Texture" id=19]
-[ext_resource path="res://levels/01-grass/tiles/water_shader.shd" type="Shader" id=20]
+[ext_resource path="res://levels/01-grass/tiles/water_shader.res" type="Shader" id=20]
 [ext_resource path="res://levels/01-grass/tiles/water.png" type="Texture" id=21]
 
 [sub_resource type="GDScript" id=1]
