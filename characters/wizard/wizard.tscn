@@ -83,9 +83,9 @@ anim_offset_random = 0.0
 anim_loop = true
 _sections_unfolded = [ "Angle", "Angular Velocity", "Animation", "Color", "Damping", "Emission Shape", "Flags", "Gravity", "Hue Variation", "Initial Velocity", "Linear Accel", "Orbit Velocity", "Radial Accel", "Scale", "Spread", "Tangential Accel", "Trail" ]
 
-[node name="wizard" type="KinematicBody2D" groups=[
-"players",
+[node name="wizard" type="KinematicBody2D" index="0" groups=[
 "characters",
+"players",
 ]]
 
 input_pickable = false
@@ -95,13 +95,13 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
 position = Vector2( -0.664386, -11.1985 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." index="1"]
 
 anchor_mode = 1
 rotating = false
@@ -125,7 +125,7 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Limit", "Transform" ]
 
-[node name="jetpack_exhaust" type="Particles2D" parent="."]
+[node name="jetpack_exhaust" type="Particles2D" parent="." index="2"]
 
 position = Vector2( -1.27425, 31.0842 )
 rotation = 1.56831
@@ -149,7 +149,7 @@ h_frames = 1
 v_frames = 1
 _sections_unfolded = [ "Drawing", "Process Material", "Time" ]
 
-[node name="light" type="Light2D" parent="."]
+[node name="light" type="Light2D" parent="." index="3"]
 
 position = Vector2( 50, 0 )
 enabled = false
@@ -175,7 +175,7 @@ shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Shadow" ]
 
-[node name="animation_player" type="AnimationPlayer" parent="."]
+[node name="animation_player" type="AnimationPlayer" parent="." index="4"]
 
 playback_process_mode = 1
 playback_default_blend_time = 0.0
@@ -185,93 +185,93 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="base" type="Node2D" parent="."]
+[node name="base" type="Node2D" parent="." index="5"]
 
-[node name="ice_timer" type="Timer" parent="base"]
-
-process_mode = 1
-wait_time = 1.0
-one_shot = false
-autostart = false
-
-[node name="petrification_timer" type="Timer" parent="base"]
+[node name="ice_timer" type="Timer" parent="base" index="0"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="projectile_spawn" type="Position2D" parent="base"]
+[node name="petrification_timer" type="Timer" parent="base" index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="projectile_spawn" type="Position2D" parent="base" index="2"]
 
 position = Vector2( 30.5707, 0.527931 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="airblast" parent="base/projectile_spawn" instance=ExtResource( 4 )]
+[node name="airblast" parent="base/projectile_spawn" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 5.48579, -13.4649 )
 
-[node name="wizardbody" type="Node2D" parent="base"]
+[node name="wizardbody" type="Node2D" parent="base" index="3"]
 
 _sections_unfolded = [ "Visibility" ]
 
-[node name="leg_right" type="Sprite" parent="base/wizardbody"]
+[node name="leg_right" type="Sprite" parent="base/wizardbody" index="0"]
 
 position = Vector2( 12.1887, 22.3504 )
 texture = ExtResource( 5 )
 offset = Vector2( 5.35906, 8.28226 )
 
-[node name="leg_left" type="Sprite" parent="base/wizardbody"]
+[node name="leg_left" type="Sprite" parent="base/wizardbody" index="1"]
 
 position = Vector2( -14.1562, 21.1881 )
 texture = ExtResource( 6 )
 offset = Vector2( -2.78266, 7.65713 )
 
-[node name="body" type="Sprite" parent="base/wizardbody"]
+[node name="body" type="Sprite" parent="base/wizardbody" index="2"]
 
 editor/display_folded = true
 texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="mustache" type="Sprite" parent="base/wizardbody/body"]
+[node name="mustache" type="Sprite" parent="base/wizardbody/body" index="0"]
 
 position = Vector2( 10.0439, 4.6913 )
 texture = ExtResource( 8 )
 
-[node name="eye_right" type="Sprite" parent="base/wizardbody/body"]
+[node name="eye_right" type="Sprite" parent="base/wizardbody/body" index="1"]
 
 position = Vector2( 16.1231, -7.41246 )
 texture = ExtResource( 9 )
 
-[node name="pupil_right" type="Sprite" parent="base/wizardbody/body/eye_right"]
+[node name="pupil_right" type="Sprite" parent="base/wizardbody/body/eye_right" index="0"]
 
 position = Vector2( 1.3277, -0.506506 )
 texture = ExtResource( 10 )
 
-[node name="eye_left" type="Sprite" parent="base/wizardbody/body"]
+[node name="eye_left" type="Sprite" parent="base/wizardbody/body" index="2"]
 
 position = Vector2( 3.30411, -7.8209 )
 texture = ExtResource( 11 )
 
-[node name="pupil_left" type="Sprite" parent="base/wizardbody/body/eye_left"]
+[node name="pupil_left" type="Sprite" parent="base/wizardbody/body/eye_left" index="0"]
 
 position = Vector2( 1.58987, -0.295063 )
 texture = ExtResource( 12 )
 
-[node name="eyebrow_left" type="Sprite" parent="base/wizardbody/body"]
+[node name="eyebrow_left" type="Sprite" parent="base/wizardbody/body" index="3"]
 
 position = Vector2( 10.1945, -12.806 )
 rotation = -0.0224884
 texture = ExtResource( 13 )
 offset = Vector2( -8.67434, -1.81467 )
 
-[node name="eyebrow_right" type="Sprite" parent="base/wizardbody/body"]
+[node name="eyebrow_right" type="Sprite" parent="base/wizardbody/body" index="4"]
 
 position = Vector2( 8.15333, -12.8293 )
 rotation = 0.0422089
 texture = ExtResource( 14 )
 offset = Vector2( 9.22118, -1.4218 )
 
-[node name="arm_left" type="Sprite" parent="base/wizardbody"]
+[node name="arm_left" type="Sprite" parent="base/wizardbody" index="3"]
 
 editor/display_folded = true
 position = Vector2( -26.2058, -0.343494 )
@@ -279,54 +279,54 @@ texture = ExtResource( 15 )
 offset = Vector2( -4.66704, 5.20427 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="hand_left" type="Sprite" parent="base/wizardbody/arm_left"]
+[node name="hand_left" type="Sprite" parent="base/wizardbody/arm_left" index="0"]
 
 position = Vector2( -10.6724, 8.79764 )
 texture = ExtResource( 16 )
 offset = Vector2( -3.84471, 4.41429 )
 
-[node name="hat" type="Sprite" parent="base/wizardbody"]
+[node name="hat" type="Sprite" parent="base/wizardbody" index="4"]
 
 position = Vector2( 3.29622, -12.7701 )
 texture = ExtResource( 17 )
 offset = Vector2( -1.89791, -23.497 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="arm_right" type="Sprite" parent="base/wizardbody"]
+[node name="arm_right" type="Sprite" parent="base/wizardbody" index="5"]
 
 position = Vector2( 25.3054, -0.312061 )
 texture = ExtResource( 18 )
 offset = Vector2( 5.56227, 5.09751 )
 _sections_unfolded = [ "Transform", "Z" ]
 
-[node name="hand_right" type="Sprite" parent="base/wizardbody"]
+[node name="hand_right" type="Sprite" parent="base/wizardbody" index="6"]
 
 position = Vector2( 35.9349, 8.59654 )
 texture = ExtResource( 19 )
 offset = Vector2( 3.41751, 4.41429 )
 
-[node name="wizard_iceBlock" type="Sprite" parent="base"]
+[node name="wizard_iceBlock" type="Sprite" parent="base" index="4"]
 
 visible = false
 position = Vector2( 0.215584, -6.04467 )
 texture = ExtResource( 20 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="wizard_petrified" type="Sprite" parent="base"]
+[node name="wizard_petrified" type="Sprite" parent="base" index="5"]
 
 visible = false
 position = Vector2( -0.220993, -13.5108 )
 texture = ExtResource( 21 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="xmas_hat" type="Sprite" parent="base"]
+[node name="xmas_hat" type="Sprite" parent="base" index="6"]
 
 position = Vector2( 2.31037, -51.1168 )
 texture = ExtResource( 22 )
 
-[node name="audio" type="Node2D" parent="."]
+[node name="audio" type="Node2D" parent="." index="6"]
 
-[node name="bounce" type="AudioStreamPlayer2D" parent="audio"]
+[node name="bounce" type="AudioStreamPlayer2D" parent="audio" index="0"]
 
 stream = ExtResource( 23 )
 volume_db = 0.0
@@ -336,9 +336,9 @@ attenuation = 1.0
 bus = "bouncing"
 area_mask = 1
 
-[node name="damage" type="Node2D" parent="audio"]
+[node name="damage" type="Node2D" parent="audio" index="1"]
 
-[node name="1" type="AudioStreamPlayer2D" parent="audio/damage"]
+[node name="1" type="AudioStreamPlayer2D" parent="audio/damage" index="0"]
 
 stream = ExtResource( 24 )
 volume_db = 0.0
@@ -348,7 +348,7 @@ attenuation = 1.0
 bus = "wizard_fx"
 area_mask = 1
 
-[node name="2" type="AudioStreamPlayer2D" parent="audio/damage"]
+[node name="2" type="AudioStreamPlayer2D" parent="audio/damage" index="1"]
 
 stream = ExtResource( 25 )
 volume_db = 0.0
@@ -358,7 +358,7 @@ attenuation = 1.0
 bus = "wizard_fx"
 area_mask = 1
 
-[node name="3" type="AudioStreamPlayer2D" parent="audio/damage"]
+[node name="3" type="AudioStreamPlayer2D" parent="audio/damage" index="2"]
 
 stream = ExtResource( 26 )
 volume_db = 0.0
@@ -368,7 +368,7 @@ attenuation = 1.0
 bus = "wizard_fx"
 area_mask = 1
 
-[node name="levitation" type="AudioStreamPlayer2D" parent="audio"]
+[node name="levitation" type="AudioStreamPlayer2D" parent="audio" index="2"]
 
 stream = ExtResource( 27 )
 volume_db = -15.0

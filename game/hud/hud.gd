@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 onready var player = get_node("../wizard")
-onready var boss = get_node("../characters/beholder")
 
 func _ready():
 	set_process(true)

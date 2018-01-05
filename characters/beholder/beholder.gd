@@ -5,8 +5,11 @@ signal update_boss_health(health)
 signal killed
 signal boss_killed
 
+# only here to satisfy npc_bouncer interface
+signal enemy_killed(object)
+
 const MAX_VELOCITY = 200
-const MAX_HEALTH = 1000
+const MAX_HEALTH = 100
 
 var health = MAX_HEALTH
 var velocity = Vector2(0, 0)
@@ -61,7 +64,7 @@ func take_damage(num, damage_dealer):
 
 func despawn():
 	dead = true
-	if player.must_gravitate_to == self:
+	if player and player.must_gravitate_to == self:
 		player.must_gravitate_to = null
 	emit_signal("killed")
 	emit_signal("boss_killed")

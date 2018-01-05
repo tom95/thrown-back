@@ -39,9 +39,10 @@ func setup_level():
 		$level.connect("boss_fight_started", $hud, "_on_boss_fight_started")
 		$level.connect("boss_health_updated", $hud, "_on_boss_health_updated")
 		$level.connect("boss_killed", self, "you_won")
-	
+	else:
+		$level.connect("next_level", self, "show_level")
+
 	$level.connect("enemy_killed", self, "_on_enemy_killed")
-	$level.connect("next_level", self, "show_level")
 	$wizard/light.enabled = $level.needs_light()
 	$wizard.position = $level.get_spawn_position()
 	$wizard.velocity = Vector2(0, 0)
@@ -68,6 +69,7 @@ func you_won():
 	var you_won = preload("res://levels/you_won/you_won.tscn").instance()
 	root.add_child(you_won)
 	add_enemies(you_won)
+	print("done")
 
 func add_enemies(scene):
 	for path in killed_enemies:

@@ -18,11 +18,11 @@ extents = Vector2( 660, 10 )
 
 script = ExtResource( 1 )
 
-[node name="edges" type="Node2D" parent="."]
+[node name="edges" type="Node2D" parent="." index="0"]
 
 position = Vector2( 640, 730 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="edges"]
+[node name="StaticBody2D" type="StaticBody2D" parent="edges" index="0"]
 
 position = Vector2( -650, -740 )
 input_pickable = false
@@ -33,12 +33,12 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D" index="0"]
 
 position = Vector2( 0, 360 )
 shape = SubResource( 1 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="edges"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="edges" index="1"]
 
 position = Vector2( 650, -720 )
 input_pickable = false
@@ -49,12 +49,12 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D2" index="0"]
 
 position = Vector2( 0, 360 )
 shape = SubResource( 1 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="edges"]
+[node name="StaticBody2D3" type="StaticBody2D" parent="edges" index="2"]
 
 editor/display_folded = true
 position = Vector2( 0, -740 )
@@ -66,12 +66,12 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D3" index="0"]
 
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="edges"]
+[node name="StaticBody2D4" type="StaticBody2D" parent="edges" index="3"]
 
 editor/display_folded = true
 input_pickable = false
@@ -82,17 +82,17 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="edges/StaticBody2D4" index="0"]
 
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="you-won-text" type="Sprite" parent="."]
+[node name="you-won-text" type="Sprite" parent="." index="1"]
 
 position = Vector2( 625.147, 248.472 )
 texture = ExtResource( 2 )
 
-[node name="try_again" type="Sprite" parent="."]
+[node name="try_again" type="Sprite" parent="." index="2"]
 
 position = Vector2( 640, 650 )
 texture = ExtResource( 3 )
