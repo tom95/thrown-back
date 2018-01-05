@@ -6,7 +6,7 @@ signal killed
 signal boss_killed
 
 const MAX_VELOCITY = 200
-const MAX_HEALTH = 10000
+const MAX_HEALTH = 1000
 
 var health = MAX_HEALTH
 var velocity = Vector2(0, 0)

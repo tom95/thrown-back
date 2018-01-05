@@ -8,7 +8,7 @@
 [ext_resource path="res://sounds/beholder_damage2.wav" type="AudioStream" id=6]
 [ext_resource path="res://sounds/beholder_damage3.wav" type="AudioStream" id=7]
 
-[node name="beholder" type="KinematicBody2D" groups=[
+[node name="beholder" type="KinematicBody2D" index="0" groups=[
 "characters",
 "enemies",
 ]]
@@ -20,38 +20,38 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "collision" ]
 
-[node name="base" type="Node2D" parent="."]
+[node name="base" type="Node2D" parent="." index="0"]
 
-[node name="beholder" type="Sprite" parent="base"]
+[node name="beholder" type="Sprite" parent="base" index="0"]
 
 position = Vector2( -5.43962, 1.71281 )
 texture = ExtResource( 2 )
 
-[node name="xmas_hat" type="Sprite" parent="base"]
+[node name="xmas_hat" type="Sprite" parent="base" index="1"]
 
 position = Vector2( -1.48718, -86.5185 )
 rotation = -0.0889868
 scale = Vector2( 2.68096, 2.72429 )
 texture = ExtResource( 3 )
 
-[node name="collision" type="CollisionPolygon2D" parent="."]
+[node name="collision" type="CollisionPolygon2D" parent="." index="1"]
 
 position = Vector2( 0.902527, 0 )
 build_mode = 0
 polygon = PoolVector2Array( -115.561, 60.4296, -137.567, -5.5898, -129.645, -64.127, -81.671, -77.771, 80.2966, -78.6513, 121.229, -66.7678, 127.831, -6.91017, 107.145, 59.1092 )
 
-[node name="reposition_timer" type="Timer" parent="."]
+[node name="reposition_timer" type="Timer" parent="." index="2"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="projectile_spawn" type="Position2D" parent="."]
+[node name="projectile_spawn" type="Position2D" parent="." index="3"]
 
-[node name="sounds" type="Node2D" parent="."]
+[node name="sounds" type="Node2D" parent="." index="4"]
 
-[node name="death" type="AudioStreamPlayer2D" parent="sounds"]
+[node name="death" type="AudioStreamPlayer2D" parent="sounds" index="0"]
 
 stream = ExtResource( 4 )
 volume_db = 0.0
@@ -61,9 +61,9 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="damage" type="Node2D" parent="sounds"]
+[node name="damage" type="Node2D" parent="sounds" index="1"]
 
-[node name="1" type="AudioStreamPlayer2D" parent="sounds/damage"]
+[node name="1" type="AudioStreamPlayer2D" parent="sounds/damage" index="0"]
 
 stream = ExtResource( 5 )
 volume_db = 0.0
@@ -73,7 +73,7 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="2" type="AudioStreamPlayer2D" parent="sounds/damage"]
+[node name="2" type="AudioStreamPlayer2D" parent="sounds/damage" index="1"]
 
 stream = ExtResource( 6 )
 volume_db = 0.0
@@ -83,7 +83,7 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="3" type="AudioStreamPlayer2D" parent="sounds/damage"]
+[node name="3" type="AudioStreamPlayer2D" parent="sounds/damage" index="2"]
 
 stream = ExtResource( 7 )
 volume_db = 0.0

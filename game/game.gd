@@ -1,5 +1,8 @@
 extends Node2D
 
+const grass_level = preload("res://levels/01-grass/01-grass.gd")
+const cave_level = preload("res://levels/04-cave/04-cave.gd")
+
 var killed_enemies = {}
 
 func _ready():
@@ -30,10 +33,13 @@ func show_level(path):
 	setup_level()
 
 func setup_level():
-	$level.connect("cow_killed", $hud, "_on_cow_killed")
-	$level.connect("boss_fight_started", $hud, "_on_boss_fight_started")
-	$level.connect("boss_health_updated", $hud, "_on_boss_health_updated")
-	$level.connect("boss_killed", self, "you_won")
+	if $level is grass_level:
+		$level.connect("cow_killed", $hud, "_on_cow_killed")
+	if $level is cave_level:
+		$level.connect("boss_fight_started", $hud, "_on_boss_fight_started")
+		$level.connect("boss_health_updated", $hud, "_on_boss_health_updated")
+		$level.connect("boss_killed", self, "you_won")
+	
 	$level.connect("enemy_killed", self, "_on_enemy_killed")
 	$level.connect("next_level", self, "show_level")
 	$wizard/light.enabled = $level.needs_light()
